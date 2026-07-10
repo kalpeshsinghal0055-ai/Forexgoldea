@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How ForexGoldEA Trades XAU/USD: The Gold EA Strategy Explained</title>
+<meta name="description" content="A plain-English breakdown of how the ForexGoldEA gold trading robot analyses XAU/USD, when it enters trades, how it uses fixed stop-losses, and why it avoids martingale on MetaTrader 4 and 5." />
+<meta name="keywords" content="gold EA strategy, XAU/USD expert advisor, automated gold trading, ForexGoldEA, MT4 gold robot, MT5 gold EA, fixed stop loss EA, no martingale" />
+<meta name="author" content="ForexGoldEA" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<meta name="theme-color" content="#0E1A1F" />
+<link rel="canonical" href="https://forexgoldea.com/gold-ea-strategy.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="ForexGoldEA" />
+<meta property="og:title" content="How ForexGoldEA Trades XAU/USD: The Gold EA Strategy Explained" />
+<meta property="og:description" content="How the ForexGoldEA gold robot reads XAU/USD, enters trades, and controls risk with fixed stops and no martingale on MT4 and MT5." />
+<meta property="og:url" content="https://forexgoldea.com/gold-ea-strategy.html" />
+<meta property="og:image" content="https://forexgoldea.com/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="ForexGoldEA automated gold trading strategy for MetaTrader 4 and 5" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="How ForexGoldEA Trades XAU/USD: The Gold EA Strategy Explained" />
+<meta name="twitter:description" content="How the ForexGoldEA gold robot reads XAU/USD, enters trades, and controls risk on MT4 and MT5." />
+<meta name="twitter:image" content="https://forexgoldea.com/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BlogPosting",
+"headline": "How ForexGoldEA Trades XAU/USD: The Gold EA Strategy Explained",
+"description": "A plain-English breakdown of how the ForexGoldEA gold trading robot analyses XAU/USD, when it enters trades, how it manages risk with fixed stops, and why it avoids martingale.",
+"image": "https://forexgoldea.com/og-image.jpg",
+"author": { "@type": "Organization", "name": "ForexGoldEA", "url": "https://forexgoldea.com/" },
+"publisher": { "@type": "Organization", "name": "ForexGoldEA", "logo": { "@type": "ImageObject", "url": "https://forexgoldea.com/og-image.jpg" } },
+"mainEntityOfPage": { "@type": "WebPage", "@id": "https://forexgoldea.com/gold-ea-strategy.html" },
+"datePublished": "2026-07-10",
+"dateModified": "2026-07-10",
+"inLanguage": "en"
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{ "@type": "Question", "name": "What pair does ForexGoldEA trade?", "acceptedAnswer": { "@type": "Answer", "text": "ForexGoldEA is built specifically for XAU/USD (gold) on MetaTrader 4 and MetaTrader 5. It is designed to be attached to a single gold chart." } },
+{ "@type": "Question", "name": "Does ForexGoldEA use martingale?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every position opens with a fixed stop-loss and target. The EA does not average down into losing trades." } },
+{ "@type": "Question", "name": "Can I control the risk?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You set risk per trade, a daily loss limit, and a maximum drawdown ceiling, and the EA respects them automatically." } }
+]
+}
+</script>
+<style>
+:root{--paper:#FFFFFF;--paper-2:#F7F5EF;--ink:#0E1A1F;--ink-soft:#5A656B;--line:#E8E4DA;--gold-deep:#8C6718;--gold-soft:#F4EACF;--serif:'Instrument Serif',Georgia,serif;--sans:'Instrument Sans',system-ui,sans-serif;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+.topbar{border-bottom:1px solid var(--line);padding:16px 0;}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;max-width:1120px;margin:0 auto;padding:0 24px;}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:600;font-size:19px;}
+.btn{font-family:var(--sans);font-weight:500;font-size:16px;display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;}
+.btn-primary{background:var(--ink);color:#fff;}
+article{padding:48px 0 24px;}
+.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:14px;}
+h1{font-family:var(--serif);font-weight:400;font-size:42px;line-height:1.12;margin:0 0 18px;}
+h2{font-family:var(--serif);font-weight:400;font-size:28px;margin:38px 0 12px;}
+p{margin:0 0 18px;}
+.lead{font-size:20px;color:var(--ink-soft);}
+ul{margin:0 0 18px;padding-left:22px;}
+li{margin-bottom:8px;}
+.callout{background:var(--gold-soft);border-radius:14px;padding:22px 24px;margin:28px 0;}
+.callout p{margin:0;}
+.cta{background:var(--paper-2);border-radius:16px;padding:28px;text-align:center;margin:40px 0;}
+.cta p{margin:0 0 14px;}
+.meta{color:var(--ink-soft);font-size:14px;margin-bottom:30px;}
+.faq h3{font-size:18px;margin:22px 0 6px;}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--ink-soft);font-size:14px;margin-top:40px;}
+a{color:var(--gold-deep);}
+.disc{font-size:13px;color:var(--ink-soft);margin-top:30px;border-top:1px solid var(--line);padding-top:18px;}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="topbar-in">
+<a class="brand" href="index.html"><span>ForexGoldEA</span></a>
+<a class="btn btn-primary" href="index.html#pricing">Get the EA</a>
+</div>
+</header>
+<main class="wrap">
+<article>
+<div class="eyebrow">Strategy</div>
+<h1>How ForexGoldEA Trades XAU/USD: The Strategy Explained</h1>
+<div class="meta">Guide by ForexGoldEA &middot; about 6 min read</div>
+<p class="lead">Gold moves fast, trades nearly around the clock, and punishes hesitation. This guide explains, in plain English, how the ForexGoldEA expert advisor reads the XAU/USD chart, decides when to open a trade, and keeps every loss small and predictable.</p>
+<h2>What the EA looks for before it trades</h2>
+<p>ForexGoldEA does not trade on every candle. It waits for a specific alignment of conditions on the gold chart before it commits to a position. In simple terms, it looks for momentum that agrees with the short-term trend, at a moment when the reward on offer is larger than the risk it has to accept to get it.</p>
+<p>Because gold is volatile, the EA treats confirmation as more important than speed. A setup that only half-forms is skipped. This is deliberate: fewer, cleaner trades tend to produce steadier equity curves than a robot that fires constantly.</p>
+<h2>How a trade is opened and protected</h2>
+<p>When a valid setup appears, the EA opens a single position and immediately attaches two things to it: a fixed stop-loss and a target. Both are set at the moment of entry, not adjusted emotionally afterwards. This matters more than most beginners realise, because a known, fixed stop is what turns an unpredictable market into a defined, repeatable risk.</p>
+<ul>
+<li><strong>Fixed stop-loss:</strong> every position has a hard exit level from the start.</li>
+<li><strong>Defined target:</strong> the profit objective is set relative to the risk taken.</li>
+<li><strong>One position at a time:</strong> the strategy is not built on stacking many trades on top of each other.</li>
+</ul>
+<div class="callout">
+<p><strong>Why no martingale?</strong> Martingale systems double down after losses to recover them. On gold, a single strong trend can wipe out an account running martingale. ForexGoldEA deliberately avoids this. It accepts small losses as a normal cost and never averages into a losing position.</p>
+</div>
+<h2>Risk you actually control</h2>
+<p>The strategy only works if the person running it stays inside sensible limits, so the EA hands those controls to you. You decide the risk taken on each trade, a daily loss limit that pauses trading after a bad day, and a maximum drawdown ceiling that acts as a circuit breaker. Once set, the EA enforces them automatically, without needing you to watch the screen.</p>
+<h2>Why it runs best on a VPS</h2>
+<p>Gold trades roughly 24 hours a day, five days a week. If your computer sleeps or your internet drops, the EA misses setups and, worse, cannot manage open trades. Running it on a VPS (a small always-on server) keeps it connected continuously so the strategy behaves the way it was designed to.</p>
+<h2>Realistic expectations</h2>
+<p>No strategy wins every trade, and any honest description of gold trading has to say so clearly. ForexGoldEA is built to keep losers small and let the process play out over many trades, not to guarantee a profit on any single one. Past performance and backtests do not guarantee future results. Trade only with money you can afford to lose.</p>
+<div class="cta">
+<p><strong>Want to run this strategy yourself?</strong></p>
+<p>Get ForexGoldEA free with our partner broker, or read the full setup guide.</p>
+<a class="btn btn-primary" href="index.html#pricing">Get the EA</a>
+</div>
+<div class="faq">
+<h2>Frequently asked questions</h2>
+<h3>What pair does ForexGoldEA trade?</h3>
+<p>It is built specifically for XAU/USD (gold) on MetaTrader 4 and 5, attached to a single gold chart.</p>
+<h3>Does ForexGoldEA use martingale?</h3>
+<p>No. Every position opens with a fixed stop-loss and target, and the EA never averages down into losers.</p>
+<h3>Can I control the risk?</h3>
+<p>Yes. You set risk per trade, a daily loss limit, and a maximum drawdown ceiling, and the EA respects them automatically.</p>
+</div>
+<p class="disc">Risk disclosure: Trading foreign exchange and CFDs on margin, including gold (XAU/USD), carries a high level of risk and may not be suitable for every investor. You can lose some or all of your capital. Performance figures are illustrative and not indicative of future results. ForexGoldEA is a trading tool, not financial advice.</p>
+</article>
+</main>
+<footer>
+<div class="wrap">
+<p>&copy; 2026 ForexGoldEA &mdash; powered by BBFxAi LLC. Trade gold. Automate success.</p>
+</div>
+</footer>
+</body>
+</html>
