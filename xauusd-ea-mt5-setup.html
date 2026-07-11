@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How to Set Up a XAUUSD EA on MetaTrader 5 (Step by Step) | ForexGoldEA</title>
+<meta name="description" content="A step-by-step guide to installing and configuring the ForexGoldEA XAUUSD expert advisor on MetaTrader 5 — from downloading the file to enabling auto-trading safely." />
+<meta name="keywords" content="XAUUSD EA MT5 setup, install gold EA MetaTrader 5, how to add expert advisor MT5, ForexGoldEA setup, gold trading robot MT5" />
+<meta name="author" content="ForexGoldEA" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://forexgoldea.com/xauusd-ea-mt5-setup.html" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='18' fill='%23C9A24B'/%3E%3Ccircle cx='20' cy='20' r='18' fill='none' stroke='%23A37E2C' stroke-width='2'/%3E%3C/svg%3E" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Set Up a XAUUSD EA on MetaTrader 5 (Step by Step)" />
+<meta property="og:description" content="Install and configure the ForexGoldEA XAUUSD expert advisor on MetaTrader 5 safely." />
+<meta property="og:url" content="https://forexgoldea.com/xauusd-ea-mt5-setup.html" />
+<meta property="og:image" content="https://forexgoldea.com/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: #FBFAF7; }
+  body { font-family: 'Public Sans', sans-serif; color: #1C2226; -webkit-font-smoothing: antialiased; line-height: 1.7; }
+  a { color: #8A6A1F; text-decoration: none; }
+  a:hover { color: #6E5316; }
+  * { box-sizing: border-box; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  article h2 { font-family: 'Newsreader', serif; font-size: 27px; font-weight: 500; letter-spacing: -0.01em; margin: 40px 0 12px; line-height: 1.2; }
+  article p, article li { font-size: 16.5px; color: #2E3840; }
+  article ol, article ul { padding-left: 22px; }
+  article li { margin-bottom: 8px; }
+  .cta { display: inline-block; background: #A37E2C; color: #fff; padding: 13px 26px; border-radius: 10px; font-weight: 600; }
+  .cta:hover { background: #8A6A1F; color: #fff; }
+  .note { background: #F3EEE2; border: 1px solid #E2D9C2; border-radius: 12px; padding: 16px 18px; font-size: 15px; color: #4A5258; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Set Up a XAUUSD EA on MetaTrader 5 (Step by Step)",
+  "description": "A step-by-step guide to installing and configuring the ForexGoldEA XAUUSD expert advisor on MetaTrader 5.",
+  "datePublished": "2026-07-11",
+  "dateModified": "2026-07-11",
+  "author": { "@type": "Organization", "name": "ForexGoldEA" },
+  "publisher": { "@type": "Organization", "name": "ForexGoldEA", "logo": { "@type": "ImageObject", "url": "https://forexgoldea.com/og-image.jpg" } },
+  "mainEntityOfPage": "https://forexgoldea.com/xauusd-ea-mt5-setup.html",
+  "image": "https://forexgoldea.com/og-image.jpg"
+}
+</script>
+</head>
+<body>
+
+<header style="border-bottom: 1px solid #E9E5DC; background: rgba(251,250,247,0.92);">
+  <div class="wrap" style="max-width: 1120px; height: 64px; display: flex; align-items: center; gap: 10px;">
+    <a href="index.html" style="display:flex; align-items:center; gap:10px; color:#1C2226;">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-label="ForexGoldEA"><defs><radialGradient id="fg" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#EFD48F"/><stop offset="100%" stop-color="#A37E2C"/></radialGradient></defs><circle cx="20" cy="20" r="18" fill="url(#fg)" stroke="#8A6A1F" stroke-width="2"/><path d="M13 25 L18 18 L23 22 L28 14" fill="none" stroke="#FBFAF7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span style="font-weight:700;">ForexGoldEA</span>
+    </a>
+    <nav style="margin-left:auto; font-size:14.5px; font-weight:500;"><a href="blog.html" style="color:#4A5258;">← All posts</a></nav>
+  </div>
+</header>
+
+<article class="wrap" style="padding: 48px 24px 40px;">
+  <div style="font-size: 13px; color: #A37E2C; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;">Setup guide · July 11, 2026</div>
+  <h1 style="font-family: 'Newsreader', serif; font-size: 40px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.12; margin: 12px 0 20px;">How to set up a XAUUSD EA on MetaTrader 5, step by step</h1>
+  <p style="font-size: 18px; color: #4A5258;">Getting an automated gold strategy running on MetaTrader 5 takes only a few minutes once you know the steps. Here's exactly how to install and configure the ForexGoldEA XAU/USD expert advisor safely.</p>
+
+  <h2>1. Get the EA file</h2>
+  <p>First you need the EA file itself (an <code>.ex5</code> file for MetaTrader 5). With ForexGoldEA you unlock it free by opening and funding a live account through our partner broker, then sending your account number on Telegram. You'll receive the MT4 and MT5 builds plus ready-to-run presets.</p>
+
+  <h2>2. Install the EA in MetaTrader 5</h2>
+  <ol>
+    <li>Open MetaTrader 5, then go to <strong>File → Open Data Folder</strong>.</li>
+    <li>Open the <strong>MQL5 → Experts</strong> folder.</li>
+    <li>Copy the ForexGoldEA <code>.ex5</code> file into that folder.</li>
+    <li>Back in MT5, right-click <strong>Expert Advisors</strong> in the Navigator and choose <strong>Refresh</strong>. ForexGoldEA now appears in the list.</li>
+  </ol>
+
+  <h2>3. Attach it to an XAU/USD chart</h2>
+  <ol>
+    <li>Open a <strong>XAU/USD</strong> (gold) chart — ideally the timeframe recommended in your preset.</li>
+    <li>Drag ForexGoldEA from the Navigator onto the chart.</li>
+    <li>In the settings window, load the supplied preset (<strong>Load</strong> button in the Inputs tab) so risk parameters are set correctly.</li>
+  </ol>
+
+  <h2>4. Enable auto-trading</h2>
+  <p>Tick <strong>Allow Algo Trading</strong> in the EA dialog, then make sure the <strong>Algo Trading</strong> button in the top toolbar is green. A smiling face in the top-right corner of the chart means the EA is active.</p>
+
+  <div class="note" style="margin: 22px 0;"><strong>Tip:</strong> run the EA on a VPS so it trades 24/5 even when your computer is off. Any basic MT5 VPS works.</div>
+
+  <h2>5. Set your risk limits</h2>
+  <p>Before going live, confirm the inputs match your account size: risk per trade, a daily loss limit, and a maximum drawdown ceiling. Every ForexGoldEA position opens with a fixed stop-loss and take-profit — there is no martingale and no grid without stops. Start conservative and scale up only once you're comfortable.</p>
+
+  <h2>A quick word on risk</h2>
+  <p>Trading gold (XAU/USD) on margin carries a high level of risk and may not be suitable for everyone. Backtested figures are historical and do not guarantee future results. Never trade with money you cannot afford to lose.</p>
+
+  <div style="margin: 36px 0 8px;">
+    <a class="cta" href="https://account.markets4you.online/en/user-registration/?affid=ky6kt3m" target="_blank" rel="nofollow noopener">Get ForexGoldEA free →</a>
+  </div>
+  <p style="font-size: 13px; color: #9AA0A5;">Affiliate disclosure: we earn a commission when you open and fund an account through our partner links, at no extra cost to you.</p>
+</article>
+
+<footer style="background: #1C2226; color: #AEB6BB;">
+  <div class="wrap" style="max-width: 1120px; padding: 32px 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13.5px;">
+    <span>© 2026 ForexGoldEA — BBFxAi LLC</span>
+    <a href="blog.html" style="color: #AEB6BB;">← More guides</a>
+  </div>
+</footer>
+
+</body>
+</html>
