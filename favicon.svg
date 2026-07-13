@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-label="ForexGoldEA">
+  <defs>
+    <radialGradient id="g" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#EFD48F"/>
+      <stop offset="100%" stop-color="#A37E2C"/>
+    </radialGradient>
+  </defs>
+  <circle cx="20" cy="20" r="18" fill="url(#g)" stroke="#8A6A1F" stroke-width="2"/>
+  <path d="M13 25 L18 18 L23 22 L28 14" fill="none" stroke="#FBFAF7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
