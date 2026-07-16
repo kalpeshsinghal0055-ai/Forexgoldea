@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>What Is an EA (Expert Advisor) and How Does It Work? | ForexGoldEA</title>
+<meta name="description" content="What is an EA in forex trading? A clear beginner's guide to how expert advisors work on MT4 and MT5, what they can and can't do, and their pros and cons." />
+<meta name="keywords" content="what is an EA, expert advisor, how does an EA work, forex trading robot, EA MT4 MT5, automated trading" />
+<meta name="author" content="ForexGoldEA" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://forexgoldea.com/what-is-an-ea-how-it-works.html" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="What Is an EA (Expert Advisor) and How Does It Work?" />
+<meta property="og:description" content="A clear beginner's guide to how expert advisors work on MT4 and MT5, what they can and can't do, and their pros and cons." />
+<meta property="og:url" content="https://forexgoldea.com/what-is-an-ea-how-it-works.html" />
+<meta property="og:image" content="https://forexgoldea.com/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: #FBFAF7; }
+  body { font-family: 'Public Sans', sans-serif; color: #1C2226; -webkit-font-smoothing: antialiased; line-height: 1.7; }
+  a { color: #8A6A1F; text-decoration: none; } a:hover { color: #6E5316; }
+  * { box-sizing: border-box; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  article h2 { font-family: 'Newsreader', serif; font-size: 27px; font-weight: 500; letter-spacing: -0.01em; margin: 40px 0 12px; line-height: 1.2; }
+  article p, article li { font-size: 16.5px; color: #2E3840; }
+  article ol, article ul { padding-left: 22px; } article li { margin-bottom: 8px; }
+  .cta { display: inline-block; background: #A37E2C; color: #fff; padding: 13px 26px; border-radius: 10px; font-weight: 600; } .cta:hover { background: #8A6A1F; color:#fff; }
+  .note { background: #F3EEE2; border: 1px solid #E2D9C2; border-radius: 12px; padding: 16px 18px; font-size: 15px; color: #4A5258; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0 4px; font-size: 15px; }
+  th, td { border: 1px solid #E9E5DC; padding: 10px 12px; text-align: left; vertical-align: top; }
+  th { background: #F3EEE2; font-weight: 600; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What Is an EA (Expert Advisor) and How Does It Work?",
+  "description": "A clear beginner's guide to how expert advisors work on MT4 and MT5, what they can and can't do, and their pros and cons.",
+  "datePublished": "2026-07-16",
+  "dateModified": "2026-07-16",
+  "author": { "@type": "Organization", "name": "ForexGoldEA" },
+  "publisher": { "@type": "Organization", "name": "ForexGoldEA", "logo": { "@type": "ImageObject", "url": "https://forexgoldea.com/og-image.jpg" } },
+  "mainEntityOfPage": "https://forexgoldea.com/what-is-an-ea-how-it-works.html",
+  "image": "https://forexgoldea.com/og-image.jpg"
+}
+</script>
+</head>
+<body>
+
+<header style="border-bottom: 1px solid #E9E5DC; background: rgba(251,250,247,0.92);">
+  <div class="wrap" style="max-width: 1120px; height: 64px; display: flex; align-items: center; gap: 10px;">
+    <a href="index.html" style="display:flex; align-items:center; gap:10px; color:#1C2226;">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-label="ForexGoldEA"><defs><radialGradient id="fg" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#EFD48F"/><stop offset="100%" stop-color="#A37E2C"/></radialGradient></defs><circle cx="20" cy="20" r="18" fill="url(#fg)" stroke="#8A6A1F" stroke-width="2"/><path d="M13 25 L18 18 L23 22 L28 14" fill="none" stroke="#FBFAF7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span style="font-weight:700;">ForexGoldEA</span>
+    </a>
+    <nav style="margin-left:auto; font-size:14.5px; font-weight:500;"><a href="blog.html" style="color:#4A5258;">← All posts</a></nav>
+  </div>
+</header>
+
+<article class="wrap" style="padding: 48px 24px 40px;">
+  <div style="font-size: 13px; color: #A37E2C; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;">Basics · July 16, 2026</div>
+  <h1 style="font-family: 'Newsreader', serif; font-size: 40px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.12; margin: 12px 0 20px;">What is an EA (expert advisor) and how does it work?</h1>
+  <p style="font-size: 18px; color: #4A5258;">If you've spent any time around forex or gold trading, you've probably heard people talk about “EAs”. But what exactly is an expert advisor, and how does it actually work? Here's a clear, beginner-friendly explanation — including what an EA can and can't do.</p>
+
+  <h2>What is an EA?</h2>
+  <p>EA stands for <strong>expert advisor</strong>. It's a small program that runs inside a trading platform — usually MetaTrader 4 (MT4) or MetaTrader 5 (MT5) — and trades automatically on your behalf. Instead of you watching charts and clicking buy or sell, the EA follows a set of pre-programmed rules and places trades for you.</p>
+  <p>Think of it as a trading strategy turned into software. Whatever a human trader might decide (“if these conditions are met, open a buy trade with this stop loss”), an EA can do the same thing — instantly, consistently, and without emotion.</p>
+
+  <h2>How does an EA work?</h2>
+  <p>An EA constantly reads live market data and checks it against its rules. When the conditions line up, it acts. The basic cycle looks like this:</p>
+  <ol>
+    <li><strong>Watch the market</strong> — the EA monitors price, indicators, and other data tick by tick.</li>
+    <li><strong>Check the rules</strong> — it compares what's happening now to its entry conditions.</li>
+    <li><strong>Open a trade</strong> — if the conditions match, it places a buy or sell order, usually with a stop loss and take profit.</li>
+    <li><strong>Manage the trade</strong> — it can move stops, take partial profit, or close the position based on its logic.</li>
+    <li><strong>Repeat</strong> — it keeps doing this 24 hours a day while the market is open.</li>
+  </ol>
+
+  <h2>What an EA needs to run</h2>
+  <table>
+    <tr><th>Requirement</th><th>Why</th></tr>
+    <tr><td>A trading platform (MT4 / MT5)</td><td>The EA runs inside it</td></tr>
+    <tr><td>A broker account</td><td>To actually place the trades</td></tr>
+    <tr><td>The EA file (.ex4 / .ex5)</td><td>The program itself</td></tr>
+    <tr><td>A stable connection (often a VPS)</td><td>So it keeps running 24/5 even when your PC is off</td></tr>
+  </table>
+  <p>Because an EA needs to be online to work, many traders run it on a <strong>VPS</strong> (a virtual server that stays on around the clock) instead of their own computer.</p>
+
+  <h2>What an EA can — and can't — do</h2>
+  <p>An EA is excellent at doing exactly what it's told, without hesitation or emotion. It never gets tired, greedy, or fearful, and it can react far faster than a human. That discipline is its biggest strength.</p>
+  <p>But an EA is <em>not</em> magic. It can't predict the future, and it only follows the rules it was given — so a flawed strategy will lose money automatically, just as a good one can trade well. It also can't adapt to conditions its creator never planned for, which is why monitoring and sensible risk settings still matter.</p>
+
+  <div class="note" style="margin: 22px 0;"><strong>Key point:</strong> an EA is a tool that executes a strategy. It's only as good as the strategy behind it and the risk settings you give it — it is not a guaranteed money machine.</div>
+
+  <h2>Pros and cons</h2>
+  <table>
+    <tr><th>Pros</th><th>Cons</th></tr>
+    <tr><td>Trades 24/5 without you watching</td><td>Only as good as its strategy</td></tr>
+    <tr><td>No emotional decisions</td><td>Can't adapt to unexpected conditions</td></tr>
+    <tr><td>Fast, consistent execution</td><td>Needs a VPS and monitoring</td></tr>
+    <tr><td>Can backtest on past data</td><td>Backtests don't guarantee future results</td></tr>
+  </table>
+
+  <h2>EAs and gold trading</h2>
+  <p>Gold (XAU/USD) is one of the most popular markets to automate because it moves in clear, tradable ranges. A purpose-built gold EA like ForexGoldEA applies a defined strategy to XAU/USD automatically — but as with any EA, the smart approach is to understand its rules, test on a demo account first, and size your risk carefully.</p>
+
+  <h2>Bottom line</h2>
+  <p>An expert advisor is simply a trading strategy turned into software that runs on MT4 or MT5 and trades for you automatically. Used with a solid strategy, realistic expectations, and proper risk management, it's a powerful tool. Used blindly, it's just a fast way to follow a bad plan. Understand what your EA does before you trust it with real money.</p>
+
+  <div class="note" style="margin: 22px 0;">Trading gold on margin carries a high level of risk and may not be suitable for everyone. Backtested results are not indicative of future results. This article is educational and not financial advice.</div>
+
+  <div style="margin: 36px 0 8px;">
+    <a class="cta" href="https://account.markets4you.online/en/user-registration/?affid=ky6kt3m" target="_blank" rel="nofollow noopener">Get ForexGoldEA (a gold EA) free →</a>
+  </div>
+  <p style="font-size: 13px; color: #9AA0A5;">Affiliate disclosure: we earn a commission when you open and fund an account through our partner links, at no extra cost to you.</p>
+</article>
+
+<footer style="background: #1C2226; color: #AEB6BB;">
+  <div class="wrap" style="max-width: 1120px; padding: 32px 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13.5px;">
+    <span>© 2026 ForexGoldEA — BBFxAi LLC</span>
+    <a href="blog.html" style="color: #AEB6BB;">← More guides</a>
+  </div>
+</footer>
+
+</body>
+</html>
