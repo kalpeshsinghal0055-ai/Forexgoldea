@@ -1,0 +1,32 @@
+# ForexGoldEA
+
+> ForexGoldEA is an automated XAUUSD (gold) trading expert advisor (EA) for MetaTrader 4 and MetaTrader 5, built by BBFxAi LLC (operating since 2016). The EA is free for traders who register through our partner broker link. This site publishes honest, educational guides about gold trading, expert advisors, prop firms, and automated-trading risk.
+
+Key facts:
+- Product: ForexGoldEA — a gold (XAU/USD) expert advisor for MT4/MT5
+- Company: BBFxAi LLC, since 2016
+- Pricing: free with partner broker registration
+- Contact: Telegram bot https://t.me/xauusdrobot_bot · community https://t.me/BBFxAi_Community
+- Verified performance tracking: https://www.myfxbook.com/members/BBFx_Ai/bbfxai-100-usd/12092687
+- Important: trading gold on margin is high risk; nothing on this site is financial advice, and results are never guaranteed.
+
+## Main pages
+- [Home](https://forexgoldea.com/): what ForexGoldEA is, features, free download steps, FAQ
+- [Blog](https://forexgoldea.com/blog.html): all guides
+- [About](https://forexgoldea.com/about.html): company and contact details
+
+## Guides
+- [What is an EA (expert advisor) and how does it work?](https://forexgoldea.com/what-is-an-ea-how-it-works.html)
+- [Best prop firms for gold (XAUUSD) traders in 2026](https://forexgoldea.com/best-prop-firms-gold-xauusd-ea.html)
+- [What is a martingale grid EA? Pros, cons and the risks](https://forexgoldea.com/what-is-martingale-grid-ea-pros-cons.html)
+- [What moves XAUUSD? The key drivers of the gold price](https://forexgoldea.com/what-moves-xauusd-gold-price-drivers.html)
+- [Best time to trade XAUUSD: gold trading sessions explained](https://forexgoldea.com/best-time-to-trade-xauusd-gold-sessions.html)
+- [XAUUSD vs EUR/USD: which should a gold EA trade?](https://forexgoldea.com/xauusd-vs-eurusd-gold-ea.html)
+- [How to set up a XAUUSD EA on MetaTrader 5](https://forexgoldea.com/xauusd-ea-mt5-setup.html)
+- [Gold EA strategy](https://forexgoldea.com/gold-ea-strategy.html)
+- [How to install an EA on MT4/MT5](https://forexgoldea.com/install-ea-mt4-mt5.html)
+
+## Policies
+- [Risk disclaimer](https://forexgoldea.com/risk-disclaimer.html)
+- [Privacy policy](https://forexgoldea.com/privacy-policy.html)
+- [Terms of use](https://forexgoldea.com/terms.html)
