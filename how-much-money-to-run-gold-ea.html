@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How Much Money Do You Need to Run a Gold EA? ($100 vs $500 vs $1,000) | ForexGoldEA</title>
+<meta name="description" content="What is the minimum deposit to run a gold (XAUUSD) EA? Realistic lot sizes, risk-per-trade math and drawdown buffers for $100, $500 and $1,000 accounts on MT4 and MT5." />
+<meta name="keywords" content="minimum deposit gold EA, XAUUSD lot size small account, gold EA $100 account, how much money to run an EA, gold robot minimum balance, XAUUSD risk per trade" />
+<meta name="author" content="ForexGoldEA" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<meta name="theme-color" content="#0E1A1F" />
+<link rel="canonical" href="https://forexgoldea.com/how-much-money-to-run-gold-ea.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="ForexGoldEA" />
+<meta property="og:title" content="How Much Money Do You Need to Run a Gold EA? ($100 vs $500 vs $1,000)" />
+<meta property="og:description" content="Realistic lot sizes, risk-per-trade math and drawdown buffers for running a XAUUSD expert advisor on a $100, $500 or $1,000 account." />
+<meta property="og:url" content="https://forexgoldea.com/how-much-money-to-run-gold-ea.html" />
+<meta property="og:image" content="https://forexgoldea.com/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="How much money you need to run a gold EA on MetaTrader 4 and 5" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="How Much Money Do You Need to Run a Gold EA?" />
+<meta name="twitter:description" content="Realistic lot sizes, risk math and drawdown buffers for $100, $500 and $1,000 XAUUSD EA accounts." />
+<meta name="twitter:image" content="https://forexgoldea.com/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BlogPosting",
+"headline": "How Much Money Do You Need to Run a Gold EA? ($100 vs $500 vs $1,000)",
+"description": "What is the minimum deposit to run a gold (XAUUSD) EA? Realistic lot sizes, risk-per-trade math and drawdown buffers for $100, $500 and $1,000 accounts on MT4 and MT5.",
+"image": "https://forexgoldea.com/og-image.jpg",
+"author": { "@type": "Organization", "name": "ForexGoldEA", "url": "https://forexgoldea.com/" },
+"publisher": { "@type": "Organization", "name": "ForexGoldEA", "logo": { "@type": "ImageObject", "url": "https://forexgoldea.com/og-image.jpg" } },
+"mainEntityOfPage": { "@type": "WebPage", "@id": "https://forexgoldea.com/how-much-money-to-run-gold-ea.html" },
+"datePublished": "2026-07-19",
+"dateModified": "2026-07-19",
+"inLanguage": "en"
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{ "@type": "Question", "name": "Can I run a gold EA with $100?", "acceptedAnswer": { "@type": "Answer", "text": "Technically yes, if your broker offers 0.01 lots on XAUUSD and high leverage — but the margin for error is very small. One or two normal losing streaks can hit a stop-out. A cent account or a $300–$500 balance gives the same strategy far more room to work." } },
+{ "@type": "Question", "name": "What lot size should I use for XAUUSD on a small account?", "acceptedAnswer": { "@type": "Answer", "text": "Start from your risk, not the lot size. Decide the dollars you are willing to lose per trade (1–2% of balance), divide by the stop-loss distance in dollars per 0.01 lot, and round down. On most small accounts that means 0.01–0.03 lots." } },
+{ "@type": "Question", "name": "Why does an EA need a drawdown buffer?", "acceptedAnswer": { "@type": "Answer", "text": "Every strategy has losing streaks. If your balance only covers margin plus a couple of losses, a normal streak can stop the account out before the strategy has a chance to recover. A buffer of at least 20–30% of the balance above margin requirements keeps the EA alive through ordinary drawdown." } },
+{ "@type": "Question", "name": "Is a cent account good for testing a gold EA?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A cent account lets you run the EA with real execution and real spreads while risking a fraction of the money. It is one of the most honest ways to evaluate an EA before scaling up." } }
+]
+}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://forexgoldea.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://forexgoldea.com/blog.html"}, {"@type": "ListItem", "position": 3, "name": "How much money do you need to run a gold EA?", "item": "https://forexgoldea.com/how-much-money-to-run-gold-ea.html"}]}
+</script>
+<style>
+:root{--paper:#FFFFFF;--paper-2:#F7F5EF;--ink:#0E1A1F;--ink-soft:#5A656B;--line:#E8E4DA;--gold-deep:#8C6718;--gold-soft:#F4EACF;--serif:'Instrument Serif',Georgia,serif;--sans:'Instrument Sans',system-ui,sans-serif;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+.topbar{border-bottom:1px solid var(--line);padding:16px 0;}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;max-width:1120px;margin:0 auto;padding:0 24px;}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:600;font-size:19px;}
+.btn{font-family:var(--sans);font-weight:500;font-size:16px;display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;}
+.btn-primary{background:var(--ink);color:#fff;}
+article{padding:48px 0 24px;}
+.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:14px;}
+h1{font-family:var(--serif);font-weight:400;font-size:42px;line-height:1.12;margin:0 0 18px;}
+h2{font-family:var(--serif);font-weight:400;font-size:28px;margin:38px 0 12px;}
+p{margin:0 0 18px;}
+.lead{font-size:20px;color:var(--ink-soft);}
+ul{margin:0 0 18px;padding-left:22px;}
+li{margin-bottom:8px;}
+.callout{background:var(--gold-soft);border-radius:14px;padding:22px 24px;margin:28px 0;}
+.callout p{margin:0;}
+.cta{background:var(--paper-2);border-radius:16px;padding:28px;text-align:center;margin:40px 0;}
+.cta p{margin:0 0 14px;}
+.meta{color:var(--ink-soft);font-size:14px;margin-bottom:30px;}
+.faq h3{font-size:18px;margin:22px 0 6px;}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--ink-soft);font-size:14px;margin-top:40px;}
+a{color:var(--gold-deep);}
+.disc{font-size:13px;color:var(--ink-soft);margin-top:30px;border-top:1px solid var(--line);padding-top:18px;}
+.tbl{width:100%;border-collapse:collapse;margin:24px 0;font-size:15.5px;}
+.tbl th,.tbl td{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top;}
+.tbl th{background:var(--paper-2);font-weight:600;}
+.tbl-wrap{overflow-x:auto;}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="topbar-in">
+<a class="brand" href="index.html"><span>ForexGoldEA</span></a>
+<a class="btn btn-primary" href="index.html#pricing">Get the EA</a>
+</div>
+</header>
+<main class="wrap">
+<article>
+<nav aria-label="Breadcrumb" style="font-size:13px;margin:0 0 18px;opacity:.8;"><a href="index.html">Home</a> &rsaquo; <a href="blog.html">Blog</a></nav>
+<div class="eyebrow">Account planning</div>
+<h1>How Much Money Do You Need to Run a Gold EA?</h1>
+<div class="meta">Guide by ForexGoldEA &middot; July 19, 2026 &middot; about 7 min read</div>
+<p class="lead">"What's the minimum deposit?" is the first question almost everyone asks about running a XAU/USD expert advisor. The honest answer isn't a single number — it depends on lot sizing, your stop-loss distance, and how much drawdown room the strategy needs to survive a normal losing streak. This guide walks through the real math for a $100, $500 and $1,000 account.</p>
+
+<h2>Start with risk, not with the deposit</h2>
+<p>Most beginners pick a deposit first and a lot size second. Professionals do it the other way round: they decide how many dollars they are willing to lose on a single trade, and let that number dictate everything else. A widely used rule is risking <strong>1–2% of the account per trade</strong>. On a $500 account, that means $5–$10 per trade — no more.</p>
+<p>Why so little? Because losing streaks are normal, not exceptional. Even a strategy that wins more often than it loses will hit four or five losers in a row eventually. At 2% risk, five straight losses cost you about 10% of the account — uncomfortable, but survivable. At 10% risk per trade, the same streak destroys half the account and usually the trader's discipline with it.</p>
+
+<h2>What a 0.01 lot on gold actually means</h2>
+<p>On most brokers, one standard lot of XAU/USD is 100 ounces, so the minimum size of <strong>0.01 lots equals 1 ounce of gold</strong>. That gives you a simple rule of thumb:</p>
+<div class="callout">
+<p><strong>Rule of thumb:</strong> at 0.01 lots, every $1 move in the gold price changes your P/L by about $1. If your EA uses a $6 stop-loss distance, a losing trade at 0.01 lots costs roughly $6 (plus spread).</p>
+</div>
+<p>Gold routinely moves $10–$30 in a day, which is exactly why sensible gold EAs use fixed stop-losses. To hold a 0.01-lot position you also need margin — at 1:500 leverage this is only a few dollars per position, so on small accounts <strong>margin is rarely the real constraint. Drawdown room is.</strong></p>
+
+<h2>$100 vs $500 vs $1,000: the honest comparison</h2>
+<div class="tbl-wrap">
+<table class="tbl">
+<tr><th>Account size</th><th>Sensible risk per trade (1–2%)</th><th>Typical lot size</th><th>What it feels like in practice</th></tr>
+<tr><td><strong>$100</strong></td><td>$1–$2</td><td>0.01 (minimum)</td><td>Possible, but tight. Even at minimum size, one trade often risks 5%+ of the account. A normal losing streak can take the account near stop-out before the strategy recovers. Better treated as a live test than an income attempt.</td></tr>
+<tr><td><strong>$500</strong></td><td>$5–$10</td><td>0.01–0.03</td><td>The realistic starting point for most people. Risk per trade stays inside the 1–2% rule at real lot sizes, and there is enough buffer to sit through ordinary drawdown without panic.</td></tr>
+<tr><td><strong>$1,000</strong></td><td>$10–$20</td><td>0.02–0.05</td><td>Comfortable. The EA can size positions properly, survive losing streaks with room to spare, and compound results meaningfully if the strategy performs.</td></tr>
+</table>
+</div>
+<p>Notice what the table is really saying: the difference between account sizes is not "how much you can make" — it is <strong>how much punishment the account can absorb while staying inside sensible risk rules</strong>. That absorption capacity is what keeps an EA alive long enough for its edge, if it has one, to show up.</p>
+
+<h2>The drawdown buffer most people forget</h2>
+<p>An EA account has three jobs for its balance: covering margin, absorbing open-trade fluctuation, and surviving drawdown. The first two are small. The third is what kills undersized accounts. As a rule, after margin you want <strong>at least 20–30% of the balance free as a drawdown buffer</strong> — money whose only job is to let the account breathe through a losing period.</p>
+<ul>
+<li><strong>Set a daily loss limit.</strong> A cap that pauses trading after a bad day protects the buffer from one ugly session.</li>
+<li><strong>Set a maximum drawdown ceiling.</strong> A circuit breaker (for example 15–20% of balance) that stops the EA entirely is the difference between a bad month and a blown account.</li>
+<li><strong>Withdraw or scale deliberately.</strong> If the account grows, either take profits out or increase size according to the same 1–2% rule — not both at once.</li>
+</ul>
+
+<h2>The cent-account shortcut</h2>
+<p>If you want to test a gold EA with real execution but minimal money, many brokers offer <strong>cent accounts</strong>, where balances and lots are denominated in cents. A $50 deposit behaves like a $5,000 cent balance, letting the EA trade with live spreads and slippage while a full losing streak costs you the price of a pizza. It is one of the most honest ways to evaluate any EA before committing a real balance — more honest than a backtest, cheaper than a live $1,000 account.</p>
+
+<h2>So what's the actual minimum?</h2>
+<p>Our honest answer for a gold EA that uses fixed stops and minimum 0.01 lots: <strong>$100 is the technical minimum, $300–$500 is the practical minimum, and $1,000 is comfortable.</strong> Below $300, you are not really testing the strategy — you are testing your luck against the stop-out level. And whatever the balance: trade only with money you can genuinely afford to lose. No EA, including ours, removes the risk of loss.</p>
+
+<div class="cta">
+<p><strong>Ready to try it with sensible risk settings?</strong></p>
+<p>Get ForexGoldEA free with our partner broker, then follow the setup guide to configure risk per trade, a daily loss limit and a drawdown ceiling.</p>
+<a class="btn btn-primary" href="index.html#pricing">Get the EA</a>
+    <a href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener" style="display:inline-block; margin-left:12px; margin-top:12px; background:#1C2226; color:#fff; padding:13px 26px; border-radius:10px; font-weight:600;">Talk to us on Telegram →</a>
+</div>
+
+<div class="faq">
+<h2>Frequently asked questions</h2>
+<h3>Can I run a gold EA with $100?</h3>
+<p>Technically yes, if your broker offers 0.01 lots on XAUUSD — but the margin for error is very small, and a normal losing streak can hit a stop-out. A cent account or a $300–$500 balance gives the same strategy far more room to work.</p>
+<h3>What lot size should I use for XAUUSD on a small account?</h3>
+<p>Start from your risk, not the lot size: decide the dollars you're willing to lose per trade (1–2% of balance), divide by the stop-loss distance in dollars per 0.01 lot, and round down. On most small accounts that means 0.01–0.03 lots.</p>
+<h3>Why does an EA need a drawdown buffer?</h3>
+<p>Every strategy has losing streaks. If the balance only covers margin plus a couple of losses, a normal streak can stop the account out before the strategy recovers. Keep at least 20–30% of the balance free above margin.</p>
+<h3>Is a cent account good for testing a gold EA?</h3>
+<p>Yes — real execution and real spreads at a fraction of the risk. It's one of the most honest ways to evaluate an EA before scaling up.</p>
+</div>
+
+<div class="related-guides" style="margin:36px 0 8px;">
+<h2>Related guides</h2>
+<ul>
+<li><a href="gold-ea-strategy.html">How ForexGoldEA trades XAU/USD: the gold EA strategy explained</a></li>
+<li><a href="xauusd-ea-mt5-setup.html">How to set up a XAUUSD EA on MetaTrader 5, step by step</a></li>
+<li><a href="what-is-martingale-grid-ea-pros-cons.html">What is a martingale grid EA? Pros, cons and the risks</a></li>
+<li><a href="blog.html">All gold EA &amp; XAUUSD guides &rarr;</a></li>
+</ul>
+</div>
+
+<p class="disc">Risk disclosure: Trading foreign exchange and CFDs on margin, including gold (XAU/USD), carries a high level of risk and may not be suitable for every investor. You can lose some or all of your capital. Figures in this article are illustrative examples, not projections, and past or backtested performance does not guarantee future results. ForexGoldEA is a trading tool, not financial advice.</p>
+</article>
+</main>
+<footer>
+<div class="wrap">
+<p>&copy; 2026 ForexGoldEA &mdash; powered by BBFxAi LLC. Trade gold. Automate success.</p>
+</div>
+</footer>
+</body>
+</html>
