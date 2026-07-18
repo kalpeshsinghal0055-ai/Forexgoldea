@@ -54,5 +54,19 @@
     "date": "2026-07-11",
     "tag": "Setup guide",
     "excerpt": "Install and configure the ForexGoldEA gold expert advisor on MT5 in a few minutes — from the EA file to enabling auto-trading safely."
+  },
+  {
+    "title": "How ForexGoldEA trades XAU/USD: the gold EA strategy explained",
+    "url": "gold-ea-strategy.html",
+    "date": "2026-07-10",
+    "tag": "Strategy",
+    "excerpt": "How the gold robot reads XAU/USD, when it enters, why every trade has a fixed stop-loss, and why it avoids martingale entirely."
+  },
+  {
+    "title": "How to install a gold EA on MetaTrader 4 & 5 in 5 minutes",
+    "url": "install-ea-mt4-mt5.html",
+    "date": "2026-07-10",
+    "tag": "Setup guide",
+    "excerpt": "From the EA file to a live chart: a quick, safe walkthrough for installing any gold expert advisor on MT4 and MT5."
   }
 ]
