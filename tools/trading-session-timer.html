@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Forex Trading Session Timer — Gold Market Hours (Live) | ForexGoldEA</title>
+<meta name="description" content="Live forex trading session timer in your local time. See when the Sydney, Tokyo, London and New York sessions open and when the London–New York overlap drives peak gold volatility." />
+<meta name="keywords" content="forex session timer, trading session clock, gold market hours, forex market hours, london new york overlap, xauusd trading sessions, forex session times" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<meta name="theme-color" content="#0E1A1F" />
+<link rel="canonical" href="https://forexgoldea.com/tools/trading-session-timer.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ForexGoldEA" />
+<meta property="og:title" content="Forex Trading Session Timer — Gold Market Hours (Live)" />
+<meta property="og:description" content="Live forex sessions in your local time. See the London–New York overlap for peak gold volatility." />
+<meta property="og:url" content="https://forexgoldea.com/tools/trading-session-timer.html" />
+<meta property="og:image" content="https://forexgoldea.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Forex Trading Session Timer (Live)" />
+<meta name="twitter:image" content="https://forexgoldea.com/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://forexgoldea.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://forexgoldea.com/tools/"},{"@type":"ListItem","position":3,"name":"Trading Session Timer","item":"https://forexgoldea.com/tools/trading-session-timer.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is the best trading session for gold (XAUUSD)?","acceptedAnswer":{"@type":"Answer","text":"Gold is most active during the London session and especially the London–New York overlap (roughly 13:00–17:00 UTC), when the two largest markets are open together and volume peaks. This overlap usually offers the tightest spreads and the strongest moves."}},
+{"@type":"Question","name":"What time does the forex market open and close?","acceptedAnswer":{"@type":"Answer","text":"The forex market runs 24 hours a day, five days a week, cycling through the Sydney, Tokyo, London and New York sessions. It opens Sunday evening and closes Friday evening (New York time). This timer shows each session live in your local time."}},
+{"@type":"Question","name":"Why does session timing matter for a gold EA?","acceptedAnswer":{"@type":"Answer","text":"Spreads widen and liquidity thins outside major sessions, which can hurt an EA's fills. Many gold EAs are set to trade mainly during the London and New York sessions when conditions are best."}}]}
+</script>
+<style>
+:root{--paper:#FBFAF7;--card:#FFFFFF;--ink:#1C2226;--soft:#4A5258;--line:#E9E5DC;--gold:#A37E2C;--gold-l:#EFD48F;--gold-soft:#F4EACF;--good:#1f7a4d;--warn:#b4472b;}
+*{box-sizing:border-box;margin:0;}
+body{background:var(--paper);color:var(--ink);font-family:'Public Sans',system-ui,sans-serif;font-size:16.5px;line-height:1.65;}
+a{text-decoration:none;color:var(--gold);}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px;}
+.wrap-wide{max-width:1120px;margin:0 auto;padding:0 24px;}
+header{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between;}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);font-weight:700;font-size:17px;}
+.dot{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--gold-l),var(--gold));border:2px solid #8A6A1F;}
+.navlinks{display:flex;align-items:center;gap:22px;font-size:14.5px;font-weight:500;}
+.navlinks a{color:var(--soft);}
+.nav-cta{background:var(--ink);color:#FBFAF7 !important;padding:10px 20px;border-radius:8px;font-weight:600;}
+.crumb{font-size:13px;color:var(--soft);padding:22px 0 0;}
+.crumb a{color:var(--soft);}
+.head{padding:14px 0 6px;}
+.eyebrow{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin-bottom:10px;}
+h1{font-family:'Newsreader',serif;font-size:40px;font-weight:500;letter-spacing:-.02em;line-height:1.12;margin-bottom:12px;}
+.lead{font-size:17px;color:var(--soft);}
+.clockbar{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 24px;margin:24px 0 8px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.clockbar .lt{font-size:13px;color:var(--soft);}
+.clockbar .lt b{display:block;font-size:26px;color:var(--ink);font-family:'Newsreader',serif;font-weight:500;}
+.tzpick{font-size:13px;color:var(--soft);}
+.calc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;margin:16px 0 26px;box-shadow:0 6px 24px rgba(28,34,38,.05);}
+.sess{margin-bottom:16px;}
+.sess:last-child{margin-bottom:0;}
+.sess-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;font-size:14.5px;}
+.sess-name{font-weight:600;display:flex;align-items:center;gap:9px;}
+.pill{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:3px 9px;border-radius:20px;}
+.pill.open{background:#e9f5ee;color:var(--good);}
+.pill.closed{background:#f0ece5;color:var(--soft);}
+.sess-time{color:var(--soft);font-size:13px;}
+.track{position:relative;height:14px;background:#F1EDE4;border-radius:8px;overflow:hidden;}
+.fill{position:absolute;top:0;bottom:0;background:linear-gradient(90deg,var(--gold-l),var(--gold));opacity:.9;}
+.fill.wrap2{border-radius:0;}
+.overlap{background:var(--gold-soft);border:1px solid var(--gold-l);border-radius:12px;padding:14px 16px;margin-top:18px;font-size:13.5px;color:#6d541b;}
+.now-note{font-size:13.5px;color:var(--soft);margin-top:12px;}
+.cta{background:var(--ink);color:#fff;border-radius:16px;padding:26px 28px;margin:30px 0;text-align:center;}
+.cta p{margin-bottom:14px;color:#D8DCDE;}
+.cta a{display:inline-block;background:var(--gold);color:#fff;padding:12px 26px;border-radius:10px;font-weight:600;}
+.body h2{font-family:'Newsreader',serif;font-size:27px;font-weight:500;margin:34px 0 10px;}
+.body p{margin-bottom:16px;}
+.disc{font-size:13px;color:var(--soft);border-top:1px solid var(--line);padding-top:18px;margin:28px 0;}
+.related{margin:30px 0;}
+.related a{display:block;padding:6px 0;}
+footer{background:#1C2226;color:#AEB6BB;font-size:13.5px;margin-top:20px;}
+.foot{padding:36px 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;max-width:1120px;margin:0 auto;}
+.foot a{color:#AEB6BB;margin-left:20px;}
+@media(max-width:640px){h1{font-size:31px;}.navlinks a:not(.nav-cta){display:none;}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap-wide nav">
+<a class="brand" href="../index.html"><span class="dot"></span>ForexGoldEA</a>
+<nav class="navlinks">
+<a href="../blog.html">Blog</a>
+<a href="./">Tools</a>
+<a class="nav-cta" href="../index.html#pricing">Get the EA free</a>
+</nav>
+</div>
+</header>
+
+<main class="wrap">
+<nav class="crumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="./">Tools</a> &rsaquo; Trading Session Timer</nav>
+<div class="head">
+<div class="eyebrow">Free tool</div>
+<h1>Forex Trading Session Timer</h1>
+<p class="lead">Live forex market sessions shown in your local time. See at a glance which markets are open right now, and when the London–New York overlap drives peak gold volatility.</p>
+</div>
+
+<div class="clockbar">
+<div class="lt">Your local time<b id="localTime">--:--:--</b></div>
+<div class="lt" style="text-align:right;">UTC<b id="utcTime">--:--</b></div>
+</div>
+<div class="tzpick" id="tzName" style="margin:2px 4px 0;"></div>
+
+<div class="calc" id="sessions"></div>
+
+<div class="cta">
+<p>Trading only in the right sessions is easy to say, hard to do at 2am. ForexGoldEA runs 24/5 on a VPS and can be configured to focus on the London and New York sessions automatically.</p>
+<a href="../index.html#pricing">Get the EA free →</a>
+</div>
+
+<div class="body">
+<h2>When is gold most active?</h2>
+<p>Gold trades almost around the clock, but not all hours are equal. Volume and volatility concentrate in the <strong>London session</strong> and peak during the <strong>London–New York overlap</strong> — roughly 13:00–17:00 UTC — when the world's two largest financial centres are open together. Spreads are usually tightest and moves strongest here.</p>
+<p>The quiet Asian hours (Sydney and Tokyo) tend to be slower for XAU/USD, with thinner liquidity and wider spreads. That doesn't mean gold never moves then — major news can hit any time — but for most strategies the London and New York hours are where the opportunity concentrates.</p>
+<h2>Why sessions matter for an EA</h2>
+<p>An expert advisor fills orders at live market prices. In thin, off-session hours spreads widen and slippage grows, which quietly eats into results. Many gold EAs include a session or time filter so they trade mainly when conditions are good — one more reason a rules-based approach beats trading on impulse.</p>
+<div class="disc">Session times are approximate and shift by an hour when regions move on or off daylight saving time. This timer uses your device's clock and time zone. Educational tool, not financial advice. Trading gold on margin carries a high risk of loss.</div>
+</div>
+
+<div class="related">
+<h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:24px;margin-bottom:8px;">Keep going</h2>
+<a href="../best-time-to-trade-xauusd-gold-sessions.html">→ Best time to trade XAUUSD: gold sessions explained</a>
+<a href="gold-lot-size-calculator.html">→ Gold Lot Size Calculator</a>
+<a href="risk-calculator.html">→ Risk Calculator</a>
+<a href="./">→ All free gold trading tools</a>
+</div>
+</main>
+
+<footer>
+<div class="foot">
+<span>© 2026 ForexGoldEA — powered by BBFxAi LLC.</span>
+<span><a href="../index.html">Home</a><a href="../blog.html">Blog</a><a href="../risk-disclaimer.html">Risk disclaimer</a></span>
+</div>
+</footer>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id);};
+  // Sessions in UTC hours (approx, standard time). start,end can wrap midnight.
+  var SESSIONS=[
+    {name:'Sydney', s:22, e:7},
+    {name:'Tokyo', s:0, e:9},
+    {name:'London', s:8, e:17},
+    {name:'New York', s:13, e:22}
+  ];
+  function pad(n){return (n<10?'0':'')+n;}
+  function utcNow(){
+    var d=new Date();
+    return d.getUTCHours()+d.getUTCMinutes()/60+d.getUTCSeconds()/3600;
+  }
+  function inSession(h,s,e){
+    if(s<e) return h>=s && h<e;
+    return h>=s || h<e; // wraps midnight
+  }
+  function fmtLocalFromUTC(utcH){
+    // convert a UTC hour-of-day to local display
+    var d=new Date();
+    var base=new Date(Date.UTC(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate(),Math.floor(utcH),Math.round((utcH%1)*60)));
+    return base.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});
+  }
+  function build(){
+    var box=$('sessions'); box.innerHTML='';
+    var h=utcNow();
+    var anyOverlap = inSession(h,8,17) && inSession(h,13,22);
+    SESSIONS.forEach(function(ss){
+      var open=inSession(h,ss.s,ss.e);
+      var el=document.createElement('div'); el.className='sess';
+      var span=(ss.s<ss.e)?(ss.e-ss.s):(24-ss.s+ss.e);
+      // build fill(s)
+      var fillHtml='';
+      if(ss.s<ss.e){
+        fillHtml='<div class="fill" style="left:'+(ss.s/24*100)+'%;width:'+(span/24*100)+'%;"></div>';
+      } else {
+        fillHtml='<div class="fill" style="left:'+(ss.s/24*100)+'%;width:'+((24-ss.s)/24*100)+'%;"></div>'
+                +'<div class="fill wrap2" style="left:0;width:'+(ss.e/24*100)+'%;"></div>';
+      }
+      el.innerHTML='<div class="sess-top"><span class="sess-name">'+ss.name
+        +' <span class="pill '+(open?'open':'closed')+'">'+(open?'Open':'Closed')+'</span></span>'
+        +'<span class="sess-time">'+fmtLocalFromUTC(ss.s)+' – '+fmtLocalFromUTC(ss.e)+' local</span></div>'
+        +'<div class="track">'+fillHtml+'</div>';
+      box.appendChild(el);
+    });
+    var ov=document.createElement('div'); ov.className='overlap';
+    if(anyOverlap){
+      ov.innerHTML='🔥 <strong>London–New York overlap is live now</strong> — this is typically the highest-volume, tightest-spread window for gold.';
+    } else {
+      ov.innerHTML='The <strong>London–New York overlap</strong> (~'+fmtLocalFromUTC(13)+'–'+fmtLocalFromUTC(17)+' your time) is usually the best window for gold. It is not active right now.';
+    }
+    box.appendChild(ov);
+  }
+  function tick(){
+    var d=new Date();
+    $('localTime').textContent=d.toLocaleTimeString();
+    $('utcTime').textContent=pad(d.getUTCHours())+':'+pad(d.getUTCMinutes());
+    try{ $('tzName').textContent='Time zone: '+Intl.DateTimeFormat().resolvedOptions().timeZone; }catch(e){}
+  }
+  build(); tick();
+  setInterval(tick,1000);
+  setInterval(build,30000);
+})();
+</script>
+</body>
+</html>

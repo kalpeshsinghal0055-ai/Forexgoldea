@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Forex &amp; Gold Risk Calculator (Position Risk + Drawdown) | ForexGoldEA</title>
+<meta name="description" content="Free trading risk calculator for gold and forex. See your dollar risk, reward, risk-to-reward ratio and what a losing streak does to your account. No sign-up." />
+<meta name="keywords" content="risk calculator forex, trading risk calculator, gold risk calculator, risk reward calculator, position risk calculator, losing streak calculator" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<meta name="theme-color" content="#0E1A1F" />
+<link rel="canonical" href="https://forexgoldea.com/tools/risk-calculator.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ForexGoldEA" />
+<meta property="og:title" content="Forex &amp; Gold Risk Calculator" />
+<meta property="og:description" content="See your dollar risk, risk-to-reward and losing-streak impact on your account. Free, no sign-up." />
+<meta property="og:url" content="https://forexgoldea.com/tools/risk-calculator.html" />
+<meta property="og:image" content="https://forexgoldea.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Forex & Gold Risk Calculator" />
+<meta name="twitter:image" content="https://forexgoldea.com/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://forexgoldea.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://forexgoldea.com/tools/"},{"@type":"ListItem","position":3,"name":"Risk Calculator","item":"https://forexgoldea.com/tools/risk-calculator.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How much should I risk per trade?","acceptedAnswer":{"@type":"Answer","text":"A widely used rule is to risk 1-2% of your account balance on any single trade. At 2% risk, even five losing trades in a row cost about 10% of the account, which is survivable. Higher risk per trade dramatically increases the chance of a large drawdown."}},
+{"@type":"Question","name":"What is a good risk-to-reward ratio?","acceptedAnswer":{"@type":"Answer","text":"Many traders aim for at least 1:1.5 or 1:2, meaning the target is 1.5 to 2 times the size of the stop-loss. With a positive risk-to-reward ratio you can be profitable even while losing more trades than you win."}},
+{"@type":"Question","name":"What does a losing streak do to my account?","acceptedAnswer":{"@type":"Answer","text":"Losing streaks compound. This calculator shows the balance after a run of consecutive losses at your chosen risk, so you can see whether your account can survive a normal streak before it happens."}}]}
+</script>
+<style>
+:root{--paper:#FBFAF7;--card:#FFFFFF;--ink:#1C2226;--soft:#4A5258;--line:#E9E5DC;--gold:#A37E2C;--gold-l:#EFD48F;--gold-soft:#F4EACF;--good:#1f7a4d;--warn:#b4472b;}
+*{box-sizing:border-box;margin:0;}
+body{background:var(--paper);color:var(--ink);font-family:'Public Sans',system-ui,sans-serif;font-size:16.5px;line-height:1.65;}
+a{text-decoration:none;color:var(--gold);}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px;}
+.wrap-wide{max-width:1120px;margin:0 auto;padding:0 24px;}
+header{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between;}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);font-weight:700;font-size:17px;}
+.dot{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--gold-l),var(--gold));border:2px solid #8A6A1F;}
+.navlinks{display:flex;align-items:center;gap:22px;font-size:14.5px;font-weight:500;}
+.navlinks a{color:var(--soft);}
+.nav-cta{background:var(--ink);color:#FBFAF7 !important;padding:10px 20px;border-radius:8px;font-weight:600;}
+.crumb{font-size:13px;color:var(--soft);padding:22px 0 0;}
+.crumb a{color:var(--soft);}
+.head{padding:14px 0 6px;}
+.eyebrow{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin-bottom:10px;}
+h1{font-family:'Newsreader',serif;font-size:40px;font-weight:500;letter-spacing:-.02em;line-height:1.12;margin-bottom:12px;}
+.lead{font-size:17px;color:var(--soft);}
+.calc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;margin:26px 0;box-shadow:0 6px 24px rgba(28,34,38,.05);}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.field{margin-bottom:18px;}
+label{display:block;font-size:14px;font-weight:600;margin-bottom:7px;}
+.hint{font-weight:400;color:var(--soft);font-size:12.5px;}
+.inp{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:10px;background:#fff;overflow:hidden;transition:border-color .15s;}
+.inp:focus-within{border-color:var(--gold);}
+.inp span{padding:0 12px;color:var(--soft);font-size:15px;background:#F7F5EF;align-self:stretch;display:flex;align-items:center;}
+input,select{border:0;outline:0;padding:12px;font-size:16px;font-family:inherit;width:100%;background:transparent;color:var(--ink);}
+select{cursor:pointer;}
+.out{background:linear-gradient(180deg,#FffdF6,#F7F0DE);border:1px solid var(--gold-l);border-radius:14px;padding:24px;margin-top:8px;}
+.out-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.stat{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px;}
+.stat b{display:block;font-size:22px;margin-top:2px;font-family:'Newsreader',serif;}
+.stat span{font-size:12.5px;color:var(--soft);}
+.streak{margin-top:18px;}
+.streak h3{font-size:14px;font-weight:600;margin-bottom:10px;}
+.bars{display:flex;gap:6px;align-items:flex-end;height:90px;}
+.bar{flex:1;background:linear-gradient(180deg,var(--gold-l),var(--gold));border-radius:6px 6px 0 0;position:relative;min-height:6px;}
+.bar small{position:absolute;top:-18px;left:0;right:0;text-align:center;font-size:10.5px;color:var(--soft);}
+.bar em{position:absolute;bottom:-20px;left:0;right:0;text-align:center;font-size:10.5px;color:var(--soft);font-style:normal;}
+.msg{font-size:13.5px;margin-top:26px;padding:12px 14px;border-radius:10px;display:none;}
+.msg.show{display:block;}
+.msg.ok{background:#e9f5ee;color:var(--good);}
+.msg.bad{background:#fbece7;color:var(--warn);}
+.cta{background:var(--ink);color:#fff;border-radius:16px;padding:26px 28px;margin:30px 0;text-align:center;}
+.cta p{margin-bottom:14px;color:#D8DCDE;}
+.cta a{display:inline-block;background:var(--gold);color:#fff;padding:12px 26px;border-radius:10px;font-weight:600;}
+.body h2{font-family:'Newsreader',serif;font-size:27px;font-weight:500;margin:34px 0 10px;}
+.body p{margin-bottom:16px;}
+.disc{font-size:13px;color:var(--soft);border-top:1px solid var(--line);padding-top:18px;margin:28px 0;}
+.related{margin:30px 0;}
+.related a{display:block;padding:6px 0;}
+footer{background:#1C2226;color:#AEB6BB;font-size:13.5px;margin-top:20px;}
+.foot{padding:36px 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;max-width:1120px;margin:0 auto;}
+.foot a{color:#AEB6BB;margin-left:20px;}
+@media(max-width:640px){h1{font-size:31px;}.row,.out-grid{grid-template-columns:1fr;}.navlinks a:not(.nav-cta){display:none;}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap-wide nav">
+<a class="brand" href="../index.html"><span class="dot"></span>ForexGoldEA</a>
+<nav class="navlinks">
+<a href="../blog.html">Blog</a>
+<a href="./">Tools</a>
+<a class="nav-cta" href="../index.html#pricing">Get the EA free</a>
+</nav>
+</div>
+</header>
+
+<main class="wrap">
+<nav class="crumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="./">Tools</a> &rsaquo; Risk Calculator</nav>
+<div class="head">
+<div class="eyebrow">Free tool</div>
+<h1>Trading Risk Calculator</h1>
+<p class="lead">See exactly what a trade risks — in dollars and as a share of your account — plus the risk-to-reward ratio and what a losing streak would do to your balance. Built for gold and forex.</p>
+</div>
+
+<div class="calc">
+<div class="row">
+<div class="field">
+<label>Account balance</label>
+<div class="inp"><span id="curSym">$</span><input id="balance" type="number" inputmode="decimal" value="1000" min="0" step="any" /></div>
+</div>
+<div class="field">
+<label>Account currency</label>
+<div class="inp"><select id="currency">
+<option value="USD">USD ($)</option><option value="EUR">EUR (€)</option><option value="GBP">GBP (£)</option><option value="INR">INR (₹)</option><option value="AED">AED (د.إ)</option><option value="JPY">JPY (¥)</option>
+</select></div>
+</div>
+</div>
+<div class="row">
+<div class="field">
+<label>Risk per trade <span class="hint">(% of balance)</span></label>
+<div class="inp"><input id="riskpct" type="number" inputmode="decimal" value="1" min="0" step="any" /><span>%</span></div>
+</div>
+<div class="field">
+<label>Risk-to-reward <span class="hint">(reward ÷ risk)</span></label>
+<div class="inp"><span>1 :</span><input id="rr" type="number" inputmode="decimal" value="2" min="0" step="any" /></div>
+</div>
+</div>
+
+<div class="out">
+<div class="out-grid">
+<div class="stat"><span>Risk per trade</span><b id="riskAmt">$10.00</b></div>
+<div class="stat"><span>Reward if target hit</span><b id="rewardAmt">$20.00</b></div>
+<div class="stat"><span>Break-even win rate</span><b id="beWin">33%</b></div>
+</div>
+<div class="streak">
+<h3>Balance after a losing streak (at this risk)</h3>
+<div class="bars" id="bars"></div>
+</div>
+<div class="msg" id="msg"></div>
+</div>
+</div>
+
+<div class="cta">
+<p>Knowing your risk is step one — enforcing it on every trade is the hard part. ForexGoldEA applies a fixed risk-per-trade, a daily loss limit and a max drawdown ceiling automatically.</p>
+<a href="../index.html#pricing">Get the EA free →</a>
+</div>
+
+<div class="body">
+<h2>Why risk-per-trade decides everything</h2>
+<p>Your risk per trade is the single biggest lever on whether an account survives. At 2% risk, a five-trade losing streak costs about 10% — a bad week. At 10% risk, the same streak nearly halves the account and usually breaks the trader's discipline too. The bar chart above shows this compounding effect at your chosen numbers.</p>
+<h2>The break-even win rate</h2>
+<p>Risk-to-reward and win rate work together. With a 1:2 ratio you only need to win about 33% of trades to break even — which is why professionals obsess over reward relative to risk rather than trying to win every trade. The calculator shows the break-even win rate for your ratio automatically.</p>
+<div class="disc">Estimates only, for education. Assumes a fixed percentage risk per trade and does not include spread, commission, swap or slippage. Not financial advice. Trading gold and CFDs on margin carries a high risk of loss.</div>
+</div>
+
+<div class="related">
+<h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:24px;margin-bottom:8px;">Keep going</h2>
+<a href="gold-lot-size-calculator.html">→ Gold Lot Size Calculator — turn this risk into a lot size</a>
+<a href="pip-calculator.html">→ Gold Pip Calculator — convert pips and points to money</a>
+<a href="../what-is-martingale-grid-ea-pros-cons.html">→ Why martingale grid EAs blow up accounts</a>
+<a href="./">→ All free gold trading tools</a>
+</div>
+</main>
+
+<footer>
+<div class="foot">
+<span>© 2026 ForexGoldEA — powered by BBFxAi LLC.</span>
+<span><a href="../index.html">Home</a><a href="../blog.html">Blog</a><a href="../risk-disclaimer.html">Risk disclaimer</a></span>
+</div>
+</footer>
+
+<script>
+(function(){
+  var SYM={USD:'$',EUR:'€',GBP:'£',INR:'₹',AED:'د.إ',JPY:'¥'};
+  var $=function(id){return document.getElementById(id);};
+  function num(id){var v=parseFloat($(id).value);return isNaN(v)?0:v;}
+  function fmt(n){return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+  function fmt0(n){return n.toLocaleString('en-US',{maximumFractionDigits:0});}
+  function calc(){
+    var cur=$('currency').value, sym=SYM[cur]||'$';
+    $('curSym').textContent=sym;
+    var bal=num('balance'), riskPct=num('riskpct'), rr=num('rr');
+    var riskAmt=bal*riskPct/100;
+    var reward=riskAmt*rr;
+    var beWin=(rr>0)?100/(1+rr):0;
+    $('riskAmt').textContent=sym+fmt(riskAmt);
+    $('rewardAmt').textContent=sym+fmt(reward);
+    $('beWin').textContent=beWin.toFixed(0)+'%';
+    // losing streak 0..6
+    var bars=$('bars'); bars.innerHTML='';
+    var start=bal, maxLoss=1-riskPct/100;
+    for(var i=0;i<=6;i++){
+      var b=bal*Math.pow(maxLoss,i);
+      var h=(start>0)?(b/start*100):0;
+      var d=document.createElement('div'); d.className='bar'; d.style.height=Math.max(h,6)+'%';
+      d.innerHTML='<small>'+sym+fmt0(b)+'</small><em>'+(i===0?'now':'-'+i)+'</em>';
+      bars.appendChild(d);
+    }
+    var msg=$('msg');
+    if(bal<=0||riskPct<=0){msg.className='msg show bad';msg.textContent='Enter a balance and risk % greater than zero.';}
+    else if(riskPct>3){var after5=bal*Math.pow(maxLoss,5);msg.className='msg show bad';msg.textContent='At '+riskPct+'% risk, five losses in a row would leave about '+sym+fmt0(after5)+' ('+(100-after5/bal*100).toFixed(0)+'% drawdown). Most disciplined traders stay at 1–2%.';}
+    else{msg.className='msg show ok';msg.textContent='Disciplined. With a 1:'+rr+' reward-to-risk you only need to win '+beWin.toFixed(0)+'% of trades to break even.';}
+  }
+  ['balance','currency','riskpct','rr'].forEach(function(id){$(id).addEventListener('input',calc);$(id).addEventListener('change',calc);});
+  calc();
+})();
+</script>
+</body>
+</html>
