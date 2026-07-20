@@ -1,5 +1,12 @@
 [
   {
+    "title": "How to calculate lot size for XAUUSD (with worked examples)",
+    "url": "how-to-calculate-lot-size-xauusd.html",
+    "date": "2026-07-20",
+    "tag": "Position sizing",
+    "excerpt": "The exact formula — risk divided by stop distance times 100 — plus worked examples for $500, $1,000 and $2,000 gold accounts, and the pip/point trap to avoid."
+  },
+  {
     "title": "How much money do you need to run a gold EA? ($100 vs $500 vs $1,000)",
     "url": "how-much-money-to-run-gold-ea.html",
     "date": "2026-07-19",
