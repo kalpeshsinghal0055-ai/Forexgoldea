@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X82W5RGRLF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X82W5RGRLF');
+</script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<title>How to Set Risk Per Trade on a Gold EA (the 1% Rule) | ForexGoldEA</title>
+<meta name="description" content="How much should you risk per trade on a gold EA? The 1–2% rule explained for XAUUSD, how to convert it to a lot size, and why it keeps small accounts alive." />
+<meta name="keywords" content="gold ea risk per trade, risk per trade forex, 1% rule forex, xauusd risk management, how much to risk per trade gold, risk percent EA, position size gold" />
+<meta name="author" content="ForexGoldEA" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<meta name="theme-color" content="#0E1A1F" />
+<link rel="canonical" href="https://forexgoldea.com/how-to-set-risk-per-trade-gold-ea.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="ForexGoldEA" />
+<meta property="og:title" content="How to Set Risk Per Trade on a Gold EA (the 1% Rule)" />
+<meta property="og:description" content="The 1–2% risk-per-trade rule for XAUUSD, how to turn it into a lot size, and why it keeps small gold accounts alive." />
+<meta property="og:url" content="https://forexgoldea.com/how-to-set-risk-per-trade-gold-ea.html" />
+<meta property="og:image" content="https://forexgoldea.com/images/how-to-set-risk-per-trade-gold-ea.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="How to set risk per trade on a gold EA — the 1 percent rule for XAUUSD" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="How to Set Risk Per Trade on a Gold EA" />
+<meta name="twitter:description" content="The 1–2% rule for XAUUSD, converting it to a lot size, and why it keeps small gold accounts alive." />
+<meta name="twitter:image" content="https://forexgoldea.com/images/how-to-set-risk-per-trade-gold-ea.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BlogPosting",
+"headline": "How to Set Risk Per Trade on a Gold EA (the 1% Rule)",
+"description": "How much should you risk per trade on a gold EA? The 1–2% rule explained for XAUUSD, how to convert it to a lot size, and why it keeps small accounts alive.",
+"image": "https://forexgoldea.com/images/how-to-set-risk-per-trade-gold-ea.jpg",
+"author": { "@type": "Organization", "name": "ForexGoldEA", "url": "https://forexgoldea.com/" },
+"publisher": { "@type": "Organization", "name": "ForexGoldEA", "logo": { "@type": "ImageObject", "url": "https://forexgoldea.com/images/how-to-set-risk-per-trade-gold-ea.jpg" } },
+"mainEntityOfPage": { "@type": "WebPage", "@id": "https://forexgoldea.com/how-to-set-risk-per-trade-gold-ea.html" },
+"datePublished": "2026-07-22",
+"dateModified": "2026-07-22",
+"inLanguage": "en"
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{ "@type": "Question", "name": "How much should I risk per trade on a gold EA?", "acceptedAnswer": { "@type": "Answer", "text": "A widely used rule is risking 1 to 2 percent of your account balance per trade. On a $1,000 account that is $10 to $20 per trade. Keeping risk small is what lets an account survive the losing streaks every strategy eventually has." } },
+{ "@type": "Question", "name": "What is the 1% rule in trading?", "acceptedAnswer": { "@type": "Answer", "text": "The 1% rule means you never risk more than 1% of your account on a single trade. If the trade hits its stop-loss, you lose only 1% of the balance. It caps the damage of any one loss and is the foundation of surviving a losing streak." } },
+{ "@type": "Question", "name": "How do I turn a risk percentage into a lot size on XAUUSD?", "acceptedAnswer": { "@type": "Answer", "text": "First convert your risk percent to dollars (for example 1% of $1,000 is $10). Then divide that by the stop-loss distance in dollars, and divide again by 100 for the gold contract size. Risk $10 with a $5 stop gives 10 divided by 500, which is 0.02 lots." } },
+{ "@type": "Question", "name": "Should I risk more per trade to grow the account faster?", "acceptedAnswer": { "@type": "Answer", "text": "No. Raising risk per trade increases how fast a losing streak destroys the account far more than it speeds up growth. At 10% risk, five losses in a row halve the balance. Slow, survivable risk beats fast, fragile risk." } },
+{ "@type": "Question", "name": "Does a gold EA set risk per trade automatically?", "acceptedAnswer": { "@type": "Answer", "text": "If the EA has a risk-percent setting, yes. It reads the current balance and the stop distance and sizes each trade so the loss matches your chosen percentage. A fixed-lot setting does not adapt, so the effective risk drifts as the account changes." } }
+]
+}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://forexgoldea.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://forexgoldea.com/blog.html"}, {"@type": "ListItem", "position": 3, "name": "How to set risk per trade on a gold EA", "item": "https://forexgoldea.com/how-to-set-risk-per-trade-gold-ea.html"}]}
+</script>
+<style>
+:root{--paper:#FFFFFF;--paper-2:#F7F5EF;--ink:#0E1A1F;--ink-soft:#5A656B;--line:#E8E4DA;--gold-deep:#8C6718;--gold-soft:#F4EACF;--serif:'Instrument Serif',Georgia,serif;--sans:'Instrument Sans',system-ui,sans-serif;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+.topbar{border-bottom:1px solid var(--line);padding:16px 0;}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;max-width:1120px;margin:0 auto;padding:0 24px;}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:600;font-size:19px;}
+.btn{font-family:var(--sans);font-weight:500;font-size:16px;display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;}
+.btn-primary{background:var(--ink);color:#fff;}
+article{padding:48px 0 24px;}
+.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:14px;}
+h1{font-family:var(--serif);font-weight:400;font-size:42px;line-height:1.12;margin:0 0 18px;}
+h2{font-family:var(--serif);font-weight:400;font-size:28px;margin:38px 0 12px;}
+p{margin:0 0 18px;}
+.lead{font-size:20px;color:var(--ink-soft);}
+ul{margin:0 0 18px;padding-left:22px;}
+li{margin-bottom:8px;}
+.callout{background:var(--gold-soft);border-radius:14px;padding:22px 24px;margin:28px 0;}
+.callout p{margin:0;}
+.cta{background:var(--paper-2);border-radius:16px;padding:28px;text-align:center;margin:40px 0;}
+.cta p{margin:0 0 14px;}
+.meta{color:var(--ink-soft);font-size:14px;margin-bottom:30px;}
+.faq h3{font-size:18px;margin:22px 0 6px;}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--ink-soft);font-size:14px;margin-top:40px;}
+a{color:var(--gold-deep);}
+.disc{font-size:13px;color:var(--ink-soft);margin-top:30px;border-top:1px solid var(--line);padding-top:18px;}
+.tbl{width:100%;border-collapse:collapse;margin:24px 0;font-size:15.5px;}
+.tbl th,.tbl td{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top;}
+.tbl th{background:var(--paper-2);font-weight:600;}
+.tbl-wrap{overflow-x:auto;}
+.formula{background:var(--ink);color:#fff;border-radius:14px;padding:26px 24px;margin:26px 0;text-align:center;font-family:var(--serif);font-size:24px;line-height:1.5;}
+.formula small{display:block;font-family:var(--sans);font-size:13px;opacity:.7;margin-top:10px;letter-spacing:.04em;}
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="topbar-in">
+<a class="brand" href="index.html"><span>ForexGoldEA</span></a>
+<a class="btn btn-primary" href="index.html#pricing">Get the EA</a>
+</div>
+</header>
+<main class="wrap">
+<article>
+<nav aria-label="Breadcrumb" style="font-size:13px;margin:0 0 18px;opacity:.8;"><a href="index.html">Home</a> &rsaquo; <a href="blog.html">Blog</a></nav>
+<div class="eyebrow">Risk management</div>
+<h1>How to Set Risk Per Trade on a Gold EA</h1>
+<div class="meta">Guide by ForexGoldEA &middot; July 22, 2026 &middot; about 6 min read</div>
+<img class="article-hero" src="images/how-to-set-risk-per-trade-gold-ea.jpg" alt="Shield and percentage dial — how to set risk per trade on a gold EA using the 1 percent rule" width="1200" height="630" style="width:100%;height:auto;border-radius:14px;margin:6px 0 26px;" />
+<p class="lead">Almost every blown gold account has the same cause — not a bad strategy, but too much risk on each trade. Get this one setting right and an average EA can survive; get it wrong and even a great EA will eventually wipe the account. Here is exactly how to set risk per trade on XAU/USD, in plain numbers.</p>
+
+<h2>The rule: 1–2% per trade</h2>
+<p>The single most important number in your whole setup is <strong>how many dollars you're willing to lose on one trade</strong>. The widely used standard is <strong>1–2% of the account balance</strong>. On a $1,000 account that's just $10–$20 per trade.</p>
+<p>Why so small? Because losing streaks are normal, not exceptional. Even a strategy that wins more often than it loses will hit four or five losers in a row eventually. The table below shows why the percentage you pick is a survival decision, not a growth decision:</p>
+<div class="tbl-wrap">
+<table class="tbl">
+<tr><th>Risk per trade</th><th>Loss after 5 losers in a row</th><th>What it does to you</th></tr>
+<tr><td><strong>1%</strong></td><td>~5% of account</td><td>Barely noticeable — the EA keeps working.</td></tr>
+<tr><td><strong>2%</strong></td><td>~10% of account</td><td>Uncomfortable but fully survivable.</td></tr>
+<tr><td><strong>5%</strong></td><td>~23% of account</td><td>Painful — recovery gets hard.</td></tr>
+<tr><td><strong>10%</strong></td><td>~41% of account</td><td>Account and discipline both break.</td></tr>
+</table>
+</div>
+<div class="callout">
+<p><strong>The key idea:</strong> lowering risk per trade barely slows your growth, but it dramatically increases how many losses in a row you can survive. Slow and survivable beats fast and fragile — every time.</p>
+</div>
+
+<h2>Turning "1%" into an actual lot size</h2>
+<p>A percentage means nothing until it becomes a lot size the EA can trade. On XAU/USD it's three quick steps:</p>
+<div class="formula">
+Lot size = (Balance × Risk %) ÷ (Stop distance $ × 100)
+<small>100 = ounces per standard gold lot</small>
+</div>
+<ol>
+<li><strong>Risk % → dollars.</strong> 1% of a $1,000 account = $10.</li>
+<li><strong>Measure the stop-loss in dollars.</strong> Not pips — the actual price distance. Entry $2,400, stop $2,395 = a $5.00 distance.</li>
+<li><strong>Apply the formula.</strong> $10 ÷ ($5 × 100) = 0.02 lots.</li>
+</ol>
+<p>Check it: 0.02 lots is 2 ounces, so a $5 move against you is 2 × $5 = $10 — exactly the 1% you set. Prefer not to do the math each time? Our <a href="tools/risk-calculator.html">gold risk calculator</a> gives the dollar risk instantly, and the <a href="tools/gold-lot-size-calculator.html">lot size calculator</a> turns it straight into the correct trade size. The full walk-through is in our <a href="how-to-calculate-lot-size-xauusd.html">lot size guide</a>.</p>
+
+<h2>Worked examples</h2>
+<div class="tbl-wrap">
+<table class="tbl">
+<tr><th>Account</th><th>Risk</th><th>Stop distance</th><th>Lot size</th></tr>
+<tr><td>$500</td><td>1% = $5</td><td>$5.00</td><td>0.01</td></tr>
+<tr><td>$1,000</td><td>1% = $10</td><td>$5.00</td><td>0.02</td></tr>
+<tr><td>$2,000</td><td>2% = $40</td><td>$8.00</td><td>0.05</td></tr>
+</table>
+</div>
+<p>Notice the pattern: as the stop gets wider, the lot size gets <em>smaller</em> to keep the same dollar risk. That's the whole point — the risk stays constant even when the setup changes.</p>
+
+<h2>Beyond per-trade: two more limits that matter</h2>
+<p>Risk per trade controls a single loss. Two more settings control a bad <em>run</em> of losses:</p>
+<ul>
+<li><strong>Daily loss limit.</strong> A cap (say 4–6%) that pauses the EA after a bad day, so one ugly session can't spiral.</li>
+<li><strong>Maximum drawdown ceiling.</strong> A hard stop (say 15–20%) that shuts the EA down entirely — the circuit breaker between a bad month and a blown account.</li>
+</ul>
+<p>Together these three — per-trade risk, daily limit, drawdown ceiling — are what "risk management" actually means in practice. For how account size affects all of this, see <a href="how-much-money-to-run-gold-ea.html">how much money you need to run a gold EA</a>.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+<li><strong>Using a fixed lot forever.</strong> 0.10 lots that suited $5,000 is reckless on $800 after a drawdown. Risk should scale with the balance.</li>
+<li><strong>Risking to "make it back."</strong> Doubling risk after a loss is how accounts die fastest.</li>
+<li><strong>Ignoring the stop distance.</strong> A wider stop needs a smaller lot — same risk, different size.</li>
+<li><strong>Confusing risk with leverage.</strong> Leverage sets margin, not your loss. Risk comes from lot size × stop distance.</li>
+</ul>
+
+<h2>How ForexGoldEA handles it</h2>
+<p>If your EA has a <strong>risk-percent</strong> setting, it runs this exact calculation on every single trade — reading the current balance, measuring the stop the strategy chose, and sizing so your loss matches the percentage you set. You set it once (say 1%) and never think in lots again. That's the real advantage of automation: the machine enforces the discipline that humans abandon after two losses.</p>
+
+<div class="cta">
+<p><strong>Want your risk set correctly, automatically?</strong></p>
+<p>Use our free gold risk calculator to see the numbers, or get ForexGoldEA and set risk as a percentage — it sizes every trade for you.</p>
+<a class="btn btn-primary" href="tools/risk-calculator.html">Open the Risk Calculator</a>
+    <a href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener" style="display:inline-block; margin-left:12px; margin-top:12px; background:#1C2226; color:#fff; padding:13px 26px; border-radius:10px; font-weight:600;">Talk to us on Telegram →</a>
+</div>
+
+<div class="faq">
+<h2>Frequently asked questions</h2>
+<h3>How much should I risk per trade on a gold EA?</h3>
+<p>1–2% of the balance per trade. On $1,000 that's $10–$20. Small risk is what survives the losing streaks every strategy eventually has.</p>
+<h3>What is the 1% rule?</h3>
+<p>Never risk more than 1% of the account on a single trade, so any one loss costs just 1% of the balance. It's the foundation of surviving a losing run.</p>
+<h3>How do I turn a risk percentage into a lot size?</h3>
+<p>Risk % → dollars, divide by the stop distance in dollars, divide by 100 (gold contract size). $10 risk with a $5 stop = 0.02 lots.</p>
+<h3>Should I risk more to grow faster?</h3>
+<p>No. Higher risk speeds up losing streaks far more than growth. At 10% risk, five losses halve the account.</p>
+<h3>Does the EA set risk automatically?</h3>
+<p>If it has a risk-percent setting, yes — it sizes every trade to match your chosen percentage. A fixed lot does not adapt.</p>
+</div>
+
+<div class="related-guides" style="margin:36px 0 8px;">
+<h2>Related guides</h2>
+<ul>
+<li><a href="how-to-calculate-lot-size-xauusd.html">How to calculate lot size for XAUUSD (with worked examples)</a></li>
+<li><a href="how-much-money-to-run-gold-ea.html">How much money do you need to run a gold EA? ($100 vs $500 vs $1,000)</a></li>
+<li><a href="how-much-is-a-pip-in-gold-xauusd.html">How much is a pip in gold? XAUUSD pip &amp; point value explained</a></li>
+<li><a href="tools/">Free gold trading calculators &amp; tools &rarr;</a></li>
+<li><a href="blog.html">All gold EA &amp; XAUUSD guides &rarr;</a></li>
+</ul>
+</div>
+
+<p class="disc">Risk disclosure: Trading foreign exchange and CFDs on margin, including gold (XAU/USD), carries a high level of risk and may not be suitable for every investor. You can lose some or all of your capital. Figures here are illustrative examples using a 100-ounce standard contract — confirm your broker's contract specification. Correct risk sizing controls the size of a loss; it does not prevent losses. ForexGoldEA is a trading tool, not financial advice.</p>
+</article>
+</main>
+<footer>
+<div class="wrap">
+<p>&copy; 2026 ForexGoldEA &mdash; powered by BBFxAi LLC. Trade gold. Automate success.</p>
+</div>
+</footer>
+</body>
+</html>
