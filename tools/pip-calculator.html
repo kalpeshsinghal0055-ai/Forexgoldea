@@ -36,10 +36,17 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://forexgoldea.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://forexgoldea.com/tools/"},{"@type":"ListItem","position":3,"name":"Gold Pip Calculator","item":"https://forexgoldea.com/tools/pip-calculator.html"}]}
 </script>
 <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Gold Pip Calculator (XAUUSD)","url":"https://forexgoldea.com/tools/pip-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free XAUUSD pip value calculator: convert pips, points and dollar price moves into money for any lot size and account currency on MT4 and MT5.","publisher":{"@type":"Organization","name":"ForexGoldEA"}}
+</script>
+<script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"How much is one pip in gold (XAUUSD)?","acceptedAnswer":{"@type":"Answer","text":"On most brokers a pip on gold is a $0.10 move in price. For one standard lot (100 ounces) that is worth about $10 per pip; for 0.01 lots it is about $0.10 per pip. Some brokers quote gold in points, where 1 point equals a $0.01 move."}},
 {"@type":"Question","name":"What is the difference between a pip and a point on gold?","acceptedAnswer":{"@type":"Answer","text":"A pip on XAUUSD is usually a $0.10 price move, while a point (or cent) is a $0.01 move. So 1 pip equals 10 points. Always check whether your broker and EA count in pips or points."}},
-{"@type":"Question","name":"How do I calculate pip value for XAUUSD?","acceptedAnswer":{"@type":"Answer","text":"Multiply the price move by the contract size. One lot of gold is 100 ounces, so a $1 move equals $100 per lot. A $0.10 pip therefore equals $10 per lot, scaled by your actual lot size."}}]}
+{"@type":"Question","name":"How do I calculate pip value for XAUUSD?","acceptedAnswer":{"@type":"Answer","text":"Multiply the price move by the contract size. One lot of gold is 100 ounces, so a $1 move equals $100 per lot. A $0.10 pip therefore equals $10 per lot, scaled by your actual lot size."}},
+{"@type":"Question","name":"How much is a pip on gold at 0.01 lots?","acceptedAnswer":{"@type":"Answer","text":"At 0.01 lots (1 ounce), a $0.10 pip is worth about $0.10 and a full $1.00 move in the gold price is worth about $1.00. It is the simplest size to reason about and the smallest most brokers allow."}},
+{"@type":"Question","name":"Is a pip on gold the same as a pip on forex pairs?","acceptedAnswer":{"@type":"Answer","text":"No. On most forex pairs a pip is the fourth decimal place (0.0001) of the exchange rate. Gold is quoted in dollars and cents, so brokers define a pip as a $0.10 move instead. That is why a forex pip calculator gives wrong answers for XAUUSD."}},
+{"@type":"Question","name":"How do I convert a gold stop-loss from pips to dollars?","acceptedAnswer":{"@type":"Answer","text":"Multiply the pip distance by $0.10 to get the price distance, then by your ounces (lots x 100). Example: a 50-pip stop is a $5.00 price move; at 0.02 lots (2 oz) that is a $10 risk."}},
+{"@type":"Question","name":"Why does my broker show a different pip value?","acceptedAnswer":{"@type":"Answer","text":"A few brokers use a non-standard contract size, quote gold with an extra digit, or apply currency conversion for non-USD accounts. Check the XAUUSD contract specification in MetaTrader (right-click the symbol, then Specification) and compare its tick value."}}]}
 </script>
 <style>
 :root{--paper:#FBFAF7;--card:#FFFFFF;--ink:#1C2226;--soft:#4A5258;--line:#E9E5DC;--gold:#A37E2C;--gold-l:#EFD48F;--gold-soft:#F4EACF;--good:#1f7a4d;--warn:#b4472b;}
@@ -169,8 +176,43 @@ footer{background:#1C2226;color:#AEB6BB;font-size:13.5px;margin-top:20px;}
 <tr><td>$1 move</td><td>$1.00</td><td>$100</td></tr>
 </table>
 <p>So 1 pip = 10 points, and a full $1 move in gold = 10 pips = 100 points. Scale any of these by your lot size to get the money value. At 0.10 lots, a 100-pip move ($10 of price) is worth $100.</p>
+<h2>Pip value by lot size (cheat sheet)</h2>
+<table>
+<tr><th>Lot size</th><th>Ounces</th><th>1 pip ($0.10)</th><th>1 point ($0.01)</th><th>$1 move</th></tr>
+<tr><td>0.01</td><td>1</td><td>$0.10</td><td>$0.01</td><td>$1</td></tr>
+<tr><td>0.05</td><td>5</td><td>$0.50</td><td>$0.05</td><td>$5</td></tr>
+<tr><td>0.10</td><td>10</td><td>$1.00</td><td>$0.10</td><td>$10</td></tr>
+<tr><td>0.50</td><td>50</td><td>$5.00</td><td>$0.50</td><td>$50</td></tr>
+<tr><td>1.00</td><td>100</td><td>$10.00</td><td>$1.00</td><td>$100</td></tr>
+</table>
+
+<h2>Gold pips vs forex pips — why they're different</h2>
+<p>This is the trap that catches almost everyone coming from currency pairs. On most forex pairs, a pip is the <strong>fourth decimal place</strong> of the exchange rate (0.0001 on EUR/USD). Gold isn't an exchange rate — it's a dollar price with cents — so brokers define a pip on XAUUSD as a <strong>$0.10 move</strong> instead. A generic forex pip calculator will therefore give you wrong answers for gold. If you want the full explanation with examples, we wrote it up here: <a href="../how-much-is-a-pip-in-gold-xauusd.html">how much is a pip in gold?</a></p>
+
+<h2>Worked examples</h2>
+<p><strong>Stop-loss conversion:</strong> your strategy uses a 50-pip stop on gold. 50 pips × $0.10 = a <strong>$5.00 price move</strong>. At 0.02 lots (2 oz) that stop risks 5.00 × 2 = <strong>$10</strong>. At 0.10 lots it risks $50.</p>
+<p><strong>Take-profit check:</strong> your EA reports +300 points on a 0.10-lot trade. 300 points = $3.00 of price × 10 oz = <strong>$30 profit</strong>. The same trade described in pips would be "+30 pips" — same money, different unit.</p>
+<p><strong>Sizing backwards:</strong> you're willing to risk $20 on a $4.00 (40-pip) stop. $20 ÷ ($4.00 × 100) = 0.05 lots. That's exactly what our <a href="gold-lot-size-calculator.html">lot size calculator</a> automates.</p>
+
 <h2>Why this matters for an EA</h2>
-<p>If your EA's stop-loss is set in "points" but you think in "pips", you can accidentally risk 10× what you intended. Always confirm which unit your EA and broker use before going live — the difference is an order of magnitude.</p>
+<p>If your EA's stop-loss is set in "points" but you think in "pips", you can accidentally risk 10× what you intended. Always confirm which unit your EA and broker use before going live — the difference is an order of magnitude. Pair this calculator with a proper <a href="../how-to-set-risk-per-trade-gold-ea.html">risk-per-trade rule</a> and the sizing takes care of itself.</p>
+
+<h2>Frequently asked questions</h2>
+<h3 style="font-size:18px;font-weight:700;margin:18px 0 6px;">How much is one pip in gold (XAUUSD)?</h3>
+<p>Usually a $0.10 price move — worth ~$10 per standard lot (100 oz) and ~$0.10 at 0.01 lots.</p>
+<h3 style="font-size:18px;font-weight:700;margin:18px 0 6px;">What's the difference between a pip and a point on gold?</h3>
+<p>Pip = $0.10 move, point (cent) = $0.01 move, so 1 pip = 10 points. Platforms and EAs often count gold in points.</p>
+<h3 style="font-size:18px;font-weight:700;margin:18px 0 6px;">How do I calculate pip value for XAUUSD?</h3>
+<p>Price move × ounces. One lot = 100 oz, so a $1 move = $100 per lot and a $0.10 pip = $10 per lot, scaled by lot size.</p>
+<h3 style="font-size:18px;font-weight:700;margin:18px 0 6px;">How much is a pip at 0.01 lots?</h3>
+<p>About $0.10 per pip, and about $1 for a full $1.00 move in the gold price.</p>
+<h3 style="font-size:18px;font-weight:700;margin:18px 0 6px;">Is a gold pip the same as a forex pip?</h3>
+<p>No — forex pips are the fourth decimal (0.0001); gold pips are a $0.10 dollar move. Generic forex calculators get gold wrong.</p>
+<h3 style="font-size:18px;font-weight:700;margin:18px 0 6px;">How do I convert a gold stop-loss from pips to dollars?</h3>
+<p>Pips × $0.10 = price distance; then × your ounces. A 50-pip stop at 0.02 lots = $5.00 × 2 = $10 risk.</p>
+<h3 style="font-size:18px;font-weight:700;margin:18px 0 6px;">Why does my broker show a different pip value?</h3>
+<p>Non-standard contract sizes, extra-digit quotes or account-currency conversion. Check the XAUUSD specification in MetaTrader and its tick value.</p>
+
 <div class="disc">Estimates only. Contract size and tick value can differ by broker and account type — confirm your XAUUSD symbol specification in MetaTrader. Not financial advice. Trading gold on margin carries a high risk of loss.</div>
 </div>
 
