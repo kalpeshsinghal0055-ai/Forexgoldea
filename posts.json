@@ -1,5 +1,12 @@
 [
   {
+    "title": "How to backtest a gold EA: data, spreads and honest results",
+    "url": "how-to-backtest-gold-ea.html",
+    "date": "2026-07-23",
+    "tag": "Testing Guide",
+    "excerpt": "Tick data and modelling quality, realistic spreads, how long to test, the metrics that matter, and why forward testing is the only real proof."
+  },
+  {
     "title": "Are gold trading EAs actually profitable? An honest look",
     "url": "are-gold-trading-eas-profitable.html",
     "date": "2026-07-23",

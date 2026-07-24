@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X82W5RGRLF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X82W5RGRLF');
+</script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<title>How to Backtest a Gold EA Properly (MT4 &amp; MT5)</title>
+<meta name="description" content="How to backtest a gold EA the right way on MT4 and MT5 — tick data and modelling quality, realistic spreads, test length, the metrics that matter, and forward testing." />
+<meta name="keywords" content="how to backtest a gold EA, backtest EA MT4, MT5 strategy tester, XAUUSD backtest, modelling quality, EA forward testing" />
+<meta name="author" content="ForexGoldEA" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://forexgoldea.com/how-to-backtest-gold-ea.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Backtest a Gold EA Properly (MT4 &amp; MT5)" />
+<meta property="og:description" content="Tick data, modelling quality, realistic spreads, the metrics that matter, and why forward testing is the only real proof." />
+<meta property="og:url" content="https://forexgoldea.com/how-to-backtest-gold-ea.html" />
+<meta property="og:image" content="https://forexgoldea.com/images/how-to-backtest-gold-ea.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="How to Backtest a Gold EA Properly" />
+<meta name="twitter:description" content="Data quality, realistic spreads, forward testing — and why most gold EA backtests lie." />
+<meta name="twitter:image" content="https://forexgoldea.com/images/how-to-backtest-gold-ea.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: #FBFAF7; }
+  body { font-family: 'Public Sans', sans-serif; color: #1C2226; -webkit-font-smoothing: antialiased; line-height: 1.7; }
+  a { color: #8A6A1F; text-decoration: none; } a:hover { color: #6E5316; }
+  * { box-sizing: border-box; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  article h2 { font-family: 'Newsreader', serif; font-size: 27px; font-weight: 500; letter-spacing: -0.01em; margin: 40px 0 12px; line-height: 1.2; }
+  article h3 { font-size: 18.5px; font-weight: 700; margin: 24px 0 6px; }
+  article p, article li { font-size: 16.5px; color: #2E3840; }
+  article ol, article ul { padding-left: 22px; } article li { margin-bottom: 8px; }
+  .cta { display: inline-block; background: #A37E2C; color: #fff; padding: 13px 26px; border-radius: 10px; font-weight: 600; } .cta:hover { background: #8A6A1F; color:#fff; }
+  .note { background: #F3EEE2; border: 1px solid #E2D9C2; border-radius: 12px; padding: 16px 18px; font-size: 15px; color: #4A5258; }
+  .answer { background: #F3EEE2; border: 1px solid #E2D9C2; border-left: 3px solid #A37E2C; border-radius: 12px; padding: 18px 20px; margin: 22px 0; font-size: 16px; color: #2E3840; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0 4px; font-size: 15px; }
+  th, td { border: 1px solid #E9E5DC; padding: 10px 12px; text-align: left; vertical-align: top; }
+  th { background: #F3EEE2; font-weight: 600; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Backtest a Gold EA: Data, Spreads and Honest Results",
+  "description": "A practical guide to backtesting a gold (XAUUSD) expert advisor on MT4 and MT5 — tick data and modelling quality, realistic spreads, test length, the metrics that matter, over-optimisation, and forward testing.",
+  "datePublished": "2026-07-23",
+  "dateModified": "2026-07-23",
+  "author": { "@type": "Organization", "name": "ForexGoldEA" },
+  "publisher": { "@type": "Organization", "name": "ForexGoldEA", "logo": { "@type": "ImageObject", "url": "https://forexgoldea.com/images/how-to-backtest-gold-ea.jpg" } },
+  "mainEntityOfPage": "https://forexgoldea.com/how-to-backtest-gold-ea.html",
+  "image": "https://forexgoldea.com/images/how-to-backtest-gold-ea.jpg"
+}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://forexgoldea.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://forexgoldea.com/blog.html"}, {"@type": "ListItem", "position": 3, "name": "How to backtest a gold EA properly", "item": "https://forexgoldea.com/how-to-backtest-gold-ea.html"}]}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I backtest a gold EA on MT4 or MT5?", "acceptedAnswer": {"@type": "Answer", "text": "Open the Strategy Tester in MetaTrader, select the EA and the XAUUSD symbol, choose a timeframe and date range, set the modelling to every tick (real ticks on MT5), enter a realistic spread, and run the test. Then review the report — especially the maximum drawdown — before trusting the result."}}, {"@type": "Question", "name": "What modelling quality should a gold EA backtest have?", "acceptedAnswer": {"@type": "Answer", "text": "On MT4, aim for 90% modelling quality at minimum, and 99% if you import real tick data. On MT5, use the every tick based on real ticks mode, which is more accurate. Anything below 90% on MT4 is too rough to trust for a gold EA."}}, {"@type": "Question", "name": "Why do gold EA backtests look better than live results?", "acceptedAnswer": {"@type": "Answer", "text": "Backtests usually assume a fixed, tight spread and perfect fills. In reality gold spreads widen sharply around news and the daily rollover, and slippage is real. Over-optimising settings to fit past data makes the gap worse. That is why a backtest is a hypothesis, not proof."}}, {"@type": "Question", "name": "How long should I backtest a gold EA?", "acceptedAnswer": {"@type": "Answer", "text": "Test at least one to three years so the EA meets different market conditions — trending, ranging, high and low volatility. A short test over one favourable period tells you almost nothing about how the robot behaves when conditions change."}}, {"@type": "Question", "name": "What backtest metrics actually matter?", "acceptedAnswer": {"@type": "Answer", "text": "Maximum drawdown matters most, because it shows the worst losing stretch you would have had to sit through. Then look at profit factor, the number of trades (a large enough sample), and whether the equity curve is smooth or driven by a few lucky trades. Total profit alone is the least useful number."}}, {"@type": "Question", "name": "What is over-optimisation or curve fitting?", "acceptedAnswer": {"@type": "Answer", "text": "It is tuning an EA's settings until it looks perfect on past data. The result fits history rather than the market, so it usually falls apart on new data. Test your chosen settings on a period you did not optimise on, and prefer robust settings that work reasonably across many values."}}, {"@type": "Question", "name": "Is a backtest enough before going live?", "acceptedAnswer": {"@type": "Answer", "text": "No. After a backtest, run the EA on a demo account in live market conditions for several weeks. Forward testing is the only way to see real spreads, slippage and execution. Only then consider a small live account."}}]}</script>
+</head>
+<body>
+
+<header style="border-bottom: 1px solid #E9E5DC; background: rgba(251,250,247,0.92);">
+  <div class="wrap" style="max-width: 1120px; height: 64px; display: flex; align-items: center; gap: 10px;">
+    <a href="index.html" style="display:flex; align-items:center; gap:10px; color:#1C2226;">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-label="ForexGoldEA"><defs><radialGradient id="fg" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#EFD48F"/><stop offset="100%" stop-color="#A37E2C"/></radialGradient></defs><circle cx="20" cy="20" r="18" fill="url(#fg)" stroke="#8A6A1F" stroke-width="2"/><path d="M13 25 L18 18 L23 22 L28 14" fill="none" stroke="#FBFAF7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span style="font-weight:700;">ForexGoldEA</span>
+    </a>
+    <nav style="margin-left:auto; font-size:14.5px; font-weight:500;"><a href="blog.html" style="color:#4A5258;">← All posts</a><a href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener" style="margin-left:16px; background:#A37E2C; color:#fff; padding:8px 15px; border-radius:8px; font-weight:600;">Talk to us</a></nav>
+  </div>
+</header>
+
+<article class="wrap" style="padding: 48px 24px 40px;">
+<nav aria-label="Breadcrumb" style="font-size:13px;margin:0 0 18px;opacity:.8;"><a href="index.html">Home</a> &rsaquo; <a href="blog.html">Blog</a></nav>
+  <div style="font-size: 13px; color: #A37E2C; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;">Testing Guide · July 23, 2026</div>
+  <h1 style="font-family: 'Newsreader', serif; font-size: 40px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.12; margin: 12px 0 20px;">How to backtest a gold EA: data, spreads and honest results</h1>
+<img class="article-hero" src="images/how-to-backtest-gold-ea.jpg" alt="How to backtest a gold EA properly on MT4 and MT5" width="1200" height="630" style="width:100%;height:auto;border-radius:14px;margin:6px 0 26px;" />
+  <p style="font-size: 18px; color: #4A5258;">Every gold robot comes with a beautiful backtest. Almost none of them survive contact with the live market in the same shape. The gap isn't usually dishonesty — it's testing done badly. Here's how to run a backtest that actually tells you something.</p>
+
+<div class="answer"><strong>Quick answer:</strong> To backtest a gold EA properly, use <strong>high-quality tick data</strong> (99% modelling quality on MT4, or "real ticks" on MT5), set a <strong>realistic variable spread</strong> rather than a tight fixed one, test over <strong>1–3 years covering different market conditions</strong>, and judge it by <strong>maximum drawdown</strong> — not total profit. Then forward-test on demo, because that's the only real proof.</div>
+
+  <h2>Why most gold EA backtests are misleading</h2>
+  <p>A backtest replays history against your EA's rules. That sounds objective, but three assumptions quietly inflate the result:</p>
+  <ul>
+    <li><strong>Perfect spreads.</strong> Testers typically apply a fixed, tight spread. Real gold spreads widen sharply around news and the daily rollover.</li>
+    <li><strong>Perfect fills.</strong> No slippage, no requotes, no latency — none of which is true live.</li>
+    <li><strong>Hindsight tuning.</strong> Settings get adjusted until the curve looks great <em>on that data</em>.</li>
+  </ul>
+  <p>Gold makes all three worse than usual, because XAU/USD is more volatile and more spread-sensitive than a major forex pair. That's why a robot can show a flawless backtest and still lose live — a point we covered in <a href="are-gold-trading-eas-profitable.html">are gold trading EAs actually profitable?</a></p>
+
+  <h2>Step 1 — Start with quality data</h2>
+  <p>Garbage data produces confident nonsense. What to aim for:</p>
+  <ul>
+    <li><strong>MT4:</strong> at least <strong>90% modelling quality</strong>; 99% if you import real tick data with a tool like Tickstory or TDS.</li>
+    <li><strong>MT5:</strong> use <strong>"Every tick based on real ticks"</strong> — it's more accurate than MT4's modelled ticks and runs multi-threaded.</li>
+  </ul>
+  <div class="note"><strong>Rule:</strong> if your MT4 report shows modelling quality below 90%, the result isn't worth interpreting for a gold EA — the tester is inventing ticks between M1 bars.</div>
+
+  <h2>Step 2 — Use a realistic spread</h2>
+  <p>This is the single biggest fixable error. Testing gold at a 10-point fixed spread when your broker averages 20–30 (and 100+ at news) will flatter almost any strategy — and it destroys fast strategies completely.</p>
+  <p>Set the spread to your broker's <em>realistic average</em> for XAUUSD, or use variable/real spread if your data supports it. Then re-run the test with a spread <strong>50% worse</strong> than average. If profitability disappears, the edge was never robust.</p>
+
+  <h2>Step 3 — Test long enough, across different conditions</h2>
+  <p>One good year proves nothing. Aim for <strong>1–3 years minimum</strong>, and make sure the window includes:</p>
+  <ul>
+    <li>A strong trending phase and a choppy ranging phase</li>
+    <li>At least one high-volatility shock period</li>
+    <li>Enough trades to be statistically meaningful — a few dozen is not a sample</li>
+  </ul>
+
+  <h2>Step 4 — Read the right numbers</h2>
+  <table>
+    <tr><th>Metric</th><th>Why it matters</th></tr>
+    <tr><td><strong>Maximum drawdown</strong></td><td>The worst losing stretch you'd have to sit through. The most important number by far.</td></tr>
+    <tr><td><strong>Profit factor</strong></td><td>Gross profit ÷ gross loss. Below ~1.2 is fragile; suspiciously high often means curve fitting.</td></tr>
+    <tr><td><strong>Number of trades</strong></td><td>Small samples are luck, not evidence.</td></tr>
+    <tr><td><strong>Equity curve shape</strong></td><td>Smooth and gradual beats a curve made by two lucky trades.</td></tr>
+    <tr><td><strong>Total profit</strong></td><td>The least useful number on its own — it's what marketing shows you.</td></tr>
+  </table>
+  <p>Once you know the drawdown, you can size properly — see <a href="how-to-set-risk-per-trade-gold-ea.html">how to set risk per trade on a gold EA</a>.</p>
+
+  <h2>Step 5 — Avoid over-optimisation (curve fitting)</h2>
+  <p>Optimisation finds the settings that would have worked best <em>in the past</em>. Push it far enough and you've fitted history, not the market. Two safeguards:</p>
+  <ol>
+    <li><strong>Out-of-sample testing.</strong> Optimise on one period, then test those settings on a separate period you never touched.</li>
+    <li><strong>Prefer robust settings.</strong> If a parameter only works at exactly 14 and collapses at 13 or 15, that's a fluke — pick values that work across a range.</li>
+  </ol>
+  <div class="note">Be especially sceptical of martingale or grid EAs with perfect backtests — their risk hides in the rare sequence that history didn't contain. See <a href="what-is-martingale-grid-ea-pros-cons.html">what is a martingale grid EA</a>.</div>
+
+  <h2>Step 6 — Forward test on demo (the only real proof)</h2>
+  <p>After the backtest, run the EA on a <strong>demo account for several weeks</strong> in current conditions. This is where real spreads, slippage, execution and news behaviour show up — none of which a tester can fully model. If demo results roughly match the backtest's character (not its exact profit), you have something worth a small live account.</p>
+  <p>Need to get the EA installed first? See <a href="install-ea-mt4-mt5.html">how to install a gold EA on MT4 &amp; MT5</a> or the <a href="xauusd-ea-mt5-setup.html">MT5 setup guide</a>.</p>
+
+  <h2>MT4 vs MT5 for backtesting</h2>
+  <p>Both work, but MT5's tester is meaningfully better for gold: it supports real tick data natively, runs multi-threaded (much faster), and handles multi-symbol testing. MT4 can reach 99% quality but needs imported tick data and more setup. If you have the choice, backtest on MT5.</p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>How do I backtest a gold EA on MT4 or MT5?</h3>
+  <p>Open the Strategy Tester, pick the EA and XAUUSD, set the date range, use every-tick (real ticks on MT5) modelling and a realistic spread, then run it and review the report — starting with maximum drawdown.</p>
+  <h3>What modelling quality should it have?</h3>
+  <p>90% minimum on MT4, 99% with imported real tick data. On MT5 use "every tick based on real ticks". Below 90% on MT4 isn't trustworthy for gold.</p>
+  <h3>Why do backtests look better than live results?</h3>
+  <p>They assume tight fixed spreads and perfect fills, and settings are often over-fitted to past data. Gold's spread widening around news makes the gap worse.</p>
+  <h3>How long should I backtest?</h3>
+  <p>At least 1–3 years, covering trending, ranging and high-volatility periods, with enough trades to be meaningful.</p>
+  <h3>What metrics actually matter?</h3>
+  <p>Maximum drawdown first, then profit factor, trade count and equity-curve shape. Total profit alone is the least informative.</p>
+  <h3>What is curve fitting?</h3>
+  <p>Tuning settings until they fit history perfectly. Guard against it with out-of-sample testing and robust parameter ranges.</p>
+  <h3>Is a backtest enough before going live?</h3>
+  <p>No. Always forward-test on demo for several weeks first, then start small.</p>
+
+  <h2>Bottom line</h2>
+  <p>A backtest is a <strong>hypothesis</strong>, not proof. Done properly — good tick data, honest spreads, a long and varied period, drawdown-first analysis, and no curve fitting — it tells you whether a gold EA is worth forward-testing. Done badly, it's a marketing image. The discipline is simple: make the test harsher than reality, and let the demo account have the final word.</p>
+
+  <div class="note" style="margin: 22px 0;">Trading gold on margin carries a high level of risk and may not be suitable for everyone. Backtested results are not indicative of future results. This article is educational and not financial advice.</div>
+
+  <div style="margin: 36px 0 8px;">
+    <a class="cta" href="https://account.markets4you.online/en/user-registration/?affid=tngnqvl" target="_blank" rel="nofollow noopener">Get ForexGoldEA free &amp; test it on demo →</a>
+    <a href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener" style="display:inline-block; margin-left:12px; margin-top:12px; background:#1C2226; color:#fff; padding:13px 26px; border-radius:10px; font-weight:600;">Talk to us on Telegram →</a>
+  </div>
+  <p style="font-size: 13px; color: #9AA0A5;">Affiliate disclosure: we earn a commission when you open and fund an account through our partner links, at no extra cost to you.</p>
+
+<div class="related-guides" style="margin:36px 0 8px;">
+<h2>Related guides</h2>
+<ul>
+<li><a href="are-gold-trading-eas-profitable.html">Are gold trading EAs actually profitable? An honest look</a></li>
+<li><a href="gold-ea-strategy.html">How ForexGoldEA trades XAU/USD: the gold EA strategy explained</a></li>
+<li><a href="install-ea-mt4-mt5.html">How to install a gold EA on MetaTrader 4 &amp; 5 in 5 minutes</a></li>
+<li><a href="what-is-martingale-grid-ea-pros-cons.html">What is a martingale grid EA? Pros, cons and the risks</a></li>
+<li><a href="how-to-set-risk-per-trade-gold-ea.html">How to set risk per trade on a gold EA (the 1% rule)</a></li>
+<li><a href="blog.html">All gold EA &amp; XAUUSD guides &rarr;</a></li>
+</ul>
+</div>
+</article>
+
+<footer style="background: #1C2226; color: #AEB6BB;">
+  <div class="wrap" style="max-width: 1120px; padding: 32px 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13.5px;">
+    <span>© 2026 ForexGoldEA — BBFxAi LLC</span>
+    <a href="blog.html" style="color: #AEB6BB;">← More guides</a>
+  </div>
+</footer>
+
+</body>
+</html>
