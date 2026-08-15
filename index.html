@@ -19,7 +19,7 @@
 <meta name="description" content="ForexGoldEA is a free gold trading robot (XAUUSD EA) for MetaTrader 4 &amp; 5 — automated XAU/USD trading with fixed stop-losses and user-controlled risk." />
 <meta name="keywords" content="ForexGoldEA, XAUUSD EA, gold trading EA, gold trading robot, forex gold expert advisor, MT4 EA, MT5 EA, MetaTrader gold EA, automated gold trading, XAU/USD expert advisor, free forex robot, gold scalping EA" />
 <meta name="author" content="ForexGoldEA" />
-<meta name="theme-color" content="#05060f" />
+<meta name="theme-color" content="#1C2226" />
 <meta name="format-detection" content="telephone=no" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="msvalidate.01" content="6F518CF6B98E8EAFC3002B623E747BC4" />
@@ -44,60 +44,27 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <style>
-  :root{
-    --canvas:#05060f; --steel:#2f343e; --fog:#9da7ba; --mist:#c7d3ea; --frost:#d1e4fa; --ice:#d8ecf8;
-    --white:#ffffff; --violet:#663af3; --bpblue:#b6d9fc;
-    --hairline:rgba(186,215,247,0.12); --hairline-soft:rgba(186,215,247,0.06);
-    --frost-wash:rgba(186,214,247,0.06); --frost-wash-hover:rgba(186,214,247,0.12);
-    --glass:rgba(186,214,247,0.03); --lum-fill:rgba(199,211,234,0.12);
-    --sans:'Inter',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
-    --disp:'Space Grotesk',ui-sans-serif,system-ui,sans-serif;
-    --mono:'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
-    --sh-glass:inset 0 1px 1px rgba(199,211,234,0.12), inset 0 24px 48px rgba(199,211,234,0.05), 0 24px 32px rgba(6,6,14,0.7);
-    --sh-modal:inset 0 1px 1px rgba(216,236,248,0.2), inset 0 24px 48px rgba(168,216,245,0.06), 0 16px 32px rgba(0,0,0,0.3);
-  }
-  html, body { margin: 0; padding: 0; background: var(--canvas); }
-  body { font-family: var(--sans); color: var(--mist); -webkit-font-smoothing: antialiased; font-size: 16px; line-height: 1.5; letter-spacing: -0.16px; }
-  a { color: var(--frost); text-decoration: none; transition: background .15s ease, box-shadow .15s ease, color .15s ease, border-color .15s ease; }
-  a:hover { color: var(--ice); }
+  html, body { margin: 0; padding: 0; background: #FBFAF7; }
+  body { font-family: 'Public Sans', sans-serif; color: #1C2226; -webkit-font-smoothing: antialiased; }
+  a { color: #8A6A1F; text-decoration: none; transition: background .15s ease, border-color .15s ease, color .15s ease; }
+  a:hover { color: #6E5316; }
   * { box-sizing: border-box; }
 
-  /* ambient background: blueprint grid + spotlight halo */
-  .bg { position: fixed; inset: 0; z-index: -1; pointer-events: none;
-    background: radial-gradient(ellipse 70% 44% at 50% -8%, rgba(124,145,182,0.30), transparent 62%), var(--canvas); }
-  .bg::before { content: ""; position: absolute; inset: 0;
-    background-image: linear-gradient(var(--hairline-soft) 1px, transparent 1px), linear-gradient(90deg, var(--hairline-soft) 1px, transparent 1px);
-    background-size: 88px 88px;
-    -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 0%, #000 25%, transparent 78%);
-    mask-image: radial-gradient(ellipse 85% 75% at 50% 0%, #000 25%, transparent 78%); }
+  @keyframes fgFloat {
+    0%   { transform: translateY(105vh) rotate(-8deg); opacity: 0; }
+    8%   { opacity: 1; }
+    92%  { opacity: 1; }
+    100% { transform: translateY(-15vh) rotate(10deg); opacity: 0; }
+  }
 
-  .sec { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
-
-  /* type */
-  h1, h2 { font-family: var(--disp); font-weight: 500; margin: 0; color: var(--ice); letter-spacing: normal; }
-  .grad { background: linear-gradient(180deg, #d8ecf8 0%, #98c0ef 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .eyebrow { display: flex; align-items: center; gap: 16px; font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.10em; text-transform: uppercase; color: var(--mist); }
-  .eyebrow.center { justify-content: center; }
-  .eyebrow.center::before { content: ""; height: 1px; width: 72px; background: linear-gradient(90deg, transparent, var(--hairline)); }
-  .eyebrow.center::after  { content: ""; height: 1px; width: 72px; background: linear-gradient(90deg, var(--hairline), transparent); }
-
-  /* buttons — every button is a pill */
-  .pill { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 999px; font-weight: 500; white-space: nowrap; }
-  .btn-violet { background: var(--violet); color: var(--white); padding: 14px 28px; font-size: 15.5px; }
-  .btn-violet:hover { background: #744ef5; color: var(--white); }
-  .btn-ghost { background: var(--frost-wash); color: var(--white); box-shadow: inset 0 0 0 1px var(--hairline); padding: 13px 26px; font-size: 15px; }
-  .btn-ghost:hover { background: var(--frost-wash-hover); color: var(--white); }
-  .btn-ghost-sm { background: var(--frost-wash); color: var(--white); box-shadow: inset 0 0 0 1px var(--hairline); padding: 9px 18px; font-size: 14px; }
-  .btn-ghost-sm:hover { background: var(--frost-wash-hover); color: var(--white); }
-
-  /* surfaces */
-  .glass { background: var(--glass); border-radius: 16px; box-shadow: var(--sh-glass); }
-  .modal-card { background: rgba(5,6,15,0.97); border-radius: 16px; box-shadow: var(--sh-modal); }
-  .badge6 { display: inline-block; border-radius: 6px; background: var(--lum-fill); color: var(--frost); padding: 4px 10px; font-size: 12px; font-weight: 500; box-shadow: inset 0 1px 1px rgba(216,236,248,0.2); }
-  .lumdot { width: 7px; height: 7px; border-radius: 50%; background: var(--bpblue); box-shadow: 0 0 6px rgba(186,207,247,0.7); flex: none; }
+  /* hover states (converted from the design) */
+  .btn-gold:hover   { background: #8A6A1F !important; color: #fff !important; }
+  .btn-dark:hover   { background: #2E3840 !important; color: #FBFAF7 !important; }
+  .btn-outline:hover{ border-color: #A37E2C !important; }
+  .nav-cta:hover    { background: #2E3840 !important; color: #FBFAF7 !important; }
 
   /* FAQ accordion */
   .faq-a { display: none; }
@@ -106,12 +73,12 @@
   /* responsive */
   @media (max-width: 860px) {
     .hero-grid, .perf-grid, .steps-grid, .feat-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
-    .hero-h1 { font-size: 38px !important; }
+    .hero-h1 { font-size: 40px !important; }
     .nav-links { display: none !important; }
-    .nav-talk { display: none !important; }
-    .btn-ghost-sm { padding: 8px 14px; font-size: 13.5px; }
     .sec { padding-left: 20px !important; padding-right: 20px !important; }
-    section.pad { padding-top: 64px !important; padding-bottom: 64px !important; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #bgMotion { display: none !important; }
   }
 </style>
 
@@ -173,46 +140,45 @@
 </head>
 <body>
 
-<!-- ambient midnight background (decorative) -->
-<div class="bg" aria-hidden="true"></div>
+<!-- animated gold background (decorative) -->
+<div id="bgMotion" aria-hidden="true" style="position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none;"></div>
 
 <!-- NAV -->
-<header style="position: sticky; top: 0; z-index: 50; background: rgba(5,6,15,0.80); backdrop-filter: blur(12px); border-bottom: 1px solid var(--hairline);">
-  <div class="sec" style="height: 66px; display: flex; align-items: center; justify-content: space-between;">
+<header style="position: sticky; top: 0; z-index: 50; background: rgba(251,250,247,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid #E9E5DC;">
+  <div class="sec" style="max-width: 1120px; margin: 0 auto; padding: 0 32px; height: 68px; display: flex; align-items: center; justify-content: space-between;">
     <div style="display: flex; align-items: center; gap: 10px;">
-      <svg width="40" height="40" viewBox="0 0 40 40" role="img" aria-label="ForexGoldEA logo" style="flex:none;"><defs><radialGradient id="fg48" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#EFD48F"/><stop offset="100%" stop-color="#A37E2C"/></radialGradient></defs><circle cx="20" cy="20" r="18" fill="url(#fg48)" stroke="#8A6A1F" stroke-width="2"/><text x="20" y="25.5" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="14.5" fill="#FBFAF7">FGE</text></svg>
-      <span style="font-weight: 600; font-size: 17px; letter-spacing: -0.01em; color: var(--frost);">ForexGoldEA</span>
+      <svg width="48" height="48" viewBox="0 0 40 40" role="img" aria-label="ForexGoldEA logo" style="flex:none;"><defs><radialGradient id="fg48" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#EFD48F"/><stop offset="100%" stop-color="#A37E2C"/></radialGradient></defs><circle cx="20" cy="20" r="18" fill="url(#fg48)" stroke="#8A6A1F" stroke-width="2"/><text x="20" y="25.5" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="14.5" fill="#FBFAF7">FGE</text></svg>
+      <span style="font-weight: 700; font-size: 17px; letter-spacing: -0.01em;">ForexGoldEA</span>
     </div>
-    <nav style="display: flex; align-items: center; gap: 24px; font-size: 14.5px; font-weight: 500;">
-      <span class="nav-links" style="display: flex; align-items: center; gap: 24px;">
-        <a href="#performance" style="color: var(--mist); white-space: nowrap;">Performance</a>
-        <a href="#free" style="color: var(--mist); white-space: nowrap;">Free EA</a>
-        <a href="#pricing" style="color: var(--mist); white-space: nowrap;">What's included</a>
-        <a href="#faq" style="color: var(--mist); white-space: nowrap;">FAQ</a>
-        <a href="blog.html" style="color: var(--mist); white-space: nowrap;">Blog</a>
-        <a href="tools/" style="color: var(--mist); white-space: nowrap;">Free Tools</a>
+    <nav style="display: flex; align-items: center; gap: 28px; font-size: 14.5px; font-weight: 500;">
+      <span class="nav-links" style="display: flex; align-items: center; gap: 28px;">
+        <a href="#performance" style="color: #4A5258; white-space: nowrap;">Performance</a>
+        <a href="#free" style="color: #4A5258; white-space: nowrap;">Free EA</a>
+        <a href="#pricing" style="color: #4A5258; white-space: nowrap;">What's included</a>
+        <a href="#faq" style="color: #4A5258; white-space: nowrap;">FAQ</a>
+        <a href="blog.html" style="color: #4A5258; white-space: nowrap;">Blog</a>
+        <a href="tools/" style="color: #4A5258; white-space: nowrap;">Free Tools</a>
       </span>
-      <a class="pill btn-ghost-sm" href="https://affs.click/JVeDD" target="_blank" rel="nofollow noopener">Get the EA free</a>
-      <a class="pill btn-ghost-sm nav-talk" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener" style="margin-left:-8px;">Talk to us</a>
-    </nav>
+      <a class="nav-cta" href="https://affs.click/JVeDD" target="_blank" rel="nofollow noopener" style="white-space: nowrap; background: #1C2226; color: #FBFAF7; padding: 10px 20px; border-radius: 8px; font-weight: 600;">Get the EA free</a>
+    <a href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener" style="margin-left:16px; background:#A37E2C; color:#fff; padding:8px 15px; border-radius:8px; font-weight:600;">Talk to us</a></nav>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="sec pad" style="padding-top: 96px; padding-bottom: 96px;">
+<section class="sec" style="max-width: 1120px; margin: 0 auto; padding: 88px 32px 72px;">
   <div class="hero-grid" style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 64px; align-items: center;">
     <div style="display: flex; flex-direction: column; gap: 24px;">
-      <div class="badge6" style="display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 500;">
-        <span class="lumdot"></span>
+      <div style="display: flex; align-items: center; gap: 8px; align-self: flex-start; background: #F3EEE2; border: 1px solid #E2D9C2; border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 600; color: #8A6A1F;">
+        <span style="width: 7px; height: 7px; border-radius: 50%; background: #2E7D4F;"></span>
         Verified live results on Myfxbook
       </div>
-      <h1 class="hero-h1 grad" style="font-size: 54px; line-height: 1.12; margin: 0; text-wrap: balance;">Automated gold trading, with risk you control.</h1>
-      <p style="font-size: 18px; line-height: 1.6; color: var(--mist); margin: 0; max-width: 52ch; text-wrap: pretty;">ForexGoldEA trades XAU/USD around the clock on MetaTrader 4 &amp; 5 — 87.4% win rate across multi-year backtests, with a fixed stop on every trade and a drawdown ceiling you set yourself.</p>
+      <h1 class="hero-h1" style="font-family: 'Newsreader', serif; font-size: 56px; line-height: 1.08; font-weight: 500; letter-spacing: -0.02em; margin: 0; text-wrap: balance;">Automated gold trading, with risk you control.</h1>
+      <p style="font-size: 18px; line-height: 1.65; color: #4A5258; margin: 0; max-width: 52ch; text-wrap: pretty;">ForexGoldEA trades XAU/USD around the clock on MetaTrader 4 &amp; 5 — 87.4% win rate across multi-year backtests, with a fixed stop on every trade and a drawdown ceiling you set yourself.</p>
       <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
-        <a class="pill btn-violet" href="#free">Get the EA free</a>
-        <a class="pill btn-ghost" href="#performance">See performance</a>
+        <a class="btn-gold" href="#free" style="white-space: nowrap; background: #A37E2C; color: #FFFFFF; padding: 14px 28px; border-radius: 10px; font-weight: 600; font-size: 16px;">Get the EA free</a>
+        <a class="btn-outline" href="#performance" style="white-space: nowrap; border: 1.5px solid #D9D3C6; color: #1C2226; padding: 13px 26px; border-radius: 10px; font-weight: 600; font-size: 16px; background: #FFFFFF;">See performance</a>
       </div>
-      <div style="display: flex; gap: 24px; font-size: 13.5px; color: var(--fog); font-weight: 500; padding-top: 4px; flex-wrap: wrap;">
+      <div style="display: flex; gap: 24px; font-size: 13.5px; color: #6B7379; font-weight: 500; padding-top: 4px; flex-wrap: wrap;">
         <span>MetaTrader 4 &amp; 5</span>
         <span>·</span>
         <span>Works with any broker</span>
@@ -220,71 +186,71 @@
         <span>Rules-based system</span>
       </div>
     </div>
-    <div class="modal-card" style="padding: 28px; display: flex; flex-direction: column; gap: 20px;">
-      <div style="font-family: var(--mono); font-size: 12px; letter-spacing: 0.10em; text-transform: uppercase; color: var(--fog);">Backtest summary — XAU/USD</div>
+    <div style="background: #FFFFFF; border: 1px solid #E9E5DC; border-radius: 16px; padding: 28px; box-shadow: 0 1px 2px rgba(28,34,38,0.04), 0 12px 32px rgba(28,34,38,0.06); display: flex; flex-direction: column; gap: 20px;">
+      <div style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #6B7379;">Backtest summary — XAU/USD</div>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
-        <div style="border-bottom: 1px solid var(--hairline); padding-bottom: 14px;">
-          <div style="font-family: var(--disp); font-size: 32px; font-weight: 500; color: var(--ice);">87.4%</div>
-          <div style="font-size: 13px; color: var(--fog);">Win rate</div>
+        <div style="border-bottom: 1px solid #F0EDE5; padding-bottom: 14px;">
+          <div style="font-family: 'Newsreader', serif; font-size: 34px; font-weight: 500; color: #1C2226;">87.4%</div>
+          <div style="font-size: 13px; color: #6B7379;">Win rate</div>
         </div>
-        <div style="border-bottom: 1px solid var(--hairline); padding-bottom: 14px;">
-          <div style="font-family: var(--disp); font-size: 32px; font-weight: 500; color: var(--ice);">24/5</div>
-          <div style="font-size: 13px; color: var(--fog);">Hands-free trading</div>
-        </div>
-        <div>
-          <div style="font-family: var(--disp); font-size: 32px; font-weight: 500; color: var(--ice);">Fixed</div>
-          <div style="font-size: 13px; color: var(--fog);">Stop &amp; target, every trade</div>
+        <div style="border-bottom: 1px solid #F0EDE5; padding-bottom: 14px;">
+          <div style="font-family: 'Newsreader', serif; font-size: 34px; font-weight: 500; color: #1C2226;">24/5</div>
+          <div style="font-size: 13px; color: #6B7379;">Hands-free trading</div>
         </div>
         <div>
-          <div style="font-family: var(--disp); font-size: 32px; font-weight: 500; color: var(--ice);">You set</div>
-          <div style="font-size: 13px; color: var(--fog);">Max drawdown ceiling</div>
+          <div style="font-family: 'Newsreader', serif; font-size: 34px; font-weight: 500; color: #1C2226;">Fixed</div>
+          <div style="font-size: 13px; color: #6B7379;">Stop &amp; target, every trade</div>
+        </div>
+        <div>
+          <div style="font-family: 'Newsreader', serif; font-size: 34px; font-weight: 500; color: #1C2226;">You set</div>
+          <div style="font-size: 13px; color: #6B7379;">Max drawdown ceiling</div>
         </div>
       </div>
-      <div style="font-size: 12px; color: var(--fog); line-height: 1.5;">Backtested figures; past performance does not guarantee future results.</div>
+      <div style="font-size: 12px; color: #9AA0A5; line-height: 1.5;">Backtested figures; past performance does not guarantee future results.</div>
     </div>
   </div>
 </section>
 
 <!-- PERFORMANCE -->
-<section id="performance" style="border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); background: rgba(186,214,247,0.02);">
-  <div class="sec perf-grid pad" style="padding-top: 88px; padding-bottom: 88px; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: center;">
+<section id="performance" style="background: #FFFFFF; border-top: 1px solid #E9E5DC; border-bottom: 1px solid #E9E5DC;">
+  <div class="sec perf-grid" style="max-width: 1120px; margin: 0 auto; padding: 72px 32px; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: center;">
     <div style="display: flex; flex-direction: column; gap: 18px;">
-      <div class="eyebrow">Verified performance</div>
-      <h2 style="font-size: 36px; letter-spacing: -0.24px; line-height: 1.16;">Don't take our word for it. Check the live account.</h2>
-      <p style="font-size: 16.5px; line-height: 1.6; color: var(--mist); margin: 0; text-wrap: pretty;">Our results are tracked on an independently verified live account. Every trade, every drawdown, every day — public and unedited.</p>
-      <a class="pill btn-ghost" href="https://t.me/BBFx_Ai" target="_blank" rel="noopener" style="align-self: flex-start;">Get the live Myfxbook link on Telegram →</a>
+      <div style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #A37E2C;">Verified performance</div>
+      <h2 style="font-family: 'Newsreader', serif; font-size: 36px; font-weight: 500; letter-spacing: -0.015em; margin: 0; line-height: 1.15;">Don't take our word for it. Check the live account.</h2>
+      <p style="font-size: 16.5px; line-height: 1.65; color: #4A5258; margin: 0; text-wrap: pretty;">Our results are tracked on an independently verified live account. Every trade, every drawdown, every day — public and unedited.</p>
+      <a class="btn-dark" href="https://t.me/BBFx_Ai" target="_blank" rel="noopener" style="white-space: nowrap; align-self: flex-start; display: flex; align-items: center; gap: 8px; background: #1C2226; color: #FBFAF7; padding: 13px 24px; border-radius: 10px; font-weight: 600; font-size: 15.5px;">Get the live Myfxbook link on Telegram →</a>
     </div>
-    <div class="glass" style="overflow: hidden;">
-      <div style="display: flex; align-items: center; gap: 8px; padding: 12px 18px; border-bottom: 1px solid var(--hairline);">
-        <span class="lumdot" style="width: 8px; height: 8px;"></span>
-        <span style="font-size: 13px; font-weight: 500; color: var(--mist);">Live XAU/USD price · TradingView</span>
+    <div style="border: 1px solid #E9E5DC; border-radius: 16px; overflow: hidden; background: #FBFAF7;">
+      <div style="display: flex; align-items: center; gap: 8px; padding: 12px 18px; border-bottom: 1px solid #E9E5DC; background: #FFFFFF;">
+        <span style="width: 8px; height: 8px; border-radius: 50%; background: #2E7D4F;"></span>
+        <span style="font-size: 13px; font-weight: 600; color: #4A5258;">Live XAU/USD price · TradingView</span>
       </div>
-      <div style="height: 380px;">
+      <div style="height: 380px; background: #FFFFFF;">
         <div class="tradingview-widget-container" style="height:100%;width:100%;">
           <div class="tradingview-widget-container__widget" style="height:calc(100% - 24px);width:100%;"></div>
           <div class="tradingview-widget-copyright" style="font-size:11px;line-height:24px;text-align:center;">
-            <a href="https://www.tradingview.com/symbols/XAUUSD/?exchange=OANDA" rel="noopener nofollow" target="_blank" style="color:#98c0ef;">XAUUSD quote</a>
-            <span style="color:var(--fog);"> by TradingView</span>
+            <a href="https://www.tradingview.com/symbols/XAUUSD/?exchange=OANDA" rel="noopener nofollow" target="_blank" style="color:#2962FF;">XAUUSD quote</a>
+            <span style="color:#9AA0A5;"> by TradingView</span>
           </div>
           <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
           {
           "lineWidth": 2,
           "lineType": 0,
           "chartType": "area",
-          "fontColor": "rgb(157, 167, 186)",
-          "gridLineColor": "rgba(199, 211, 234, 0.06)",
+          "fontColor": "rgb(106, 109, 120)",
+          "gridLineColor": "rgba(46, 46, 46, 0.06)",
           "volumeUpColor": "rgba(34, 171, 148, 0.5)",
           "volumeDownColor": "rgba(247, 82, 95, 0.5)",
-          "backgroundColor": "#05060f",
-          "widgetFontColor": "#d1e4fa",
+          "backgroundColor": "#ffffff",
+          "widgetFontColor": "#0F0F0F",
           "upColor": "#22ab94",
           "downColor": "#f7525f",
           "borderUpColor": "#22ab94",
           "borderDownColor": "#f7525f",
           "wickUpColor": "#22ab94",
           "wickDownColor": "#f7525f",
-          "colorTheme": "dark",
-          "isTransparent": true,
+          "colorTheme": "light",
+          "isTransparent": false,
           "locale": "en",
           "chartOnly": false,
           "scalePosition": "right",
@@ -308,177 +274,176 @@
 </section>
 
 <!-- HOW IT WORKS / FREE -->
-<section id="free" class="sec pad" style="padding-top: 100px; padding-bottom: 100px;">
-  <div style="max-width: 640px; margin: 0 auto 56px; text-align: center; display: flex; flex-direction: column; gap: 16px;">
-    <div class="eyebrow center">Get it free</div>
-    <h2 style="font-size: 40px; line-height: 1.16;">The full EA, free with our partner broker.</h2>
-    <p style="font-size: 16.5px; line-height: 1.6; color: var(--mist); margin: 0; text-wrap: pretty;">Open and fund a live account through our partner link, and we unlock everything — MT4 &amp; MT5 builds, ready-to-run presets, lifetime updates, and community access.</p>
+<section id="free" class="sec" style="max-width: 1120px; margin: 0 auto; padding: 88px 32px;">
+  <div style="max-width: 640px; margin: 0 auto 56px; text-align: center; display: flex; flex-direction: column; gap: 14px;">
+    <div style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #A37E2C;">Get it free</div>
+    <h2 style="font-family: 'Newsreader', serif; font-size: 40px; font-weight: 500; letter-spacing: -0.015em; margin: 0; line-height: 1.12;">The full EA, free with our partner broker.</h2>
+    <p style="font-size: 16.5px; line-height: 1.65; color: #4A5258; margin: 0; text-wrap: pretty;">Open and fund a live account through our partner link, and we unlock everything — MT4 &amp; MT5 builds, ready-to-run presets, lifetime updates, and community access.</p>
   </div>
   <div class="steps-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
-    <div class="glass" style="padding: 28px; display: flex; flex-direction: column; gap: 12px;">
-      <div style="width: 40px; height: 40px; border-radius: 9999px; background: var(--frost-wash); box-shadow: inset 0 0 0 1px var(--hairline); color: var(--frost); font-weight: 600; font-size: 16px; display: flex; align-items: center; justify-content: center;">1</div>
-      <div style="font-weight: 600; font-size: 17px; color: var(--frost);">Open your account</div>
-      <p style="font-size: 15px; line-height: 1.6; color: var(--fog); margin: 0;">Register a live account with our partner broker through our link. Takes about five minutes.</p>
+    <div style="background: #FFFFFF; border: 1px solid #E9E5DC; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px;">
+      <div style="width: 36px; height: 36px; border-radius: 50%; background: #F3EEE2; color: #8A6A1F; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center;">1</div>
+      <div style="font-weight: 600; font-size: 17px;">Open your account</div>
+      <p style="font-size: 15px; line-height: 1.6; color: #4A5258; margin: 0;">Register a live account with our partner broker through our link. Takes about five minutes.</p>
     </div>
-    <div class="glass" style="padding: 28px; display: flex; flex-direction: column; gap: 12px;">
-      <div style="width: 40px; height: 40px; border-radius: 9999px; background: var(--frost-wash); box-shadow: inset 0 0 0 1px var(--hairline); color: var(--frost); font-weight: 600; font-size: 16px; display: flex; align-items: center; justify-content: center;">2</div>
-      <div style="font-weight: 600; font-size: 17px; color: var(--frost);">Fund it</div>
-      <p style="font-size: 15px; line-height: 1.6; color: var(--fog); margin: 0;">Deposit the minimum required amount (see partner terms). Your capital stays in your own account.</p>
+    <div style="background: #FFFFFF; border: 1px solid #E9E5DC; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px;">
+      <div style="width: 36px; height: 36px; border-radius: 50%; background: #F3EEE2; color: #8A6A1F; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center;">2</div>
+      <div style="font-weight: 600; font-size: 17px;">Fund it</div>
+      <p style="font-size: 15px; line-height: 1.6; color: #4A5258; margin: 0;">Deposit the minimum required amount (see partner terms). Your capital stays in your own account.</p>
     </div>
-    <div class="glass" style="padding: 28px; display: flex; flex-direction: column; gap: 12px;">
-      <div style="width: 40px; height: 40px; border-radius: 9999px; background: var(--frost-wash); box-shadow: inset 0 0 0 1px var(--hairline); color: var(--frost); font-weight: 600; font-size: 16px; display: flex; align-items: center; justify-content: center;">3</div>
-      <div style="font-weight: 600; font-size: 17px; color: var(--frost);">Get unlocked</div>
-      <p style="font-size: 15px; line-height: 1.6; color: var(--fog); margin: 0;">Send us your account number on Telegram and we unlock your EA — usually within hours.</p>
+    <div style="background: #FFFFFF; border: 1px solid #E9E5DC; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px;">
+      <div style="width: 36px; height: 36px; border-radius: 50%; background: #F3EEE2; color: #8A6A1F; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center;">3</div>
+      <div style="font-weight: 600; font-size: 17px;">Get unlocked</div>
+      <p style="font-size: 15px; line-height: 1.6; color: #4A5258; margin: 0;">Send us your account number on Telegram and we unlock your EA — usually within hours.</p>
     </div>
   </div>
   <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 44px;">
-    <a class="pill btn-violet" href="https://affs.click/JVeDD" target="_blank" rel="nofollow noopener" style="padding: 15px 32px; font-size: 16px;">Open broker account →</a>
-    <p style="font-size: 12.5px; color: var(--fog); margin: 0; max-width: 60ch; text-align: center; line-height: 1.5;">Affiliate disclosure: we earn a commission when you open and fund an account through our partner links, at no extra cost to you. This is how the EA stays free.</p>
+    <a class="btn-gold" href="https://affs.click/JVeDD" target="_blank" rel="nofollow noopener" style="white-space: nowrap; background: #A37E2C; color: #FFFFFF; padding: 15px 32px; border-radius: 10px; font-weight: 600; font-size: 16.5px;">Open broker account →</a>
+    <p style="font-size: 12.5px; color: #9AA0A5; margin: 0; max-width: 60ch; text-align: center; line-height: 1.5;">Affiliate disclosure: we earn a commission when you open and fund an account through our partner links, at no extra cost to you. This is how the EA stays free.</p>
   </div>
 </section>
 
 <!-- FEATURES -->
-<section style="border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); background: rgba(186,214,247,0.02);">
-  <div class="sec pad" style="padding-top: 88px; padding-bottom: 88px;">
-    <div style="max-width: 560px; margin-bottom: 56px; display: flex; flex-direction: column; gap: 16px;">
-      <div class="eyebrow">How it trades</div>
-      <h2 style="font-size: 40px; line-height: 1.16;">Discipline, not screen-watching.</h2>
+<section style="background: #1C2226; color: #FBFAF7;">
+  <div class="sec" style="max-width: 1120px; margin: 0 auto; padding: 88px 32px;">
+    <div style="max-width: 560px; margin-bottom: 56px; display: flex; flex-direction: column; gap: 14px;">
+      <div style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #C9A24B;">How it trades</div>
+      <h2 style="font-family: 'Newsreader', serif; font-size: 40px; font-weight: 500; letter-spacing: -0.015em; margin: 0; line-height: 1.12;">Discipline, not screen-watching.</h2>
     </div>
     <div class="feat-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px;">
-      <div style="display: flex; flex-direction: column; gap: 10px; border-top: 1px solid var(--hairline); padding-top: 22px;">
-        <div style="font-weight: 600; font-size: 18px; color: var(--frost);">Backtested edge</div>
-        <p style="font-size: 15px; line-height: 1.65; color: var(--fog); margin: 0;">A multi-year XAU/USD backtest with an 87% win rate and controlled drawdown — the exact strategy the EA runs live.</p>
+      <div style="display: flex; flex-direction: column; gap: 10px; border-top: 1px solid rgba(201,162,75,0.35); padding-top: 22px;">
+        <div style="font-weight: 600; font-size: 18px;">Backtested edge</div>
+        <p style="font-size: 15px; line-height: 1.65; color: #AEB6BB; margin: 0;">A multi-year XAU/USD backtest with an 87% win rate and controlled drawdown — the exact strategy the EA runs live.</p>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 10px; border-top: 1px solid var(--hairline); padding-top: 22px;">
-        <div style="font-weight: 600; font-size: 18px; color: var(--frost);">Hands-free, 24/5</div>
-        <p style="font-size: 15px; line-height: 1.65; color: var(--fog); margin: 0;">Attach once to an XAU/USD chart, load a preset, enable auto-trading. Run it on a VPS so it never misses a setup.</p>
+      <div style="display: flex; flex-direction: column; gap: 10px; border-top: 1px solid rgba(201,162,75,0.35); padding-top: 22px;">
+        <div style="font-weight: 600; font-size: 18px;">Hands-free, 24/5</div>
+        <p style="font-size: 15px; line-height: 1.65; color: #AEB6BB; margin: 0;">Attach once to an XAU/USD chart, load a preset, enable auto-trading. Run it on a VPS so it never misses a setup.</p>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 10px; border-top: 1px solid var(--hairline); padding-top: 22px;">
-        <div style="font-weight: 600; font-size: 18px; color: var(--frost);">Risk you control</div>
-        <p style="font-size: 15px; line-height: 1.65; color: var(--fog); margin: 0;">Set risk per trade, a daily loss limit and a max drawdown ceiling. Every position opens with a fixed stop and target.</p>
+      <div style="display: flex; flex-direction: column; gap: 10px; border-top: 1px solid rgba(201,162,75,0.35); padding-top: 22px;">
+        <div style="font-weight: 600; font-size: 18px;">Risk you control</div>
+        <p style="font-size: 15px; line-height: 1.65; color: #AEB6BB; margin: 0;">Set risk per trade, a daily loss limit and a max drawdown ceiling. Every position opens with a fixed stop and target.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PRICING -->
-<section id="pricing" class="sec pad" style="padding-top: 100px; padding-bottom: 100px;">
-  <div style="max-width: 560px; margin: 0 auto 52px; text-align: center; display: flex; flex-direction: column; gap: 16px;">
-    <div class="eyebrow center">What's included</div>
-    <h2 style="font-size: 40px; line-height: 1.16;">One plan. Completely free.</h2>
+<section id="pricing" class="sec" style="max-width: 1120px; margin: 0 auto; padding: 88px 32px;">
+  <div style="max-width: 560px; margin: 0 auto 52px; text-align: center; display: flex; flex-direction: column; gap: 14px;">
+    <div style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #A37E2C;">What's included</div>
+    <h2 style="font-family: 'Newsreader', serif; font-size: 40px; font-weight: 500; letter-spacing: -0.015em; margin: 0; line-height: 1.12;">One plan. Completely free.</h2>
   </div>
   <div style="display: grid; grid-template-columns: 1fr; max-width: 480px; margin: 0 auto;">
-    <div class="modal-card" style="position: relative; padding: 36px 32px; display: flex; flex-direction: column; gap: 20px;">
-      <div class="badge6" style="position: absolute; top: -13px; left: 32px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600; background: #12131f; box-shadow: inset 0 0 0 1px var(--hairline);">Free EA</div>
+    <div style="position: relative; background: #FFFFFF; border: 2px solid #A37E2C; border-radius: 16px; padding: 36px 32px; display: flex; flex-direction: column; gap: 20px; box-shadow: 0 12px 32px rgba(163,126,44,0.10);">
+      <div style="position: absolute; top: -13px; left: 32px; background: #A37E2C; color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px;">Free EA</div>
       <div style="display: flex; flex-direction: column; gap: 6px;">
-        <div style="font-weight: 600; font-size: 20px; color: var(--frost);">Partner</div>
-        <div style="font-size: 14.5px; color: var(--fog);">The full EA, unlocked through our partner broker.</div>
+        <div style="font-weight: 700; font-size: 20px;">Partner</div>
+        <div style="font-size: 14.5px; color: #6B7379;">The full EA, unlocked through our partner broker.</div>
       </div>
       <div style="display: flex; align-items: baseline; gap: 10px;">
-        <span class="grad" style="font-family: var(--disp); font-size: 44px; font-weight: 500;">Free</span>
-        <span style="font-size: 14px; color: var(--fog);">with our partner broker</span>
+        <span style="font-family: 'Newsreader', serif; font-size: 44px; font-weight: 500;">Free</span>
+        <span style="font-size: 14px; color: #6B7379;">with our partner broker</span>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 11px; font-size: 15px; color: var(--mist);">
-        <div style="display: flex; gap: 10px;"><span style="color: var(--bpblue); font-weight: 700;">✓</span>Full EA — MT4 &amp; MT5 builds</div>
-        <div style="display: flex; gap: 10px;"><span style="color: var(--bpblue); font-weight: 700;">✓</span>Ready-to-run presets</div>
-        <div style="display: flex; gap: 10px;"><span style="color: var(--bpblue); font-weight: 700;">✓</span>Free lifetime updates</div>
-        <div style="display: flex; gap: 10px;"><span style="color: var(--bpblue); font-weight: 700;">✓</span>Telegram community access</div>
-        <div style="display: flex; gap: 10px;"><span style="color: var(--bpblue); font-weight: 700;">✓</span>Ready-made risk profiles</div>
-        <div style="display: flex; gap: 10px;"><span style="color: var(--bpblue); font-weight: 700;">✓</span>Setup help on Telegram</div>
+      <div style="display: flex; flex-direction: column; gap: 11px; font-size: 15px; color: #2E3840;">
+        <div style="display: flex; gap: 10px;"><span style="color: #2E7D4F; font-weight: 700;">✓</span>Full EA — MT4 &amp; MT5 builds</div>
+        <div style="display: flex; gap: 10px;"><span style="color: #2E7D4F; font-weight: 700;">✓</span>Ready-to-run presets</div>
+        <div style="display: flex; gap: 10px;"><span style="color: #2E7D4F; font-weight: 700;">✓</span>Free lifetime updates</div>
+        <div style="display: flex; gap: 10px;"><span style="color: #2E7D4F; font-weight: 700;">✓</span>Telegram community access</div>
+        <div style="display: flex; gap: 10px;"><span style="color: #2E7D4F; font-weight: 700;">✓</span>Ready-made risk profiles</div>
+        <div style="display: flex; gap: 10px;"><span style="color: #2E7D4F; font-weight: 700;">✓</span>Setup help on Telegram</div>
       </div>
-      <a class="pill btn-violet" href="https://affs.click/JVeDD" target="_blank" rel="nofollow noopener" style="margin-top: auto; text-align: center; padding: 14px; font-size: 16px;">Open broker account</a>
+      <a class="btn-gold" href="https://affs.click/JVeDD" target="_blank" rel="nofollow noopener" style="white-space: nowrap; margin-top: auto; text-align: center; background: #A37E2C; color: #FFFFFF; padding: 14px; border-radius: 10px; font-weight: 600; font-size: 16px;">Open broker account</a>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section id="faq" style="border-top: 1px solid var(--hairline); background: rgba(186,214,247,0.02);">
-  <div class="sec pad" style="max-width: 760px; padding-top: 88px; padding-bottom: 88px;">
-    <div class="eyebrow center" style="margin-bottom: 16px;">FAQ</div>
-    <h2 style="font-size: 36px; letter-spacing: -0.24px; margin: 0 0 40px; line-height: 1.16; text-align: center;">Common questions</h2>
+<section id="faq" style="background: #FFFFFF; border-top: 1px solid #E9E5DC;">
+  <div class="sec" style="max-width: 760px; margin: 0 auto; padding: 88px 32px;">
+    <h2 style="font-family: 'Newsreader', serif; font-size: 36px; font-weight: 500; letter-spacing: -0.015em; margin: 0 0 40px; line-height: 1.15; text-align: center;">Common questions</h2>
     <div id="faqList" style="display: flex; flex-direction: column;">
 
-      <div class="faq-item open" style="border-top: 1px solid var(--hairline);">
-        <button class="faq-q" aria-expanded="true" style="width: 100%; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 4px; font-family: var(--sans); font-size: 16.5px; font-weight: 600; color: var(--frost); text-align: left;">
+      <div class="faq-item open" style="border-top: 1px solid #E9E5DC;">
+        <button class="faq-q" aria-expanded="true" style="width: 100%; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 4px; font-family: 'Public Sans', sans-serif; font-size: 16.5px; font-weight: 600; color: #1C2226; text-align: left;">
           How does the EA stay free?
-          <span class="faq-icon" style="color: #98c0ef; font-size: 20px; font-weight: 400;">−</span>
+          <span class="faq-icon" style="color: #A37E2C; font-size: 20px; font-weight: 400;">−</span>
         </button>
-        <div class="faq-a"><p style="margin: 0; padding: 0 4px 24px; font-size: 15.5px; line-height: 1.7; color: var(--fog); max-width: 62ch;">We earn a commission from our partner broker when you open and fund an account through our link. That commission covers the EA — you pay nothing extra, and your deposit stays in your own trading account.</p></div>
+        <div class="faq-a"><p style="margin: 0; padding: 0 4px 24px; font-size: 15.5px; line-height: 1.7; color: #4A5258; max-width: 62ch;">We earn a commission from our partner broker when you open and fund an account through our link. That commission covers the EA — you pay nothing extra, and your deposit stays in your own trading account.</p></div>
       </div>
 
-      <div class="faq-item" style="border-top: 1px solid var(--hairline);">
-        <button class="faq-q" aria-expanded="false" style="width: 100%; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 4px; font-family: var(--sans); font-size: 16.5px; font-weight: 600; color: var(--frost); text-align: left;">
+      <div class="faq-item" style="border-top: 1px solid #E9E5DC;">
+        <button class="faq-q" aria-expanded="false" style="width: 100%; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 4px; font-family: 'Public Sans', sans-serif; font-size: 16.5px; font-weight: 600; color: #1C2226; text-align: left;">
           Which brokers and platforms does it support?
-          <span class="faq-icon" style="color: #98c0ef; font-size: 20px; font-weight: 400;">+</span>
+          <span class="faq-icon" style="color: #A37E2C; font-size: 20px; font-weight: 400;">+</span>
         </button>
-        <div class="faq-a"><p style="margin: 0; padding: 0 4px 24px; font-size: 15.5px; line-height: 1.7; color: var(--fog); max-width: 62ch;">The EA is unlocked free when you open and fund a live account with our partner broker, and runs on MetaTrader 4 or 5 attached to an XAU/USD chart.</p></div>
+        <div class="faq-a"><p style="margin: 0; padding: 0 4px 24px; font-size: 15.5px; line-height: 1.7; color: #4A5258; max-width: 62ch;">The EA is unlocked free when you open and fund a live account with our partner broker, and runs on MetaTrader 4 or 5 attached to an XAU/USD chart.</p></div>
       </div>
 
-      <div class="faq-item" style="border-top: 1px solid var(--hairline);">
-        <button class="faq-q" aria-expanded="false" style="width: 100%; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 4px; font-family: var(--sans); font-size: 16.5px; font-weight: 600; color: var(--frost); text-align: left;">
+      <div class="faq-item" style="border-top: 1px solid #E9E5DC;">
+        <button class="faq-q" aria-expanded="false" style="width: 100%; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 4px; font-family: 'Public Sans', sans-serif; font-size: 16.5px; font-weight: 600; color: #1C2226; text-align: left;">
           Do I need a VPS?
-          <span class="faq-icon" style="color: #98c0ef; font-size: 20px; font-weight: 400;">+</span>
+          <span class="faq-icon" style="color: #A37E2C; font-size: 20px; font-weight: 400;">+</span>
         </button>
-        <div class="faq-a"><p style="margin: 0; padding: 0 4px 24px; font-size: 15.5px; line-height: 1.7; color: var(--fog); max-width: 62ch;">It's recommended. The EA trades 24/5, so a VPS keeps it connected even when your computer is off. Any basic MT4/MT5 VPS works.</p></div>
+        <div class="faq-a"><p style="margin: 0; padding: 0 4px 24px; font-size: 15.5px; line-height: 1.7; color: #4A5258; max-width: 62ch;">It's recommended. The EA trades 24/5, so a VPS keeps it connected even when your computer is off. Any basic MT4/MT5 VPS works.</p></div>
       </div>
 
-      <div class="faq-item" style="border-top: 1px solid var(--hairline);">
-        <button class="faq-q" aria-expanded="false" style="width: 100%; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 4px; font-family: var(--sans); font-size: 16.5px; font-weight: 600; color: var(--frost); text-align: left;">
+      <div class="faq-item" style="border-top: 1px solid #E9E5DC;">
+        <button class="faq-q" aria-expanded="false" style="width: 100%; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 4px; font-family: 'Public Sans', sans-serif; font-size: 16.5px; font-weight: 600; color: #1C2226; text-align: left;">
           How is risk controlled?
-          <span class="faq-icon" style="color: #98c0ef; font-size: 20px; font-weight: 400;">+</span>
+          <span class="faq-icon" style="color: #A37E2C; font-size: 20px; font-weight: 400;">+</span>
         </button>
-        <div class="faq-a"><p style="margin: 0; padding: 0 4px 24px; font-size: 15.5px; line-height: 1.7; color: var(--fog); max-width: 62ch;">You set risk per trade, a daily loss limit, and a max drawdown ceiling in the preset. Every position opens with a fixed stop-loss and take-profit — no martingale, no grid without stops.</p></div>
+        <div class="faq-a"><p style="margin: 0; padding: 0 4px 24px; font-size: 15.5px; line-height: 1.7; color: #4A5258; max-width: 62ch;">You set risk per trade, a daily loss limit, and a max drawdown ceiling in the preset. Every position opens with a fixed stop-loss and take-profit — no martingale, no grid without stops.</p></div>
       </div>
 
-      <div class="faq-item" style="border-top: 1px solid var(--hairline);">
-        <button class="faq-q" aria-expanded="false" style="width: 100%; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 4px; font-family: var(--sans); font-size: 16.5px; font-weight: 600; color: var(--frost); text-align: left;">
+      <div class="faq-item" style="border-top: 1px solid #E9E5DC;">
+        <button class="faq-q" aria-expanded="false" style="width: 100%; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 4px; font-family: 'Public Sans', sans-serif; font-size: 16.5px; font-weight: 600; color: #1C2226; text-align: left;">
           Are the results verified?
-          <span class="faq-icon" style="color: #98c0ef; font-size: 20px; font-weight: 400;">+</span>
+          <span class="faq-icon" style="color: #A37E2C; font-size: 20px; font-weight: 400;">+</span>
         </button>
-        <div class="faq-a"><p style="margin: 0; padding: 0 4px 24px; font-size: 15.5px; line-height: 1.7; color: var(--fog); max-width: 62ch;">Yes — we run a public live account tracked on Myfxbook, independently verified. Backtest figures are historical and don't guarantee future results.</p></div>
+        <div class="faq-a"><p style="margin: 0; padding: 0 4px 24px; font-size: 15.5px; line-height: 1.7; color: #4A5258; max-width: 62ch;">Yes — we run a public live account tracked on Myfxbook, independently verified. Backtest figures are historical and don't guarantee future results.</p></div>
       </div>
 
-      <div style="border-top: 1px solid var(--hairline);"></div>
+      <div style="border-top: 1px solid #E9E5DC;"></div>
     </div>
   </div>
 </section>
 
 <!-- FINAL CTA -->
-<section class="sec pad" style="padding-top: 100px; padding-bottom: 100px; text-align: center; position: relative;">
+<section class="sec" style="max-width: 1120px; margin: 0 auto; padding: 88px 32px; text-align: center;">
   <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
-    <h2 class="grad" style="font-size: 42px; line-height: 1.16; max-width: 20ch;">Let a disciplined strategy trade gold for you.</h2>
-    <p style="font-size: 17px; color: var(--mist); margin: 0; max-width: 48ch; line-height: 1.6;">Join through our partner broker and get the full EA free — or message us on Telegram with any question first.</p>
+    <h2 style="font-family: 'Newsreader', serif; font-size: 42px; font-weight: 500; letter-spacing: -0.015em; margin: 0; line-height: 1.1; max-width: 20ch;">Let a disciplined strategy trade gold for you.</h2>
+    <p style="font-size: 17px; color: #4A5258; margin: 0; max-width: 48ch; line-height: 1.65;">Join through our partner broker and get the full EA free — or message us on Telegram with any question first.</p>
     <div style="display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;">
-      <a class="pill btn-violet" href="https://affs.click/JVeDD" target="_blank" rel="nofollow noopener" style="padding: 15px 30px; font-size: 16px;">Get the EA free</a>
-      <a class="pill btn-ghost" href="https://t.me/BBFxAi_Community" target="_blank" rel="noopener">Chat on Telegram</a>
+      <a class="btn-gold" href="https://affs.click/JVeDD" target="_blank" rel="nofollow noopener" style="white-space: nowrap; background: #A37E2C; color: #FFFFFF; padding: 15px 30px; border-radius: 10px; font-weight: 600; font-size: 16.5px;">Get the EA free</a>
+      <a class="btn-outline" href="https://t.me/BBFxAi_Community" target="_blank" rel="noopener" style="white-space: nowrap; border: 1.5px solid #D9D3C6; color: #1C2226; padding: 14px 28px; border-radius: 10px; font-weight: 600; font-size: 16.5px; background: #FFFFFF;">Chat on Telegram</a>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer style="border-top: 1px solid var(--hairline); background: rgba(186,214,247,0.02);">
-  <div class="sec" style="padding-top: 56px; padding-bottom: 40px; display: flex; flex-direction: column; gap: 36px;">
+<footer style="background: #1C2226; color: #AEB6BB;">
+  <div class="sec" style="max-width: 1120px; margin: 0 auto; padding: 56px 32px 40px; display: flex; flex-direction: column; gap: 36px;">
     <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap;">
       <div style="display: flex; align-items: center; gap: 10px;">
-        <svg width="36" height="36" viewBox="0 0 40 40" role="img" aria-label="ForexGoldEA logo" style="flex:none;"><defs><radialGradient id="fg40" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#EFD48F"/><stop offset="100%" stop-color="#A37E2C"/></radialGradient></defs><circle cx="20" cy="20" r="18" fill="url(#fg40)" stroke="#8A6A1F" stroke-width="2"/><text x="20" y="25.5" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="14.5" fill="#FBFAF7">FGE</text></svg>
-        <span style="font-weight: 600; font-size: 16px; color: var(--frost);">ForexGoldEA</span>
+        <svg width="40" height="40" viewBox="0 0 40 40" role="img" aria-label="ForexGoldEA logo" style="flex:none;"><defs><radialGradient id="fg40" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#EFD48F"/><stop offset="100%" stop-color="#A37E2C"/></radialGradient></defs><circle cx="20" cy="20" r="18" fill="url(#fg40)" stroke="#8A6A1F" stroke-width="2"/><text x="20" y="25.5" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="14.5" fill="#FBFAF7">FGE</text></svg>
+        <span style="font-weight: 700; font-size: 16px; color: #FBFAF7;">ForexGoldEA</span>
       </div>
       <div style="display: flex; gap: 32px; font-size: 14px; flex-wrap: wrap;">
-        <a href="#performance" style="color: var(--mist);">Performance</a>
-        <a href="#free" style="color: var(--mist);">Free EA</a>
-        <a href="#pricing" style="color: var(--mist);">What's included</a>
-        <a href="tools/" style="color: var(--mist);">Free tools</a>
-        <a href="https://t.me/BBFxAi_Community" target="_blank" rel="noopener" style="color: var(--mist);">Community</a>
-        <a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener" style="color: var(--mist);">Contact</a>
+        <a href="#performance" style="color: #AEB6BB;">Performance</a>
+        <a href="#free" style="color: #AEB6BB;">Free EA</a>
+        <a href="#pricing" style="color: #AEB6BB;">What's included</a>
+        <a href="tools/" style="color: #AEB6BB;">Free tools</a>
+        <a href="https://t.me/BBFxAi_Community" target="_blank" rel="noopener" style="color: #AEB6BB;">Community</a>
+        <a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener" style="color: #AEB6BB;">Contact</a>
       </div>
     </div>
-    <div style="border-top: 1px solid var(--hairline); padding-top: 28px; display: flex; flex-direction: column; gap: 14px; font-size: 12.5px; line-height: 1.65; color: var(--fog);">
-      <p style="margin: 0;"><strong style="color: var(--mist);">Risk disclosure.</strong> Trading foreign exchange and CFDs on margin — including gold (XAU/USD) — carries a high level of risk and may not be suitable for every investor. You can lose some or all of your invested capital; do not trade with money you cannot afford to lose. Performance figures are derived from historical backtesting and are not indicative of future results. ForexGoldEA is a trading tool, not financial advice.</p>
-      <p style="margin: 0;"><strong style="color: var(--mist);">Affiliate disclosure.</strong> This site contains affiliate links to third-party brokers. We may receive a commission if you open and fund an account through them, at no additional cost to you.</p>
+    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 28px; display: flex; flex-direction: column; gap: 14px; font-size: 12.5px; line-height: 1.65; color: #7E868C;">
+      <p style="margin: 0;"><strong style="color: #AEB6BB;">Risk disclosure.</strong> Trading foreign exchange and CFDs on margin — including gold (XAU/USD) — carries a high level of risk and may not be suitable for every investor. You can lose some or all of your invested capital; do not trade with money you cannot afford to lose. Performance figures are derived from historical backtesting and are not indicative of future results. ForexGoldEA is a trading tool, not financial advice.</p>
+      <p style="margin: 0;"><strong style="color: #AEB6BB;">Affiliate disclosure.</strong> This site contains affiliate links to third-party brokers. We may receive a commission if you open and fund an account through them, at no additional cost to you.</p>
       <p style="margin: 0;">© 2026 ForexGoldEA — powered by BBFxAi LLC.</p>
     </div>
   </div>
-<div style="max-width:1120px; margin:0 auto; padding:4px 24px 12px; font-size:13px; display:flex; flex-wrap:wrap; gap:16px;"><a href="about.html" style="color:var(--fog);">About</a><a href="blog.html" style="color:var(--fog);">Blog</a><a href="tools/" style="color:var(--fog);">Free tools</a><a href="risk-disclaimer.html" style="color:var(--fog);">Risk disclaimer</a><a href="privacy-policy.html" style="color:var(--fog);">Privacy policy</a><a href="terms.html" style="color:var(--fog);">Terms of use</a><a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener" style="color:var(--frost);">Contact</a></div>
+<div style="max-width:1120px; margin:0 auto; padding:4px 24px 8px; font-size:13px; display:flex; flex-wrap:wrap; gap:16px;"><a href="about.html" style="color:#AEB6BB;">About</a><a href="blog.html" style="color:#AEB6BB;">Blog</a><a href="tools/" style="color:#AEB6BB;">Free tools</a><a href="risk-disclaimer.html" style="color:#AEB6BB;">Risk disclaimer</a><a href="privacy-policy.html" style="color:#AEB6BB;">Privacy policy</a><a href="terms.html" style="color:#AEB6BB;">Terms of use</a><a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener" style="color:#C9A24B;">Contact</a></div>
 </footer>
 
 <script>
@@ -505,6 +470,34 @@
       }
     });
   });
+})();
+
+/* ---------- animated gold background ---------- */
+(function () {
+  var host = document.getElementById('bgMotion');
+  if (!host || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var kinds = ['bar', 'coin', 'candleUp', 'candleDown'];
+  function rnd(a, b) { return a + Math.random() * (b - a); }
+  for (var i = 0; i < 16; i++) {
+    var kind = kinds[i % 4];
+    var left = rnd(2, 96), dur = rnd(26, 48), delay = -rnd(0, 48), scale = rnd(0.6, 1.3), op = rnd(0.10, 0.22);
+    var wrap = document.createElement('div');
+    wrap.style.cssText = 'position:absolute;left:' + left + '%;top:0;opacity:' + op + ';transform:scale(' + scale + ');animation:fgFloat ' + dur + 's linear ' + delay + 's infinite;';
+    var inner = '';
+    if (kind === 'bar') {
+      inner = '<div style="width:46px;height:20px;border-radius:4px;background:linear-gradient(135deg,#E3C377,#A37E2C);box-shadow:inset 0 2px 3px rgba(255,255,255,0.5);"></div>';
+    } else if (kind === 'coin') {
+      inner = '<div style="width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#EFD48F,#B8913A);border:2px solid #A37E2C;"></div>';
+    } else {
+      var col = (kind === 'candleUp') ? '#2E9D6A' : '#C9A24B';
+      inner = '<div style="position:relative;width:10px;height:44px;">' +
+              '<div style="width:2px;height:44px;background:' + col + ';margin:0 auto;"></div>' +
+              '<div style="width:10px;height:22px;border-radius:2px;background:' + col + ';position:absolute;top:11px;left:50%;margin-left:-5px;"></div>' +
+              '</div>';
+    }
+    wrap.innerHTML = inner;
+    host.appendChild(wrap);
+  }
 })();
 </script>
 
