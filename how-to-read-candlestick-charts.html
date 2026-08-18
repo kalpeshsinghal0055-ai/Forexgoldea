@@ -44,7 +44,10 @@
   article ol, article ul { padding-left: 22px; } article li { margin-bottom: 8px; }
   .cta { display: inline-block; background: #A37E2C; color: #fff; padding: 13px 26px; border-radius: 10px; font-weight: 600; } .cta:hover { background: #8A6A1F; color:#fff; }
   .note { background: #F3EEE2; border: 1px solid #E2D9C2; border-radius: 12px; padding: 16px 18px; font-size: 15px; color: #4A5258; }
-  .answer { background: #F3EEE2; border: 1px solid #E2D9C2; border-left: 3px solid #A37E2C; border-radius: 12px; padding: 18px 20px; margin: 22px 0; font-size: 16px; color: #2E3840; }
+  .answer { background: transparent; border: 0; border-left: 2px solid #A37E2C; border-radius: 0; padding: 4px 0 4px 24px; margin: 30px 0; font-family: 'Newsreader', serif; font-size: 19.5px; font-style: italic; line-height: 1.55; color: #2E3840; }
+  .answer > strong:first-child, .answer > p > strong:first-child { font-style: normal; font-family: 'Public Sans', sans-serif; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6A1F; display: block; margin-bottom: 8px; }
+  article > p:first-of-type::first-letter { float: left; font-family: 'Newsreader', serif; font-size: 62px; line-height: 0.84; padding: 7px 11px 0 0; color: #A37E2C; font-weight: 500; }
+  article h2 { border-bottom: 1px solid #E9E5DC; padding-bottom: 8px; }
   table { border-collapse: collapse; width: 100%; margin: 8px 0 4px; font-size: 15px; }
   th, td { border: 1px solid #E9E5DC; padding: 10px 12px; text-align: left; vertical-align: top; }
   th { background: #F3EEE2; font-weight: 600; }
@@ -62,7 +65,7 @@
       <svg width="34" height="34" viewBox="0 0 40 40" aria-label="ForexGoldEA"><defs><radialGradient id="fg" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#EFD48F"/><stop offset="100%" stop-color="#A37E2C"/></radialGradient></defs><circle cx="20" cy="20" r="18" fill="url(#fg)" stroke="#8A6A1F" stroke-width="2"/><text x="20" y="25.5" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="14.5" fill="#FBFAF7">FGE</text></svg>
       <span style="font-weight:700;">ForexGoldEA</span>
     </a>
-    <nav style="margin-left:auto; font-size:14.5px; font-weight:500;"><a href="blog.html" style="color:#4A5258;">← All posts</a><a href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener" style="margin-left:16px; background:#A37E2C; color:#fff; padding:8px 15px; border-radius:8px; font-weight:600;">Talk to us</a></nav>
+    <nav style="margin-left:auto; font-size:14.5px; font-weight:500;"><a href="blog.html" style="color:#4A5258;">← All posts</a><a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener" style="margin-left:16px; background:#A37E2C; color:#fff; padding:8px 15px; border-radius:8px; font-weight:600;">Ask the desk</a></nav>
   </div>
 </header>
 
@@ -73,7 +76,7 @@
 <img class="article-hero" src="images/how-to-read-candlestick-charts.jpg" alt="How to read candlestick charts — beginner guide with gold examples" width="1200" height="630" style="width:100%;height:auto;border-radius:14px;margin:6px 0 26px;" />
   <p style="font-size: 18px; color: #4A5258;">Every trading platform defaults to candlesticks, and every beginner stares at the red-green forest wondering what it's saying. Good news: candles are a language with a small alphabet. Here's how to read them — and the context rule that makes them actually useful.</p>
 
-<div class="answer"><strong>Quick answer:</strong> each candlestick shows four prices for its time period: <strong>open, close</strong> (the body) and <strong>high, low</strong> (the wicks). A green/white body = closed above open; red/black = closed below. Long bodies mean conviction, long wicks mean rejection. A handful of patterns (engulfing, hammer, doji) describe momentum shifts — but <strong>only within context</strong>: the same candle is a signal at a key level in a trend and noise in the middle of chop. Candles describe; they don't predict.</div>
+<div class="answer"><strong>In short</strong> each candlestick shows four prices for its time period: <strong>open, close</strong> (the body) and <strong>high, low</strong> (the wicks). A green/white body = closed above open; red/black = closed below. Long bodies mean conviction, long wicks mean rejection. A handful of patterns (engulfing, hammer, doji) describe momentum shifts — but <strong>only within context</strong>: the same candle is a signal at a key level in a trend and noise in the middle of chop. Candles describe; they don't predict.</div>
 
   <h2>Candle anatomy: the whole alphabet in one table</h2>
   <table>
@@ -109,9 +112,9 @@
   <p>XAUUSD's personality shows up in its candles: <strong>long wicks are routine</strong> (gold probes and rejects levels aggressively — tight stops die to wicks, which is why <a href="how-to-set-risk-per-trade-gold-ea.html">ATR-aware sizing</a> matters), <strong>marubozu runs</strong> appear when macro news lands, and Asian-session candles shrink to a fraction of London–NY ones. Reading gold's chart without session context is reading half the language.</p>
 
   <h2>Honest limits — what candles can't do</h2>
-  <p>Patterns are <strong>probabilities, not promises</strong> — a bullish engulfing "works" somewhat more often than chance in the right context, and still fails constantly. No candle knows the future (<a href="https://xauusdrobot.com/blog/gold-price-prediction/">nothing does</a>). This is why disciplined traders pair candle context with hard stops and fixed risk — and why rule-based EAs codify these same structures instead of "reading vibes." ForexGoldEA, for instance, trades trend-and-momentum conditions with a <a href="gold-ea-strategy.html">fixed stop on every trade</a> — candle logic without candle emotions.</p>
+  <p>Patterns are <strong>probabilities, not promises</strong> — a bullish engulfing "works" somewhat more often than chance in the right context, and still fails constantly. No candle knows the future (nothing does). This is why disciplined traders pair candle context with hard stops and fixed risk — and why rule-based EAs codify these same structures instead of "reading vibes." ForexGoldEA, for instance, trades trend-and-momentum conditions with a <a href="gold-ea-strategy.html">fixed stop on every trade</a> — candle logic without candle emotions.</p>
 
-  <h2>Frequently asked questions</h2>
+  <h2>Reader questions</h2>
   <h3>How do you read a candlestick chart?</h3>
   <p>Body = open→close, wicks = high/low; green closed higher. Conviction in bodies, rejection in wicks, meaning in context.</p>
   <h3>What are the most important candlestick patterns?</h3>
@@ -125,19 +128,19 @@
   <h3>Do trading robots read candlesticks?</h3>
   <p>EAs encode the same structures as precise rules — candle logic without candle emotions.</p>
 
-  <h2>Bottom line</h2>
+  <h2>Where this leaves you</h2>
   <p>Candlesticks are the market's shorthand — four prices per period, drawn so conviction, rejection and indecision are visible at a glance. Learn the small alphabet, then spend your real effort on the grammar: trend, location, session. Read in that order and candles become a useful confirmation layer; read them alone and they're tea leaves. Either way, the stop-loss — not the pattern — is what keeps you in the game.</p>
 
   <div class="note" style="margin: 22px 0;">Trading gold and forex on margin carries a high level of risk and may not be suitable for everyone; a large majority of retail CFD accounts lose money. This article is educational and not financial advice.</div>
 
   <div style="margin: 36px 0 8px;">
     <a class="cta" href="https://affs.click/JVeDD" target="_blank" rel="nofollow noopener">Trade the structure automatically — ForexGoldEA free →</a>
-    <a href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener" style="display:inline-block; margin-left:12px; margin-top:12px; background:#1C2226; color:#fff; padding:13px 26px; border-radius:10px; font-weight:600;">Talk to us on Telegram →</a>
+    <a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener" style="display:inline-block; margin-left:12px; margin-top:12px; background:#1C2226; color:#fff; padding:13px 26px; border-radius:10px; font-weight:600;">Talk to us on Telegram →</a>
   </div>
   <p style="font-size: 13px; color: #9AA0A5;">Affiliate disclosure: we earn a commission when you open and fund an account through our partner links, at no extra cost to you.</p>
 
 <div class="related-guides" style="margin:36px 0 8px;">
-<h2>Related guides</h2>
+<h2>Continue reading</h2>
 <ul>
 <li><a href="how-to-trade-gold-beginners.html">How to trade gold for beginners</a></li>
 <li><a href="gold-trading-strategies.html">Gold trading strategies that actually work</a></li>

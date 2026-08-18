@@ -7,7 +7,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-X82W5RGRLF');
 </script>
 <meta charset="utf-8" />
@@ -15,406 +14,432 @@
 <link rel="icon" href="/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-<title>Gold EA Blog: XAUUSD Trading Guides &amp; Tips | ForexGoldEA</title>
-<meta name="description" content="Guides, tutorials and tips on automated XAU/USD (gold) trading with ForexGoldEA on MetaTrader 4 &amp; 5 — setup, risk management, VPS, presets and more." />
-<meta name="keywords" content="ForexGoldEA blog, XAUUSD EA guide, gold trading EA tutorial, MT4 MT5 gold robot, forex gold expert advisor tips" />
-<meta name="robots" content="index, follow, max-image-preview:large" />
+<title>The Gold Desk &mdash; Plain-English Gold (XAU/USD) Trading Guides</title>
+<meta name="description" content="Plain-English writing about trading gold: what moves XAU/USD, how pips, lots, spread and leverage really work, and what changes when an EA trades it for you." />
+<meta name="author" content="ForexGoldEA" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
 <link rel="canonical" href="https://forexgoldea.com/blog.html" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="ForexGoldEA Blog — Gold Trading &amp; XAUUSD EA Guides" />
-<meta property="og:description" content="Guides and tips on automated gold trading with ForexGoldEA on MT4 &amp; 5." />
+<meta property="og:site_name" content="ForexGoldEA" />
+<meta property="og:title" content="The Gold Desk &mdash; Plain-English Gold (XAU/USD) Trading Guides" />
+<meta property="og:description" content="What moves gold, how the mechanics work, and what changes when software trades it for you." />
 <meta property="og:url" content="https://forexgoldea.com/blog.html" />
 <meta property="og:image" content="https://forexgoldea.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Gold Desk &mdash; Gold Trading Guides" />
+<meta name="twitter:image" content="https://forexgoldea.com/og-image.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
   html, body { margin: 0; padding: 0; background: #FBFAF7; }
   body { font-family: 'Public Sans', sans-serif; color: #1C2226; -webkit-font-smoothing: antialiased; }
-  a { color: #8A6A1F; text-decoration: none; transition: color .15s ease, border-color .15s ease, background .15s ease; }
+  a { color: #8A6A1F; text-decoration: none; transition: color .15s ease, background .15s ease; }
   a:hover { color: #6E5316; }
   * { box-sizing: border-box; }
-  .wrap { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 32px; }
   .nav-cta:hover { background: #2E3840 !important; }
-  .card:hover { border-color: #D9CBA6 !important; box-shadow: 0 8px 28px rgba(28,34,38,0.07) !important; }
-  @media (max-width: 640px) { .wrap { padding: 0 20px; } .blog-title { font-size: 34px !important; } }
-
-  .post-card { display: flex; background: #FFFFFF; border: 1px solid #E9E5DC; border-radius: 14px; overflow: hidden; transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease; }
-  .post-card:hover { border-color: #C9B37E; box-shadow: 0 6px 24px rgba(28,34,38,0.08); transform: translateY(-2px); }
-  .pc-img { width: 300px; min-width: 300px; height: auto; object-fit: cover; object-position: left center; display: block; }
-  .pc-body { padding: 22px 26px; display: flex; flex-direction: column; gap: 8px; }
-  .pc-meta { font-size: 13px; color: #A37E2C; font-weight: 600; }
-  .pc-title { font-family: 'Newsreader', serif; font-size: 23px; font-weight: 500; color: #1C2226; line-height: 1.2; }
-  .pc-excerpt { font-size: 15px; color: #4A5258; line-height: 1.6; }
-  .pc-more { font-size: 14px; color: #A37E2C; font-weight: 600; margin-top: auto; padding-top: 6px; }
-  @media (max-width: 680px) {
-    .post-card { flex-direction: column; }
-    .pc-img { width: 100%; min-width: 0; height: auto; }
+  .row:hover .row-t { color: #8A6A1F; }
+  .lead-card:hover .lead-t { color: #8A6A1F; }
+  @media (max-width: 640px) {
+    .wrap { padding: 0 20px; }
+    .desk-h1 { font-size: 34px !important; }
+    .lead-t { font-size: 27px !important; }
+    .row { grid-template-columns: 1fr !important; }
   }
 </style>
-<script type="application/ld+json">
-{ "@context": "https://schema.org", "@type": "Blog", "name": "ForexGoldEA Blog", "url": "https://forexgoldea.com/blog.html", "description": "Guides and tips on automated XAU/USD gold trading with ForexGoldEA on MetaTrader 4 and 5." }
-</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Blog", "name": "The Gold Desk — ForexGoldEA", "url": "https://forexgoldea.com/blog.html", "description": "Plain-English writing about trading gold (XAU/USD): what moves the metal, how the mechanics work, and what changes when software trades it for you.", "blogPost": [{"@type": "BlogPosting", "headline": "Swing trading vs day trading: which actually fits your life?", "url": "https://forexgoldea.com/swing-vs-day-trading.html", "datePublished": "2026-08-11"}, {"@type": "BlogPosting", "headline": "Trading psychology: why your brain loses money (and the honest fixes)", "url": "https://forexgoldea.com/trading-psychology.html", "datePublished": "2026-08-10"}, {"@type": "BlogPosting", "headline": "Is gold trading halal? An honest, respectful guide", "url": "https://forexgoldea.com/is-gold-trading-halal.html", "datePublished": "2026-08-06"}, {"@type": "BlogPosting", "headline": "What time does the gold market open and close?", "url": "https://forexgoldea.com/gold-market-hours.html", "datePublished": "2026-08-05"}, {"@type": "BlogPosting", "headline": "Is automated trading legal? The complete answer", "url": "https://forexgoldea.com/is-automated-trading-legal.html", "datePublished": "2026-08-05"}, {"@type": "BlogPosting", "headline": "How to read candlestick charts: the beginner's guide (with gold examples)", "url": "https://forexgoldea.com/how-to-read-candlestick-charts.html", "datePublished": "2026-08-02"}, {"@type": "BlogPosting", "headline": "How to trade gold for beginners: the complete step-by-step path", "url": "https://forexgoldea.com/how-to-trade-gold-beginners.html", "datePublished": "2026-08-01"}, {"@type": "BlogPosting", "headline": "What is forex trading, really? The complete plain-English guide", "url": "https://forexgoldea.com/what-is-forex-trading.html", "datePublished": "2026-08-01"}, {"@type": "BlogPosting", "headline": "Gold vs Bitcoin: which should you actually trade?", "url": "https://forexgoldea.com/gold-vs-bitcoin.html", "datePublished": "2026-08-01"}, {"@type": "BlogPosting", "headline": "When is the best time to buy gold? What the data supports", "url": "https://forexgoldea.com/best-time-to-buy-gold.html", "datePublished": "2026-08-01"}, {"@type": "BlogPosting", "headline": "How much can you make trading gold? The honest math", "url": "https://forexgoldea.com/how-much-trading-gold.html", "datePublished": "2026-08-01"}, {"@type": "BlogPosting", "headline": "Gold trading strategies that actually work — and the ones that don't", "url": "https://forexgoldea.com/gold-trading-strategies.html", "datePublished": "2026-08-01"}]}</script>
 </head>
 <body>
 
-<!-- NAV -->
-<header style="position: sticky; top: 0; z-index: 50; background: rgba(251,250,247,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid #E9E5DC;">
-  <div class="wrap" style="max-width: 1120px; height: 68px; display: flex; align-items: center; justify-content: space-between;">
-    <a href="index.html" style="display: flex; align-items: center; gap: 10px; color: #1C2226;">
-      <svg width="40" height="40" viewBox="0 0 40 40" role="img" aria-label="ForexGoldEA logo"><defs><radialGradient id="fg" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#EFD48F"/><stop offset="100%" stop-color="#A37E2C"/></radialGradient></defs><circle cx="20" cy="20" r="18" fill="url(#fg)" stroke="#8A6A1F" stroke-width="2"/><text x="20" y="25.5" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="14.5" fill="#FBFAF7">FGE</text></svg>
-      <span style="font-weight: 700; font-size: 17px; letter-spacing: -0.01em;">ForexGoldEA</span>
+<header style="border-bottom: 1px solid #E9E5DC; background: rgba(251,250,247,0.92); position: sticky; top: 0; z-index: 40; backdrop-filter: blur(12px);">
+  <div class="wrap" style="max-width: 1120px; height: 66px; display: flex; align-items: center; gap: 10px;">
+    <a href="index.html" style="display:flex; align-items:center; gap:10px; color:#1C2226;">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-label="ForexGoldEA"><defs><radialGradient id="fg" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#EFD48F"/><stop offset="100%" stop-color="#A37E2C"/></radialGradient></defs><circle cx="20" cy="20" r="18" fill="url(#fg)" stroke="#8A6A1F" stroke-width="2"/><text x="20" y="25.5" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="14.5" fill="#FBFAF7">FGE</text></svg>
+      <span style="font-weight:700;">ForexGoldEA</span>
     </a>
-    <nav style="display: flex; align-items: center; gap: 24px; font-size: 14.5px; font-weight: 500;">
-      <a href="index.html#performance" style="color: #4A5258;">Performance</a>
-      <a href="index.html#free" style="color: #4A5258;">Free EA</a>
-      <a href="blog.html" style="color: #1C2226;">Blog</a>
-      <a class="nav-cta" href="https://affs.click/JVeDD" target="_blank" rel="nofollow noopener" style="background: #1C2226; color: #FBFAF7; padding: 10px 20px; border-radius: 8px; font-weight: 600;">Get the EA free</a>
+    <nav style="margin-left:auto; font-size:14.5px; font-weight:500; display:flex; align-items:center; gap:20px;">
+      <a href="index.html" style="color:#4A5258;">Home</a>
+      <a href="tools/" style="color:#4A5258;">Free tools</a>
+      <a class="nav-cta" href="https://affs.click/JVeDD" target="_blank" rel="nofollow noopener" style="background:#1C2226; color:#FBFAF7; padding:9px 18px; border-radius:8px; font-weight:600;">Get the EA free</a>
     </nav>
   </div>
 </header>
 
-<!-- HEADER -->
-<section class="wrap" style="padding: 72px 32px 32px;">
-  <div style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #A37E2C; margin-bottom: 12px;">The ForexGoldEA blog</div>
-  <h1 class="blog-title" style="font-family: 'Newsreader', serif; font-size: 46px; font-weight: 500; letter-spacing: -0.02em; margin: 0 0 14px; line-height: 1.1;">Gold trading guides &amp; XAUUSD EA tips</h1>
-  <p style="font-size: 17px; line-height: 1.6; color: #4A5258; margin: 0; max-width: 60ch;">Setup walkthroughs, risk-management ideas, VPS tips and everything about running an automated gold (XAU/USD) strategy on MetaTrader 4 &amp; 5.</p>
+<!-- MASTHEAD -->
+<section class="wrap" style="padding: 64px 32px 34px; border-bottom: 2px solid #1C2226;">
+  <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: #A37E2C; margin-bottom: 14px;">The Gold Desk &middot; 35 pieces</div>
+  <h1 class="desk-h1" style="font-family: 'Newsreader', serif; font-size: 48px; font-weight: 500; letter-spacing: -0.02em; margin: 0 0 14px; line-height: 1.08;">Writing about gold, in plain English.</h1>
+  <p style="font-size: 17.5px; line-height: 1.6; color: #4A5258; margin: 0; max-width: 62ch;">What actually moves XAU/USD, how the arithmetic of pips, lots and leverage really works, and what changes the day you hand the chart to software. No signals, no certainties &mdash; just the parts worth understanding before money is involved.</p>
 </section>
 
-<!-- POST LIST -->
-<section class="wrap" style="padding: 16px 32px 96px;">
-  <div id="postList" style="display: flex; flex-direction: column; gap: 18px;">
-    <a class="card post-card" href="swing-vs-day-trading.html">
-      <img class="pc-img" src="images/swing-vs-day-trading.jpg" alt="Swing trading vs day trading — which actually fits your life" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">August 11, 2026 · Comparison</div>
-        <div class="pc-title">Swing trading vs day trading: which actually fits your life?</div>
-        <div class="pc-excerpt">Time, costs, psychology and gold's character compared honestly — plus the four questions that decide the right style for you.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="trading-psychology.html">
-      <img class="pc-img" src="images/trading-psychology.jpg" alt="Trading psychology — why your brain loses money" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">August 10, 2026 · Mindset</div>
-        <div class="pc-title">Trading psychology: why your brain loses money (and the honest fixes)</div>
-        <div class="pc-excerpt">The 6 biases that empty accounts — loss aversion, revenge trading, FOMO — why knowing isn't enough, and the structural fixes that actually work.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="is-gold-trading-halal.html">
-      <img class="pc-img" src="images/is-gold-trading-halal.jpg" alt="Is gold trading halal — an honest respectful guide" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">August 6, 2026 · Honest Guide</div>
-        <div class="pc-title">Is gold trading halal? An honest, respectful guide</div>
-        <div class="pc-excerpt">What scholars weigh — riba, gharar, possession — how swap-free Islamic accounts work, and why the final word belongs to your scholar.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="gold-market-hours.html">
-      <img class="pc-img" src="images/gold-market-hours.jpg" alt="What time does the gold market open and close?" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">August 5, 2026 · Market Hours</div>
-        <div class="pc-title">What time does the gold market open and close?</div>
-        <div class="pc-excerpt">Open Sunday ~22:00 GMT, close Friday ~21:00 GMT — the full timezone table (GMT/IST/EST), sessions, the daily break and the trap windows.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="is-automated-trading-legal.html">
-      <img class="pc-img" src="images/is-automated-trading-legal.jpg" alt="Is automated trading legal? The complete answer" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">August 5, 2026 · EA Basics</div>
-        <div class="pc-title">Is automated trading legal? The complete answer</div>
-        <div class="pc-excerpt">Yes — EAs are legal and broker-supported. What's permitted, prop-firm house rules, and the three real red lines to avoid.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="how-to-read-candlestick-charts.html">
-      <img class="pc-img" src="images/how-to-read-candlestick-charts.jpg" alt="How to read candlestick charts — beginner guide with gold examples" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">August 2, 2026 · Chart Reading</div>
-        <div class="pc-title">How to read candlestick charts: the beginner's guide (with gold examples)</div>
-        <div class="pc-excerpt">Candle anatomy, the handful of patterns worth knowing, and the context rule — trend, location, session — that makes them mean anything.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="how-to-trade-gold-beginners.html">
-      <img class="pc-img" src="images/how-to-trade-gold-beginners.jpg" alt="How to trade gold for beginners: the complete step-by-step path" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">August 1, 2026 · Beginner Pillar</div>
-        <div class="pc-title">How to trade gold for beginners: the complete step-by-step path</div>
-        <div class="pc-excerpt">Broker setup, pips and lots, your first demo trade, and the risk rules that decide whether you're still trading in six months.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="what-is-forex-trading.html">
-      <img class="pc-img" src="images/what-is-forex-trading.jpg" alt="What is forex trading, really? The complete plain-English guide" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">August 1, 2026 · Basics</div>
-        <div class="pc-title">What is forex trading, really? The complete plain-English guide</div>
-        <div class="pc-excerpt">Currency pairs, pips, leverage and brokers — the honest version, hype removed, plus where gold fits in.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="gold-vs-bitcoin.html">
-      <img class="pc-img" src="images/gold-vs-bitcoin.jpg" alt="Gold vs Bitcoin: which should you actually trade?" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">August 1, 2026 · Comparison</div>
-        <div class="pc-title">Gold vs Bitcoin: which should you actually trade?</div>
-        <div class="pc-excerpt">Volatility, hours, costs and character compared honestly — and which instrument fits which trader.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="best-time-to-buy-gold.html">
-      <img class="pc-img" src="images/best-time-to-buy-gold.jpg" alt="When is the best time to buy gold? What the data supports" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">August 1, 2026 · Timing Guide</div>
-        <div class="pc-title">When is the best time to buy gold? What the data supports</div>
-        <div class="pc-excerpt">Seasonality, dip-buying and dollar cycles — what evidence backs, what it doesn't, for holders and traders both.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="how-much-trading-gold.html">
-      <img class="pc-img" src="images/how-much-trading-gold.jpg" alt="How much can you make trading gold? The honest math" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">August 1, 2026 · Expectations</div>
-        <div class="pc-title">How much can you make trading gold? The honest math</div>
-        <div class="pc-excerpt">Variable percentages, drawdowns and capital math — why % beats $ promises, and what actually scales results.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="gold-trading-strategies.html">
-      <img class="pc-img" src="images/gold-trading-strategies.jpg" alt="Gold trading strategies that actually work — and the ones that don't" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">August 1, 2026 · Strategy Guide</div>
-        <div class="pc-title">Gold trading strategies that actually work — and the ones that don't</div>
-        <div class="pc-excerpt">Trend, breakout, range and news-avoidance — what holds up on XAUUSD, the systems that quietly destroy accounts, and the rules that matter more than any entry.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="leverage-gold-ea.html">
-      <img class="pc-img" src="images/leverage-gold-ea.jpg" alt="Leverage for a gold EA: 1:100 or 1:500, honestly?" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 31, 2026 · Account Planning</div>
-        <div class="pc-title">Leverage for a gold EA: 1:100 or 1:500, honestly?</div>
-        <div class="pc-excerpt">The margin math, the risk myth almost everyone believes, stop-out mechanics — and why leverage matters less than your sizing rules.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="gold-spread-explained.html">
-      <img class="pc-img" src="images/gold-spread-explained.jpg" alt="The gold spread, explained: what XAUUSD really costs" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 30, 2026 · Trading Costs</div>
-        <div class="pc-title">The gold spread, explained: what XAUUSD really costs</div>
-        <div class="pc-excerpt">Bid vs ask, session blowouts, the stop-loss trap — the invisible cost that separates a profitable backtest from a losing live account.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="gold-ea-drawdown-explained.html">
-      <img class="pc-img" src="images/gold-ea-drawdown-explained.jpg" alt="Gold EA drawdown: how much is too much?" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 29, 2026 · Risk Basics</div>
-        <div class="pc-title">Gold EA drawdown: how much is too much?</div>
-        <div class="pc-excerpt">Equity vs balance drawdown, the brutal recovery math, honest acceptable ranges — and how to judge a robot's risk before going live.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="demo-to-live-gold-ea.html">
-      <img class="pc-img" src="images/demo-to-live-gold-ea.jpg" alt="Demo to live: when is a gold EA ready for real money?" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 28, 2026 · Testing Guide</div>
-        <div class="pc-title">Demo to live: when is a gold EA ready for real money?</div>
-        <div class="pc-excerpt">How many weeks on demo, which metrics must match the backtest, and the small-live-first checklist that protects your capital.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="mt4-vs-mt5-gold-ea.html">
-      <img class="pc-img" src="images/mt4-vs-mt5-gold-ea.jpg" alt="MT4 vs MT5 for a gold EA: the honest platform comparison" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 27, 2026 · Platform Guide</div>
-        <div class="pc-title">MT4 vs MT5 for a gold EA: the honest platform comparison</div>
-        <div class="pc-excerpt">Backtesting quality, execution, hedging modes and broker support — plus the practical verdict for ForexGoldEA users (it runs on both).</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="trading-gold-during-news.html">
-      <img class="pc-img" src="images/trading-gold-during-news.jpg" alt="Trading gold during news: what NFP, CPI and FOMC really do to XAUUSD" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 24, 2026 · News & Volatility</div>
-        <div class="pc-title">Trading gold during news: what NFP, CPI and FOMC really do to XAUUSD</div>
-        <div class="pc-excerpt">Spread blowouts, slippage and whipsaws during big US releases — and why the EA steps aside with a news filter.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="best-vps-gold-ea.html">
-      <img class="pc-img" src="images/best-vps-gold-ea.jpg" alt="Best VPS for a gold EA: why latency and uptime decide results" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 24, 2026 · Infrastructure</div>
-        <div class="pc-title">Best VPS for a gold EA: why latency and uptime decide results</div>
-        <div class="pc-excerpt">What a forex VPS does for a XAUUSD robot, the latency and uptime specs that matter, our recommended host, and a 5-step setup.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="how-to-backtest-gold-ea.html">
-      <img class="pc-img" src="images/how-to-backtest-gold-ea.jpg" alt="How to backtest a gold EA: data, spreads and honest results" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 23, 2026 · Testing Guide</div>
-        <div class="pc-title">How to backtest a gold EA: data, spreads and honest results</div>
-        <div class="pc-excerpt">Tick data and modelling quality, realistic spreads, how long to test, the metrics that matter, and why forward testing is the only real proof.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="are-gold-trading-eas-profitable.html">
-      <img class="pc-img" src="images/are-gold-trading-eas-profitable.jpg" alt="Are gold trading EAs actually profitable? An honest look" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 23, 2026 · Honest Guide</div>
-        <div class="pc-title">Are gold trading EAs actually profitable? An honest look</div>
-        <div class="pc-excerpt">When gold robots make money, when they quietly lose it, the hidden costs, and how to judge a gold EA before you trust it with real money.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="how-to-set-risk-per-trade-gold-ea.html">
-      <img class="pc-img" src="images/how-to-set-risk-per-trade-gold-ea.jpg" alt="How to set risk per trade on a gold EA (the 1% rule)" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 22, 2026 · Risk management</div>
-        <div class="pc-title">How to set risk per trade on a gold EA (the 1% rule)</div>
-        <div class="pc-excerpt">The 1–2% rule for XAUUSD, how to turn it into a lot size, and the daily/drawdown limits that keep small gold accounts alive.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="how-much-is-a-pip-in-gold-xauusd.html">
-      <img class="pc-img" src="images/how-much-is-a-pip-in-gold-xauusd.jpg" alt="How much is a pip in gold? XAUUSD pip & point value explained" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 21, 2026 · Gold basics</div>
-        <div class="pc-title">How much is a pip in gold? XAUUSD pip & point value explained</div>
-        <div class="pc-excerpt">A pip on gold is usually a $0.10 move — about $1 per pip at 0.01 lots. Pip vs point cleared up, with a value table for every lot size.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="how-to-calculate-lot-size-xauusd.html">
-      <img class="pc-img" src="images/how-to-calculate-lot-size-xauusd.jpg" alt="How to calculate lot size for XAUUSD (with worked examples)" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 20, 2026 · Position sizing</div>
-        <div class="pc-title">How to calculate lot size for XAUUSD (with worked examples)</div>
-        <div class="pc-excerpt">The exact formula — risk divided by stop distance times 100 — plus worked examples for $500, $1,000 and $2,000 gold accounts, and the pip/point trap to avoid.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="how-much-money-to-run-gold-ea.html">
-      <img class="pc-img" src="images/how-much-money-to-run-gold-ea.jpg" alt="How much money do you need to run a gold EA? ($100 vs $500 vs $1,000)" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 19, 2026 · Account planning</div>
-        <div class="pc-title">How much money do you need to run a gold EA? ($100 vs $500 vs $1,000)</div>
-        <div class="pc-excerpt">The honest math behind the minimum deposit question — realistic lot sizes, 1–2% risk per trade, and the drawdown buffer that keeps small XAUUSD accounts alive.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="best-xauusd-ea-2026.html">
-      <img class="pc-img" src="images/best-xauusd-ea-2026.jpg" alt="Best XAUUSD EA in 2026: our top gold trading robot pick" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 18, 2026 · Top picks</div>
-        <div class="pc-title">Best XAUUSD EA in 2026: our top gold trading robot pick</div>
-        <div class="pc-excerpt">Our top pick for 2026 is a rule-based gold EA with no martingale or grid, a hard SL/TP on every trade, and a news filter — plus the honest checklist to judge any gold robot.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="best-prop-firms-gold-xauusd-ea.html">
-      <img class="pc-img" src="images/best-prop-firms-gold-xauusd-ea.jpg" alt="Best prop firms for gold (XAUUSD) traders in 2026" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 17, 2026 · Prop firms</div>
-        <div class="pc-title">Best prop firms for gold (XAUUSD) traders in 2026</div>
-        <div class="pc-excerpt">FTMO, FundedNext, The5ers, E8, FundingPips and more — a practical guide to funded trading firms for gold traders, and how a gold EA fits prop accounts.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="what-is-an-ea-how-it-works.html">
-      <img class="pc-img" src="images/what-is-an-ea-how-it-works.jpg" alt="What is an EA (expert advisor) and how does it work?" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 16, 2026 · Basics</div>
-        <div class="pc-title">What is an EA (expert advisor) and how does it work?</div>
-        <div class="pc-excerpt">Heard people talk about "EAs" but not sure what they are? A clear beginner's guide to how expert advisors work on MT4 and MT5, and what they can and can't do.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="what-is-martingale-grid-ea-pros-cons.html">
-      <img class="pc-img" src="images/what-is-martingale-grid-ea-pros-cons.jpg" alt="What is a martingale grid EA? Pros, cons and the risks" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 15, 2026 · EA strategies</div>
-        <div class="pc-title">What is a martingale grid EA? Pros, cons and the risks</div>
-        <div class="pc-excerpt">Martingale and grid robots can look brilliant for months, then lose everything in a day. An honest look at how they work, their pros and cons, and the real risks.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="what-moves-xauusd-gold-price-drivers.html">
-      <img class="pc-img" src="images/what-moves-xauusd-gold-price-drivers.jpg" alt="What moves XAUUSD? The key drivers of the gold price explained" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 14, 2026 · Market guide</div>
-        <div class="pc-title">What moves XAUUSD? The key drivers of the gold price explained</div>
-        <div class="pc-excerpt">Why does gold go up and down? A clear guide to the main forces behind XAU/USD — the dollar, interest rates, inflation, safe-haven demand and central banks.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="best-time-to-trade-xauusd-gold-sessions.html">
-      <img class="pc-img" src="images/best-time-to-trade-xauusd-gold-sessions.jpg" alt="Best time to trade XAUUSD: gold trading sessions explained" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 13, 2026 · Market guide</div>
-        <div class="pc-title">Best time to trade XAUUSD: gold trading sessions explained</div>
-        <div class="pc-excerpt">Gold doesn't move the same way all day. Here's when XAU/USD is most active — the London–New York overlap, news times, and what it means for an EA.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="xauusd-vs-eurusd-gold-ea.html">
-      <img class="pc-img" src="images/xauusd-vs-eurusd-gold-ea.jpg" alt="XAUUSD vs EUR/USD: which one should a gold EA actually trade?" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 12, 2026 · Comparison</div>
-        <div class="pc-title">XAUUSD vs EUR/USD: which one should a gold EA actually trade?</div>
-        <div class="pc-excerpt">Gold and EUR/USD behave very differently. Here's how volatility, spreads and sessions compare — and why most gold EAs are built for XAU/USD.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="xauusd-ea-mt5-setup.html">
-      <img class="pc-img" src="images/xauusd-ea-mt5-setup.jpg" alt="How to set up a XAUUSD EA on MetaTrader 5, step by step" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 11, 2026 · Setup guide</div>
-        <div class="pc-title">How to set up a XAUUSD EA on MetaTrader 5, step by step</div>
-        <div class="pc-excerpt">Install and configure the ForexGoldEA gold expert advisor on MT5 in a few minutes — from the EA file to enabling auto-trading safely.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="gold-ea-strategy.html">
-      <img class="pc-img" src="images/gold-ea-strategy.jpg" alt="How ForexGoldEA trades XAU/USD: the gold EA strategy explained" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 10, 2026 · Strategy</div>
-        <div class="pc-title">How ForexGoldEA trades XAU/USD: the gold EA strategy explained</div>
-        <div class="pc-excerpt">How the gold robot reads XAU/USD, when it enters, why every trade has a fixed stop-loss, and why it avoids martingale entirely.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
-    <a class="card post-card" href="install-ea-mt4-mt5.html">
-      <img class="pc-img" src="images/install-ea-mt4-mt5.jpg" alt="How to install a gold EA on MetaTrader 4 & 5 in 5 minutes" width="1200" height="630" loading="lazy" />
-      <div class="pc-body">
-        <div class="pc-meta">July 10, 2026 · Setup guide</div>
-        <div class="pc-title">How to install a gold EA on MetaTrader 4 & 5 in 5 minutes</div>
-        <div class="pc-excerpt">From the EA file to a live chart: a quick, safe walkthrough for installing any gold expert advisor on MT4 and MT5.</div>
-        <div class="pc-more">Read guide →</div>
-      </div>
-    </a>
+<!-- LEAD PIECE -->
+<section class="wrap" style="padding: 40px 32px 12px;">
+  <a class="lead-card" href="swing-vs-day-trading.html" style="display: block; color: inherit;">
+    <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: #A37E2C; margin-bottom: 12px;">Latest &middot; August 11, 2026</div>
+    <img src="images/swing-vs-day-trading.jpg" alt="Swing trading vs day trading: which actually fits your life?" width="1200" height="630" style="width: 100%; height: auto; border-radius: 4px; display: block; margin-bottom: 20px;" />
+    <h2 class="lead-t" style="font-family: 'Newsreader', serif; font-size: 34px; font-weight: 500; line-height: 1.15; letter-spacing: -0.015em; margin: 0 0 12px; color: #1C2226;">Swing trading vs day trading: which actually fits your life?</h2>
+    <p style="font-size: 17px; line-height: 1.65; color: #4A5258; margin: 0; max-width: 64ch;">Time, costs, psychology and gold's character compared honestly — plus the four questions that decide the right style for you.</p>
+  </a>
+</section>
 
-  </div>
+<!-- ARCHIVE -->
+<section class="wrap" style="padding: 46px 32px 88px;">
+    <section style="margin: 0 0 52px;">
+      <h2 style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: #A37E2C; margin: 0 0 6px;">Gold, explained</h2>
+      <p style="font-size: 15px; color: #6B7379; margin: 0 0 4px; max-width: 60ch;">What the metal is, what moves it, and when it actually trades.</p>
+      <ul style="list-style: none; padding: 0; margin: 10px 0 0;">
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="what-is-forex-trading.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">What is forex trading, really? The complete plain-English guide</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Currency pairs, pips, leverage and brokers — the honest version, hype removed, plus where gold fits in.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">August 1, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="what-moves-xauusd-gold-price-drivers.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">What moves XAUUSD? The key drivers of the gold price explained</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Why does gold go up and down? A clear guide to the main forces behind XAU/USD — the dollar, interest rates, inflation, safe-haven demand and central banks.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 14, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="best-time-to-buy-gold.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">When is the best time to buy gold? What the data supports</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Seasonality, dip-buying and dollar cycles — what evidence backs, what it doesn't, for holders and traders both.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">August 1, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="gold-vs-bitcoin.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">Gold vs Bitcoin: which should you actually trade?</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Volatility, hours, costs and character compared honestly — and which instrument fits which trader.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">August 1, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="gold-market-hours.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">What time does the gold market open and close?</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Open Sunday ~22:00 GMT, close Friday ~21:00 GMT — the full timezone table (GMT/IST/EST), sessions, the daily break and the trap windows.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">August 5, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="best-time-to-trade-xauusd-gold-sessions.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">Best time to trade XAUUSD: gold trading sessions explained</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Gold doesn't move the same way all day. Here's when XAU/USD is most active — the London–New York overlap, news times, and what it means for an EA.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 13, 2026</span>
+        </a>
+      </li>
+      </ul>
+    </section>
+    <section style="margin: 0 0 52px;">
+      <h2 style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: #A37E2C; margin: 0 0 6px;">The mechanics</h2>
+      <p style="font-size: 15px; color: #6B7379; margin: 0 0 4px; max-width: 60ch;">Pips, lots, spread and leverage — the arithmetic every gold position runs on.</p>
+      <ul style="list-style: none; padding: 0; margin: 10px 0 0;">
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="how-much-is-a-pip-in-gold-xauusd.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">How much is a pip in gold? XAUUSD pip &amp; point value explained</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">A pip on gold is usually a $0.10 move — about $1 per pip at 0.01 lots. Pip vs point cleared up, with a value table for every lot size.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 21, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="how-to-calculate-lot-size-xauusd.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">How to calculate lot size for XAUUSD (with worked examples)</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">The exact formula — risk divided by stop distance times 100 — plus worked examples for $500, $1,000 and $2,000 gold accounts, and the pip/point trap to avoid.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 20, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="gold-spread-explained.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">The gold spread, explained: what XAUUSD really costs</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Bid vs ask, session blowouts, the stop-loss trap — the invisible cost that separates a profitable backtest from a losing live account.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 30, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="leverage-gold-ea.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">Leverage for a gold EA: 1:100 or 1:500, honestly?</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">The margin math, the risk myth almost everyone believes, stop-out mechanics — and why leverage matters less than your sizing rules.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 31, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="how-to-read-candlestick-charts.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">How to read candlestick charts: the beginner's guide (with gold examples)</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Candle anatomy, the handful of patterns worth knowing, and the context rule — trend, location, session — that makes them mean anything.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">August 2, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="xauusd-vs-eurusd-gold-ea.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">XAUUSD vs EUR/USD: which one should a gold EA actually trade?</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Gold and EUR/USD behave very differently. Here's how volatility, spreads and sessions compare — and why most gold EAs are built for XAU/USD.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 12, 2026</span>
+        </a>
+      </li>
+      </ul>
+    </section>
+    <section style="margin: 0 0 52px;">
+      <h2 style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: #A37E2C; margin: 0 0 6px;">Method</h2>
+      <p style="font-size: 15px; color: #6B7379; margin: 0 0 4px; max-width: 60ch;">Ways of trading gold that survive contact with a real account.</p>
+      <ul style="list-style: none; padding: 0; margin: 10px 0 0;">
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="how-to-trade-gold-beginners.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">How to trade gold for beginners: the complete step-by-step path</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Broker setup, pips and lots, your first demo trade, and the risk rules that decide whether you're still trading in six months.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">August 1, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="gold-trading-strategies.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">Gold trading strategies that actually work — and the ones that don't</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Trend, breakout, range and news-avoidance — what holds up on XAUUSD, the systems that quietly destroy accounts, and the rules that matter more than any entry.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">August 1, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="trading-gold-during-news.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">Trading gold during news: what NFP, CPI and FOMC really do to XAUUSD</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Spread blowouts, slippage and whipsaws during big US releases — and why the EA steps aside with a news filter.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 24, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="how-much-trading-gold.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">How much can you make trading gold? The honest math</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Variable percentages, drawdowns and capital math — why % beats $ promises, and what actually scales results.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">August 1, 2026</span>
+        </a>
+      </li>
+      </ul>
+    </section>
+    <section style="margin: 0 0 52px;">
+      <h2 style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: #A37E2C; margin: 0 0 6px;">The trader's head</h2>
+      <p style="font-size: 15px; color: #6B7379; margin: 0 0 4px; max-width: 60ch;">The part no indicator fixes: bias, discipline, and knowing when you're ready.</p>
+      <ul style="list-style: none; padding: 0; margin: 10px 0 0;">
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="trading-psychology.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">Trading psychology: why your brain loses money (and the honest fixes)</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">The 6 biases that empty accounts — loss aversion, revenge trading, FOMO — why knowing isn't enough, and the structural fixes that actually work.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">August 10, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="how-to-set-risk-per-trade-gold-ea.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">How to set risk per trade on a gold EA (the 1% rule)</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">The 1–2% rule for XAUUSD, how to turn it into a lot size, and the daily/drawdown limits that keep small gold accounts alive.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 22, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="demo-to-live-gold-ea.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">Demo to live: when is a gold EA ready for real money?</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">How many weeks on demo, which metrics must match the backtest, and the small-live-first checklist that protects your capital.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 28, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="how-much-money-to-run-gold-ea.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">How much money do you need to run a gold EA? ($100 vs $500 vs $1,000)</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">The honest math behind the minimum deposit question — realistic lot sizes, 1–2% risk per trade, and the drawdown buffer that keeps small XAUUSD accounts alive.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 19, 2026</span>
+        </a>
+      </li>
+      </ul>
+    </section>
+    <section style="margin: 0 0 52px;">
+      <h2 style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: #A37E2C; margin: 0 0 6px;">Letting software trade it</h2>
+      <p style="font-size: 15px; color: #6B7379; margin: 0 0 4px; max-width: 60ch;">If you hand gold to an Expert Advisor, these are the terms of that deal.</p>
+      <ul style="list-style: none; padding: 0; margin: 10px 0 0;">
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="what-is-an-ea-how-it-works.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">What is an EA (expert advisor) and how does it work?</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Heard people talk about "EAs" but not sure what they are? A clear beginner's guide to how expert advisors work on MT4 and MT5, and what they can and can't do.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 16, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="gold-ea-strategy.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">How ForexGoldEA trades XAU/USD: the gold EA strategy explained</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">How the gold robot reads XAU/USD, when it enters, why every trade has a fixed stop-loss, and why it avoids martingale entirely.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 10, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="are-gold-trading-eas-profitable.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">Are gold trading EAs actually profitable? An honest look</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">When gold robots make money, when they quietly lose it, the hidden costs, and how to judge a gold EA before you trust it with real money.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 23, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="what-is-martingale-grid-ea-pros-cons.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">What is a martingale grid EA? Pros, cons and the risks</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Martingale and grid robots can look brilliant for months, then lose everything in a day. An honest look at how they work, their pros and cons, and the real risks.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 15, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="gold-ea-drawdown-explained.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">Gold EA drawdown: how much is too much?</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Equity vs balance drawdown, the brutal recovery math, honest acceptable ranges — and how to judge a robot's risk before going live.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 29, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="xauusd-ea-mt5-setup.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">How to set up a XAUUSD EA on MetaTrader 5, step by step</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Install and configure the ForexGoldEA gold expert advisor on MT5 in a few minutes — from the EA file to enabling auto-trading safely.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 11, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="install-ea-mt4-mt5.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">How to install a gold EA on MetaTrader 4 &amp; 5 in 5 minutes</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">From the EA file to a live chart: a quick, safe walkthrough for installing any gold expert advisor on MT4 and MT5.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 10, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="mt4-vs-mt5-gold-ea.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">MT4 vs MT5 for a gold EA: the honest platform comparison</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Backtesting quality, execution, hedging modes and broker support — plus the practical verdict for ForexGoldEA users (it runs on both).</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 27, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="how-to-backtest-gold-ea.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">How to backtest a gold EA: data, spreads and honest results</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Tick data and modelling quality, realistic spreads, how long to test, the metrics that matter, and why forward testing is the only real proof.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 23, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="best-vps-gold-ea.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">Best VPS for a gold EA: why latency and uptime decide results</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">What a forex VPS does for a XAUUSD robot, the latency and uptime specs that matter, our recommended host, and a 5-step setup.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 24, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="best-xauusd-ea-2026.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">Best XAUUSD EA in 2026: our top gold trading robot pick</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Our top pick for 2026 is a rule-based gold EA with no martingale or grid, a hard SL/TP on every trade, and a news filter — plus the honest checklist to judge any gold robot.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 18, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="best-prop-firms-gold-xauusd-ea.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">Best prop firms for gold (XAUUSD) traders in 2026</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">FTMO, FundedNext, The5ers, E8, FundingPips and more — a practical guide to funded trading firms for gold traders, and how a gold EA fits prop accounts.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">July 17, 2026</span>
+        </a>
+      </li>
+      </ul>
+    </section>
+    <section style="margin: 0 0 52px;">
+      <h2 style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: #A37E2C; margin: 0 0 6px;">Rules of the road</h2>
+      <p style="font-size: 15px; color: #6B7379; margin: 0 0 4px; max-width: 60ch;">Legality, account types and the practical questions readers keep sending in.</p>
+      <ul style="list-style: none; padding: 0; margin: 10px 0 0;">
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="is-automated-trading-legal.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">Is automated trading legal? The complete answer</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">Yes — EAs are legal and broker-supported. What's permitted, prop-firm house rules, and the three real red lines to avoid.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">August 5, 2026</span>
+        </a>
+      </li>
+      <li style="border-top: 1px solid #E9E5DC;">
+        <a href="is-gold-trading-halal.html" class="row" style="display: grid; grid-template-columns: 1fr auto; gap: 8px 28px; align-items: baseline; padding: 18px 0; color: inherit;">
+          <span>
+            <span class="row-t" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; line-height: 1.25; color: #1C2226; display: block;">Is gold trading halal? An honest, respectful guide</span>
+            <span style="font-size: 15px; color: #6B7379; line-height: 1.55; display: block; margin-top: 5px; max-width: 62ch;">What scholars weigh — riba, gharar, possession — how swap-free Islamic accounts work, and why the final word belongs to your scholar, not a website.</span>
+          </span>
+          <span style="font-size: 12.5px; color: #9AA0A5; white-space: nowrap; letter-spacing: 0.03em;">August 6, 2026</span>
+        </a>
+      </li>
+      </ul>
+    </section>
 </section>
 
 <!-- FOOTER -->
 <footer style="background: #1C2226; color: #AEB6BB;">
   <div class="wrap" style="max-width: 1120px; padding: 40px 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 13.5px;">
-    <span>© 2026 ForexGoldEA — BBFxAi LLC.</span>
+    <span>&copy; 2026 ForexGoldEA &mdash; BBFxAi LLC.</span>
     <span style="display: flex; gap: 24px;">
       <a href="index.html" style="color: #AEB6BB;">Home</a>
-      <a href="https://t.me/BBFxAi_Community" target="_blank" rel="noopener" style="color: #AEB6BB;">Community</a>
+      <a href="about.html" style="color: #AEB6BB;">About</a>
       <a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener" style="color: #AEB6BB;">Contact</a>
     </span>
   </div>
 </footer>
-
 
 </body>
 </html>

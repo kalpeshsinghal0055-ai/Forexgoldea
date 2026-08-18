@@ -1,31 +1,68 @@
-# ForexGoldEA
+# ForexGoldEA - The Gold Desk
 
-> ForexGoldEA is an automated XAUUSD (gold) trading expert advisor (EA) for MetaTrader 4 and MetaTrader 5, built by BBFxAi LLC. The EA is free for traders who register through our partner broker link. This site publishes honest, educational guides about gold trading, expert advisors, prop firms, and automated-trading risk.
+> ForexGoldEA publishes plain-English education about trading gold (XAU/USD): what moves the metal, how the arithmetic of pips, lots, spread and leverage actually works, the psychology that decides most outcomes, and what changes when an Expert Advisor trades it for you. The site also offers ForexGoldEA, a rules-based XAU/USD expert advisor for MetaTrader 4 and 5, free to traders who open an account through the partner broker link. Editorial focus is the gold market and the trader; deep MT4/MT5 engineering topics are not this site's focus.
 
 Key facts:
-- Product: ForexGoldEA — a gold (XAU/USD) expert advisor for MT4/MT5
+- Editorial scope: gold market education - drivers, sessions, position-size arithmetic, trading psychology, and an honest account of what automation does and does not solve
+- Product: ForexGoldEA, a rules-based XAU/USD expert advisor for MT4 and MT5, with a fixed stop-loss on every trade and user-set risk limits (no martingale, no grid without stops)
 - Company: BBFxAi LLC
-- Pricing: free with partner broker registration
-- Contact: Telegram bot https://t.me/xauusdrobot_bot · community https://t.me/BBFxAi_Community
-- Verified performance tracking: results are tracked on a live Myfxbook account — message Telegram @BBFx_Ai (https://t.me/BBFx_Ai) to get the link
-- Important: trading gold on margin is high risk; nothing on this site is financial advice, and results are never guaranteed.
+- Pricing: free when you open and fund an account through the partner broker link
+- Contact: Telegram https://t.me/BBFx_Ai - community https://t.me/BBFxAi_Community
+- Performance: tracked on a live Myfxbook account; message Telegram @BBFx_Ai for the link
+- Important: trading gold on margin carries a high level of risk and a large majority of retail CFD accounts lose money. Nothing here is financial advice, and no result is guaranteed.
 
 ## Main pages
-- [Home](https://forexgoldea.com/): what ForexGoldEA is, features, free download steps, FAQ
-- [Blog](https://forexgoldea.com/blog.html): all guides
-- [About](https://forexgoldea.com/about.html): company and contact details
+- [Home](https://forexgoldea.com/): what ForexGoldEA is, how the free access works, FAQ
+- [The Gold Desk (blog)](https://forexgoldea.com/blog.html): the full guide index
+- [Free tools](https://forexgoldea.com/tools/): lot size, pip, risk calculators and a session timer
+- [About](https://forexgoldea.com/about.html): who publishes this and how it is funded
 
-## Guides
-- [Best XAUUSD EA in 2026: our top gold robot pick](https://forexgoldea.com/best-xauusd-ea-2026.html)
-- [What is an EA (expert advisor) and how does it work?](https://forexgoldea.com/what-is-an-ea-how-it-works.html)
-- [Best prop firms for gold (XAUUSD) traders in 2026](https://forexgoldea.com/best-prop-firms-gold-xauusd-ea.html)
-- [What is a martingale grid EA? Pros, cons and the risks](https://forexgoldea.com/what-is-martingale-grid-ea-pros-cons.html)
-- [What moves XAUUSD? The key drivers of the gold price](https://forexgoldea.com/what-moves-xauusd-gold-price-drivers.html)
-- [Best time to trade XAUUSD: gold trading sessions explained](https://forexgoldea.com/best-time-to-trade-xauusd-gold-sessions.html)
-- [XAUUSD vs EUR/USD: which should a gold EA trade?](https://forexgoldea.com/xauusd-vs-eurusd-gold-ea.html)
-- [How to set up a XAUUSD EA on MetaTrader 5](https://forexgoldea.com/xauusd-ea-mt5-setup.html)
-- [Gold EA strategy](https://forexgoldea.com/gold-ea-strategy.html)
-- [How to install an EA on MT4/MT5](https://forexgoldea.com/install-ea-mt4-mt5.html)
+## Gold, explained
+- [What is forex trading, really? The complete plain-English guide](https://forexgoldea.com/what-is-forex-trading.html): Currency pairs, pips, leverage and brokers — the honest version, hype removed, plus where gold fits in.
+- [What moves XAUUSD? The key drivers of the gold price explained](https://forexgoldea.com/what-moves-xauusd-gold-price-drivers.html): Why does gold go up and down? A clear guide to the main forces behind XAU/USD — the dollar, interest rates, inflation, safe-haven demand and central banks.
+- [When is the best time to buy gold? What the data supports](https://forexgoldea.com/best-time-to-buy-gold.html): Seasonality, dip-buying and dollar cycles — what evidence backs, what it doesn't, for holders and traders both.
+- [Gold vs Bitcoin: which should you actually trade?](https://forexgoldea.com/gold-vs-bitcoin.html): Volatility, hours, costs and character compared honestly — and which instrument fits which trader.
+- [What time does the gold market open and close?](https://forexgoldea.com/gold-market-hours.html): Open Sunday ~22:00 GMT, close Friday ~21:00 GMT — the full timezone table (GMT/IST/EST), sessions, the daily break and the trap windows.
+- [Best time to trade XAUUSD: gold trading sessions explained](https://forexgoldea.com/best-time-to-trade-xauusd-gold-sessions.html): Gold doesn't move the same way all day. Here's when XAU/USD is most active — the London–New York overlap, news times, and what it means for an EA.
+
+## The mechanics
+- [How much is a pip in gold? XAUUSD pip & point value explained](https://forexgoldea.com/how-much-is-a-pip-in-gold-xauusd.html): A pip on gold is usually a $0.10 move — about $1 per pip at 0.01 lots. Pip vs point cleared up, with a value table for every lot size.
+- [How to calculate lot size for XAUUSD (with worked examples)](https://forexgoldea.com/how-to-calculate-lot-size-xauusd.html): The exact formula — risk divided by stop distance times 100 — plus worked examples for $500, $1,000 and $2,000 gold accounts, and the pip/point trap to avoid.
+- [The gold spread, explained: what XAUUSD really costs](https://forexgoldea.com/gold-spread-explained.html): Bid vs ask, session blowouts, the stop-loss trap — the invisible cost that separates a profitable backtest from a losing live account.
+- [Leverage for a gold EA: 1:100 or 1:500, honestly?](https://forexgoldea.com/leverage-gold-ea.html): The margin math, the risk myth almost everyone believes, stop-out mechanics — and why leverage matters less than your sizing rules.
+- [How to read candlestick charts: the beginner's guide (with gold examples)](https://forexgoldea.com/how-to-read-candlestick-charts.html): Candle anatomy, the handful of patterns worth knowing, and the context rule — trend, location, session — that makes them mean anything.
+- [XAUUSD vs EUR/USD: which one should a gold EA actually trade?](https://forexgoldea.com/xauusd-vs-eurusd-gold-ea.html): Gold and EUR/USD behave very differently. Here's how volatility, spreads and sessions compare — and why most gold EAs are built for XAU/USD.
+
+## Method
+- [How to trade gold for beginners: the complete step-by-step path](https://forexgoldea.com/how-to-trade-gold-beginners.html): Broker setup, pips and lots, your first demo trade, and the risk rules that decide whether you're still trading in six months.
+- [Gold trading strategies that actually work — and the ones that don't](https://forexgoldea.com/gold-trading-strategies.html): Trend, breakout, range and news-avoidance — what holds up on XAUUSD, the systems that quietly destroy accounts, and the rules that matter more than any entry.
+- [Swing trading vs day trading: which actually fits your life?](https://forexgoldea.com/swing-vs-day-trading.html): Time, costs, psychology and gold's character compared honestly — plus the four questions that decide the right style for you.
+- [Trading gold during news: what NFP, CPI and FOMC really do to XAUUSD](https://forexgoldea.com/trading-gold-during-news.html): Spread blowouts, slippage and whipsaws during big US releases — and why the EA steps aside with a news filter.
+- [How much can you make trading gold? The honest math](https://forexgoldea.com/how-much-trading-gold.html): Variable percentages, drawdowns and capital math — why % beats $ promises, and what actually scales results.
+
+## The trader's head
+- [Trading psychology: why your brain loses money (and the honest fixes)](https://forexgoldea.com/trading-psychology.html): The 6 biases that empty accounts — loss aversion, revenge trading, FOMO — why knowing isn't enough, and the structural fixes that actually work.
+- [How to set risk per trade on a gold EA (the 1% rule)](https://forexgoldea.com/how-to-set-risk-per-trade-gold-ea.html): The 1–2% rule for XAUUSD, how to turn it into a lot size, and the daily/drawdown limits that keep small gold accounts alive.
+- [Demo to live: when is a gold EA ready for real money?](https://forexgoldea.com/demo-to-live-gold-ea.html): How many weeks on demo, which metrics must match the backtest, and the small-live-first checklist that protects your capital.
+- [How much money do you need to run a gold EA? ($100 vs $500 vs $1,000)](https://forexgoldea.com/how-much-money-to-run-gold-ea.html): The honest math behind the minimum deposit question — realistic lot sizes, 1–2% risk per trade, and the drawdown buffer that keeps small XAUUSD accounts alive.
+
+## Letting software trade it
+- [What is an EA (expert advisor) and how does it work?](https://forexgoldea.com/what-is-an-ea-how-it-works.html): Heard people talk about "EAs" but not sure what they are? A clear beginner's guide to how expert advisors work on MT4 and MT5, and what they can and can't do.
+- [How ForexGoldEA trades XAU/USD: the gold EA strategy explained](https://forexgoldea.com/gold-ea-strategy.html): How the gold robot reads XAU/USD, when it enters, why every trade has a fixed stop-loss, and why it avoids martingale entirely.
+- [Are gold trading EAs actually profitable? An honest look](https://forexgoldea.com/are-gold-trading-eas-profitable.html): When gold robots make money, when they quietly lose it, the hidden costs, and how to judge a gold EA before you trust it with real money.
+- [What is a martingale grid EA? Pros, cons and the risks](https://forexgoldea.com/what-is-martingale-grid-ea-pros-cons.html): Martingale and grid robots can look brilliant for months, then lose everything in a day. An honest look at how they work, their pros and cons, and the real risks.
+- [Gold EA drawdown: how much is too much?](https://forexgoldea.com/gold-ea-drawdown-explained.html): Equity vs balance drawdown, the brutal recovery math, honest acceptable ranges — and how to judge a robot's risk before going live.
+- [How to set up a XAUUSD EA on MetaTrader 5, step by step](https://forexgoldea.com/xauusd-ea-mt5-setup.html): Install and configure the ForexGoldEA gold expert advisor on MT5 in a few minutes — from the EA file to enabling auto-trading safely.
+- [How to install a gold EA on MetaTrader 4 & 5 in 5 minutes](https://forexgoldea.com/install-ea-mt4-mt5.html): From the EA file to a live chart: a quick, safe walkthrough for installing any gold expert advisor on MT4 and MT5.
+- [MT4 vs MT5 for a gold EA: the honest platform comparison](https://forexgoldea.com/mt4-vs-mt5-gold-ea.html): Backtesting quality, execution, hedging modes and broker support — plus the practical verdict for ForexGoldEA users (it runs on both).
+- [How to backtest a gold EA: data, spreads and honest results](https://forexgoldea.com/how-to-backtest-gold-ea.html): Tick data and modelling quality, realistic spreads, how long to test, the metrics that matter, and why forward testing is the only real proof.
+- [Best VPS for a gold EA: why latency and uptime decide results](https://forexgoldea.com/best-vps-gold-ea.html): What a forex VPS does for a XAUUSD robot, the latency and uptime specs that matter, our recommended host, and a 5-step setup.
+- [Best XAUUSD EA in 2026: our top gold trading robot pick](https://forexgoldea.com/best-xauusd-ea-2026.html): Our top pick for 2026 is a rule-based gold EA with no martingale or grid, a hard SL/TP on every trade, and a news filter — plus the honest checklist to judge any gold robot.
+- [Best prop firms for gold (XAUUSD) traders in 2026](https://forexgoldea.com/best-prop-firms-gold-xauusd-ea.html): FTMO, FundedNext, The5ers, E8, FundingPips and more — a practical guide to funded trading firms for gold traders, and how a gold EA fits prop accounts.
+
+## Rules of the road
+- [Is automated trading legal? The complete answer](https://forexgoldea.com/is-automated-trading-legal.html): Yes — EAs are legal and broker-supported. What's permitted, prop-firm house rules, and the three real red lines to avoid.
+- [Is gold trading halal? An honest, respectful guide](https://forexgoldea.com/is-gold-trading-halal.html): What scholars weigh — riba, gharar, possession — how swap-free Islamic accounts work, and why the final word belongs to your scholar, not a website.
 
 ## Policies
 - [Risk disclaimer](https://forexgoldea.com/risk-disclaimer.html)

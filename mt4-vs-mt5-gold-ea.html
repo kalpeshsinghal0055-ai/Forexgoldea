@@ -44,7 +44,10 @@
   article ol, article ul { padding-left: 22px; } article li { margin-bottom: 8px; }
   .cta { display: inline-block; background: #A37E2C; color: #fff; padding: 13px 26px; border-radius: 10px; font-weight: 600; } .cta:hover { background: #8A6A1F; color:#fff; }
   .note { background: #F3EEE2; border: 1px solid #E2D9C2; border-radius: 12px; padding: 16px 18px; font-size: 15px; color: #4A5258; }
-  .answer { background: #F3EEE2; border: 1px solid #E2D9C2; border-left: 3px solid #A37E2C; border-radius: 12px; padding: 18px 20px; margin: 22px 0; font-size: 16px; color: #2E3840; }
+  .answer { background: transparent; border: 0; border-left: 2px solid #A37E2C; border-radius: 0; padding: 4px 0 4px 24px; margin: 30px 0; font-family: 'Newsreader', serif; font-size: 19.5px; font-style: italic; line-height: 1.55; color: #2E3840; }
+  .answer > strong:first-child, .answer > p > strong:first-child { font-style: normal; font-family: 'Public Sans', sans-serif; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6A1F; display: block; margin-bottom: 8px; }
+  article > p:first-of-type::first-letter { float: left; font-family: 'Newsreader', serif; font-size: 62px; line-height: 0.84; padding: 7px 11px 0 0; color: #A37E2C; font-weight: 500; }
+  article h2 { border-bottom: 1px solid #E9E5DC; padding-bottom: 8px; }
   table { border-collapse: collapse; width: 100%; margin: 8px 0 4px; font-size: 15px; }
   th, td { border: 1px solid #E9E5DC; padding: 10px 12px; text-align: left; vertical-align: top; }
   th { background: #F3EEE2; font-weight: 600; }
@@ -66,7 +69,7 @@
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://forexgoldea.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://forexgoldea.com/blog.html"}, {"@type": "ListItem", "position": 3, "name": "MT4 vs MT5 for a gold EA", "item": "https://forexgoldea.com/mt4-vs-mt5-gold-ea.html"}]}
 </script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is MT4 or MT5 better for a gold EA?", "acceptedAnswer": {"@type": "Answer", "text": "For most gold EA users MT5 is the better platform today: its strategy tester supports real tick data and runs multi-threaded, execution is faster, and brokers are steadily moving new features there. MT4 remains perfectly usable — if your broker or preferred EA is MT4-only, that is not a dealbreaker."}}, {"@type": "Question", "name": "Can the same EA run on MT4 and MT5?", "acceptedAnswer": {"@type": "Answer", "text": "Not the same file — MT4 uses MQL4 (.ex4) and MT5 uses MQL5 (.ex5), so an EA must be built for each platform separately. Many providers, including ForexGoldEA, supply both versions so you can use whichever your broker offers."}}, {"@type": "Question", "name": "Is backtesting better on MT5?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, significantly. MT5's tester supports every-tick-based-on-real-ticks modelling natively, runs multi-threaded (much faster optimisation), and handles multi-symbol tests. MT4 can reach 99% modelling quality only with imported tick data and third-party tools."}}, {"@type": "Question", "name": "Does MT5 support hedging like MT4?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — modern MT5 accounts offer a hedging mode that behaves like MT4 (separate buy and sell positions). Netting mode merges positions instead, so check which mode your broker account uses before running an EA built for hedging."}}, {"@type": "Question", "name": "Will MT4 stop working?", "acceptedAnswer": {"@type": "Answer", "text": "MetaQuotes has focused development on MT5 for years and no longer issues new MT4 broker licences, but existing MT4 servers continue to run and many brokers still support it. There is no announced shutdown date — just a slow migration toward MT5."}}, {"@type": "Question", "name": "Which platform does ForexGoldEA run on?", "acceptedAnswer": {"@type": "Answer", "text": "Both. ForexGoldEA is supplied for MetaTrader 4 and MetaTrader 5, with the same rule-based, no-martingale strategy and fixed stop-loss on every trade. Use whichever platform your broker account provides."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Should I run my gold EA on MT4 or MT5?", "acceptedAnswer": {"@type": "Answer", "text": "For most gold EA users MT5 is the better platform today: its strategy tester supports real tick data and runs multi-threaded, execution is faster, and brokers are steadily moving new features there. MT4 remains perfectly usable — if your broker or preferred EA is MT4-only, that is not a dealbreaker."}}, {"@type": "Question", "name": "Can the same EA run on MT4 and MT5?", "acceptedAnswer": {"@type": "Answer", "text": "Not the same file — MT4 uses MQL4 (.ex4) and MT5 uses MQL5 (.ex5), so an EA must be built for each platform separately. Many providers, including ForexGoldEA, supply both versions so you can use whichever your broker offers."}}, {"@type": "Question", "name": "Is backtesting better on MT5?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, significantly. MT5's tester supports every-tick-based-on-real-ticks modelling natively, runs multi-threaded (much faster optimisation), and handles multi-symbol tests. MT4 can reach 99% modelling quality only with imported tick data and third-party tools."}}, {"@type": "Question", "name": "Does MT5 support hedging like MT4?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — modern MT5 accounts offer a hedging mode that behaves like MT4 (separate buy and sell positions). Netting mode merges positions instead, so check which mode your broker account uses before running an EA built for hedging."}}, {"@type": "Question", "name": "Will MT4 stop working?", "acceptedAnswer": {"@type": "Answer", "text": "MetaQuotes has focused development on MT5 for years and no longer issues new MT4 broker licences, but existing MT4 servers continue to run and many brokers still support it. There is no announced shutdown date — just a slow migration toward MT5."}}, {"@type": "Question", "name": "Which platform does ForexGoldEA run on?", "acceptedAnswer": {"@type": "Answer", "text": "Both. ForexGoldEA is supplied for MetaTrader 4 and MetaTrader 5, with the same rule-based, no-martingale strategy and fixed stop-loss on every trade. Use whichever platform your broker account provides."}}]}</script>
 </head>
 <body>
 
@@ -76,7 +79,7 @@
       <svg width="34" height="34" viewBox="0 0 40 40" aria-label="ForexGoldEA"><defs><radialGradient id="fg" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#EFD48F"/><stop offset="100%" stop-color="#A37E2C"/></radialGradient></defs><circle cx="20" cy="20" r="18" fill="url(#fg)" stroke="#8A6A1F" stroke-width="2"/><text x="20" y="25.5" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="14.5" fill="#FBFAF7">FGE</text></svg>
       <span style="font-weight:700;">ForexGoldEA</span>
     </a>
-    <nav style="margin-left:auto; font-size:14.5px; font-weight:500;"><a href="blog.html" style="color:#4A5258;">← All posts</a><a href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener" style="margin-left:16px; background:#A37E2C; color:#fff; padding:8px 15px; border-radius:8px; font-weight:600;">Talk to us</a></nav>
+    <nav style="margin-left:auto; font-size:14.5px; font-weight:500;"><a href="blog.html" style="color:#4A5258;">← All posts</a><a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener" style="margin-left:16px; background:#A37E2C; color:#fff; padding:8px 15px; border-radius:8px; font-weight:600;">Ask the desk</a></nav>
   </div>
 </header>
 
@@ -87,7 +90,7 @@
 <img class="article-hero" src="images/mt4-vs-mt5-gold-ea.jpg" alt="MT4 vs MT5 for a gold EA — which MetaTrader platform to use" width="1200" height="630" style="width:100%;height:auto;border-radius:14px;margin:6px 0 26px;" />
   <p style="font-size: 18px; color: #4A5258;">Every new gold EA user hits the same fork in the road: MetaTrader 4 or MetaTrader 5? The internet is full of tribal answers. The honest one is shorter and more useful — here it is, difference by difference.</p>
 
-<div class="answer"><strong>Quick answer:</strong> For most gold EA users, <strong>MT5 is the better platform today</strong> — a far superior strategy tester (real tick data, multi-threaded), faster execution, and it's where broker development is heading. <strong>MT4 is still perfectly fine</strong> if your broker or EA is MT4-only. ForexGoldEA runs on <strong>both</strong>, so the practical rule is: backtest on MT5, run on whichever platform your broker account gives you.</p>
+<div class="answer"><strong>In short</strong> For most gold EA users, <strong>MT5 is the better platform today</strong> — a far superior strategy tester (real tick data, multi-threaded), faster execution, and it's where broker development is heading. <strong>MT4 is still perfectly fine</strong> if your broker or EA is MT4-only. ForexGoldEA runs on <strong>both</strong>, so the practical rule is: backtest on MT5, run on whichever platform your broker account gives you.</p>
 
   <h2>The five differences that actually matter for EA users</h2>
   <p>MT4 and MT5 look similar on the surface — charts, Navigator panel, drag an EA on, done. The differences that matter live underneath:</p>
@@ -122,10 +125,10 @@
     <li><strong>Setting up on MT5?</strong> Follow the <a href="xauusd-ea-mt5-setup.html">step-by-step MT5 setup guide</a>; MT4 users can use the <a href="install-ea-mt4-mt5.html">general install walkthrough</a>.</li>
   </ul>
 
-  <h2>Frequently asked questions</h2>
-  <h3>Is MT4 or MT5 better for a gold EA?</h3>
+  <h2>Reader questions</h2>
+  <h3>Should I run my gold EA on MT4 or MT5?</h3>
   <p>MT5 for most users — better tester, faster engine, future-proof. MT4 is still fine if your broker or EA requires it.</p>
-  <h3>Can the same EA run on both?</h3>
+  <h3>Will one EA file work on both platforms?</h3>
   <p>Not the same file — MQL4 and MQL5 are different. Providers like ForexGoldEA supply separate builds for each platform.</p>
   <h3>Is backtesting better on MT5?</h3>
   <p>Significantly: native real-tick modelling, multi-threaded optimisation, multi-symbol tests. MT4 needs third-party tick data to compete.</p>
@@ -136,19 +139,19 @@
   <h3>Which platform does ForexGoldEA run on?</h3>
   <p>Both MT4 and MT5, with identical strategy and risk rules. Use whichever your broker provides.</p>
 
-  <h2>Bottom line</h2>
+  <h2>Where this leaves you</h2>
   <p>Don't overthink it. MT5 is the better toolkit — especially its backtester — and the platform the industry is moving to; MT4 is the familiar workhorse that still does the job. Since ForexGoldEA runs identically on both, let your broker account decide where you <em>run</em>, and let MT5 be where you <em>test</em>. The robot's rules, your risk settings and your broker's spreads will decide your results — the platform logo won't.</p>
 
   <div class="note" style="margin: 22px 0;">Trading gold on margin carries a high level of risk and may not be suitable for everyone. Backtested results are not indicative of future results. This article is educational and not financial advice.</div>
 
   <div style="margin: 36px 0 8px;">
     <a class="cta" href="https://affs.click/JVeDD" target="_blank" rel="nofollow noopener">Get ForexGoldEA free (MT4 &amp; MT5) →</a>
-    <a href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener" style="display:inline-block; margin-left:12px; margin-top:12px; background:#1C2226; color:#fff; padding:13px 26px; border-radius:10px; font-weight:600;">Talk to us on Telegram →</a>
+    <a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener" style="display:inline-block; margin-left:12px; margin-top:12px; background:#1C2226; color:#fff; padding:13px 26px; border-radius:10px; font-weight:600;">Talk to us on Telegram →</a>
   </div>
   <p style="font-size: 13px; color: #9AA0A5;">Affiliate disclosure: we earn a commission when you open and fund an account through our partner links, at no extra cost to you.</p>
 
 <div class="related-guides" style="margin:36px 0 8px;">
-<h2>Related guides</h2>
+<h2>Continue reading</h2>
 <ul>
 <li><a href="xauusd-ea-mt5-setup.html">How to set up a XAUUSD EA on MetaTrader 5, step by step</a></li>
 <li><a href="install-ea-mt4-mt5.html">How to install a gold EA on MetaTrader 4 &amp; 5 in 5 minutes</a></li>

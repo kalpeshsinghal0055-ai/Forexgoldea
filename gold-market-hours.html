@@ -44,7 +44,10 @@
   article ol, article ul { padding-left: 22px; } article li { margin-bottom: 8px; }
   .cta { display: inline-block; background: #A37E2C; color: #fff; padding: 13px 26px; border-radius: 10px; font-weight: 600; } .cta:hover { background: #8A6A1F; color:#fff; }
   .note { background: #F3EEE2; border: 1px solid #E2D9C2; border-radius: 12px; padding: 16px 18px; font-size: 15px; color: #4A5258; }
-  .answer { background: #F3EEE2; border: 1px solid #E2D9C2; border-left: 3px solid #A37E2C; border-radius: 12px; padding: 18px 20px; margin: 22px 0; font-size: 16px; color: #2E3840; }
+  .answer { background: transparent; border: 0; border-left: 2px solid #A37E2C; border-radius: 0; padding: 4px 0 4px 24px; margin: 30px 0; font-family: 'Newsreader', serif; font-size: 19.5px; font-style: italic; line-height: 1.55; color: #2E3840; }
+  .answer > strong:first-child, .answer > p > strong:first-child { font-style: normal; font-family: 'Public Sans', sans-serif; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6A1F; display: block; margin-bottom: 8px; }
+  article > p:first-of-type::first-letter { float: left; font-family: 'Newsreader', serif; font-size: 62px; line-height: 0.84; padding: 7px 11px 0 0; color: #A37E2C; font-weight: 500; }
+  article h2 { border-bottom: 1px solid #E9E5DC; padding-bottom: 8px; }
   table { border-collapse: collapse; width: 100%; margin: 8px 0 4px; font-size: 15px; }
   th, td { border: 1px solid #E9E5DC; padding: 10px 12px; text-align: left; vertical-align: top; }
   th { background: #F3EEE2; font-weight: 600; }
@@ -62,7 +65,7 @@
       <svg width="34" height="34" viewBox="0 0 40 40" aria-label="ForexGoldEA"><defs><radialGradient id="fg" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#EFD48F"/><stop offset="100%" stop-color="#A37E2C"/></radialGradient></defs><circle cx="20" cy="20" r="18" fill="url(#fg)" stroke="#8A6A1F" stroke-width="2"/><text x="20" y="25.5" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="14.5" fill="#FBFAF7">FGE</text></svg>
       <span style="font-weight:700;">ForexGoldEA</span>
     </a>
-    <nav style="margin-left:auto; font-size:14.5px; font-weight:500;"><a href="blog.html" style="color:#4A5258;">← All posts</a><a href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener" style="margin-left:16px; background:#A37E2C; color:#fff; padding:8px 15px; border-radius:8px; font-weight:600;">Talk to us</a></nav>
+    <nav style="margin-left:auto; font-size:14.5px; font-weight:500;"><a href="blog.html" style="color:#4A5258;">← All posts</a><a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener" style="margin-left:16px; background:#A37E2C; color:#fff; padding:8px 15px; border-radius:8px; font-weight:600;">Ask the desk</a></nav>
   </div>
 </header>
 
@@ -73,7 +76,7 @@
 <img class="article-hero" src="images/gold-market-hours.jpg" alt="Gold market hours — open and close times in GMT, IST and EST" width="1200" height="630" style="width:100%;height:auto;border-radius:14px;margin:6px 0 26px;" />
   <p style="font-size: 18px; color: #4A5258;">Simple question, and one every gold trader eventually googles at an odd hour: is the market even open right now? Here's the complete schedule — with a timezone table — plus the two windows inside the open hours that behave like they're closed.</p>
 
-<div class="answer"><strong>Quick answer:</strong> the gold market trades <strong>nearly 24 hours a day, 5 days a week</strong>: it opens <strong>Sunday ~22:00 GMT (Sunday 5:00 PM EST / Monday 3:30 AM IST)</strong> and closes <strong>Friday ~21:00 GMT (4:00 PM EST / Friday 2:30 AM IST)</strong>, with a short daily maintenance break around 21:00–22:00 GMT at most brokers. Open ≠ liquid though — depth peaks in the <strong>London–New York overlap</strong> and thins badly at rollover and the Sunday open.</div>
+<div class="answer"><strong>In short</strong> the gold market trades <strong>nearly 24 hours a day, 5 days a week</strong>: it opens <strong>Sunday ~22:00 GMT (Sunday 5:00 PM EST / Monday 3:30 AM IST)</strong> and closes <strong>Friday ~21:00 GMT (4:00 PM EST / Friday 2:30 AM IST)</strong>, with a short daily maintenance break around 21:00–22:00 GMT at most brokers. Open ≠ liquid though — depth peaks in the <strong>London–New York overlap</strong> and thins badly at rollover and the Sunday open.</div>
 
   <h2>The weekly schedule in one table</h2>
   <table>
@@ -107,7 +110,7 @@
   <h2>What this means for an EA</h2>
   <p>A robot can technically trade any open minute — which is exactly why good ones don't. ForexGoldEA trades the liquid windows and stands aside at rollover and around news, because "open" and "worth trading" are different things. If you run any EA on a VPS, it simply follows this map 24/5 without you doing timezone math at 3 AM — see <a href="what-is-an-ea-how-it-works.html">how EAs work</a>.</p>
 
-  <h2>Frequently asked questions</h2>
+  <h2>Reader questions</h2>
   <h3>What time does the gold market open?</h3>
   <p>Sunday ~22:00 GMT (Sun 5 PM EST / Mon 3:30 AM IST), then nearly 24/5 all week.</p>
   <h3>Is the gold market open 24 hours?</h3>
@@ -121,19 +124,19 @@
   <h3>Do gold trading robots trade all open hours?</h3>
   <p>Good ones don't — they trade liquid windows and skip rollover/news traps.</p>
 
-  <h2>Bottom line</h2>
+  <h2>Where this leaves you</h2>
   <p>Gold's schedule is simple to memorize — Sunday evening to Friday evening GMT, one short break a day — but the useful knowledge is the layer underneath: open hours aren't equal. Prime time is the London–NY overlap; the traps are rollover, Sunday's gap and news minutes. Trade (or let your robot trade) the liquid map, not just the open one, and the clock becomes an edge instead of a footnote.</p>
 
   <div class="note" style="margin: 22px 0;">Trading gold and forex on margin carries a high level of risk and may not be suitable for everyone; a large majority of retail CFD accounts lose money. This article is educational and not financial advice.</div>
 
   <div style="margin: 36px 0 8px;">
     <a class="cta" href="https://affs.click/JVeDD" target="_blank" rel="nofollow noopener">Trade the right hours automatically — ForexGoldEA free →</a>
-    <a href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener" style="display:inline-block; margin-left:12px; margin-top:12px; background:#1C2226; color:#fff; padding:13px 26px; border-radius:10px; font-weight:600;">Talk to us on Telegram →</a>
+    <a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener" style="display:inline-block; margin-left:12px; margin-top:12px; background:#1C2226; color:#fff; padding:13px 26px; border-radius:10px; font-weight:600;">Talk to us on Telegram →</a>
   </div>
   <p style="font-size: 13px; color: #9AA0A5;">Affiliate disclosure: we earn a commission when you open and fund an account through our partner links, at no extra cost to you.</p>
 
 <div class="related-guides" style="margin:36px 0 8px;">
-<h2>Related guides</h2>
+<h2>Continue reading</h2>
 <ul>
 <li><a href="best-time-to-trade-xauusd-gold-sessions.html">Best time to TRADE XAUUSD: session analysis</a></li>
 <li><a href="trading-gold-during-news.html">Trading gold during news: NFP, CPI & FOMC</a></li>
