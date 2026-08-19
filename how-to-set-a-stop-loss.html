@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X82W5RGRLF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X82W5RGRLF');
+</script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<title>How to Set a Stop Loss (Without Getting Hunted)</title>
+<meta name="description" content="How to place a stop loss properly: structure-based and ATR-based placement, why round numbers are the worst choice, and when moving a stop is management rather than fear." />
+<meta name="keywords" content="how to set a stop loss, stop loss placement, stop loss strategy, ATR stop loss, stop hunt, trailing stop, gold stop loss" />
+<meta name="author" content="ForexGoldEA" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://forexgoldea.com/how-to-set-a-stop-loss.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Where to put a stop loss, and why most sit in the wrong place" />
+<meta property="og:description" content="A stop is an invalidation point, not a comfort level. Where it actually belongs." />
+<meta property="og:url" content="https://forexgoldea.com/how-to-set-a-stop-loss.html" />
+<meta property="og:image" content="https://forexgoldea.com/images/how-to-set-a-stop-loss.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="How to Set a Stop Loss" />
+<meta name="twitter:description" content="A stop is an invalidation point, not a comfort level. Where it actually belongs." />
+<meta name="twitter:image" content="https://forexgoldea.com/images/how-to-set-a-stop-loss.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: #FBFAF7; }
+  body { font-family: 'Public Sans', sans-serif; color: #1C2226; -webkit-font-smoothing: antialiased; line-height: 1.7; }
+  a { color: #8A6A1F; text-decoration: none; } a:hover { color: #6E5316; }
+  * { box-sizing: border-box; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  article h2 { font-family: 'Newsreader', serif; font-size: 27px; font-weight: 500; letter-spacing: -0.01em; margin: 40px 0 12px; line-height: 1.2; }
+  article h3 { font-size: 18.5px; font-weight: 700; margin: 24px 0 6px; }
+  article p, article li { font-size: 16.5px; color: #2E3840; }
+  article ol, article ul { padding-left: 22px; } article li { margin-bottom: 8px; }
+  .cta { display: inline-block; background: #A37E2C; color: #fff; padding: 13px 26px; border-radius: 10px; font-weight: 600; } .cta:hover { background: #8A6A1F; color:#fff; }
+  .note { background: #F3EEE2; border: 1px solid #E2D9C2; border-radius: 12px; padding: 16px 18px; font-size: 15px; color: #4A5258; }
+  .answer { background: transparent; border: 0; border-left: 2px solid #A37E2C; border-radius: 0; padding: 4px 0 4px 24px; margin: 30px 0; font-family: 'Newsreader', serif; font-size: 19.5px; font-style: italic; line-height: 1.55; color: #2E3840; }
+  .answer > strong:first-child, .answer > p > strong:first-child { font-style: normal; font-family: 'Public Sans', sans-serif; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6A1F; display: block; margin-bottom: 8px; }
+  article > p:first-of-type::first-letter { float: left; font-family: 'Newsreader', serif; font-size: 62px; line-height: 0.84; padding: 7px 11px 0 0; color: #A37E2C; font-weight: 500; }
+  article h2 { border-bottom: 1px solid #E9E5DC; padding-bottom: 8px; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0 4px; font-size: 15px; }
+  th, td { border: 1px solid #E9E5DC; padding: 10px 12px; text-align: left; vertical-align: top; }
+  th { background: #F3EEE2; font-weight: 600; }
+  @media (max-width: 640px) { table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; } }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Where to put a stop loss, and why most sit in the wrong place", "description": "A practical guide to stop-loss placement for gold traders: why a stop is an invalidation point rather than a loss limit, structure-based and volatility-based placement methods, why round numbers attract stop hunts, and the difference between managing a stop and moving it out of fear.", "datePublished": "2026-08-01", "dateModified": "2026-08-01", "author": {"@type": "Organization", "name": "ForexGoldEA"}, "publisher": {"@type": "Organization", "name": "ForexGoldEA", "logo": {"@type": "ImageObject", "url": "https://forexgoldea.com/images/how-to-set-a-stop-loss.jpg"}}, "mainEntityOfPage": "https://forexgoldea.com/how-to-set-a-stop-loss.html", "image": "https://forexgoldea.com/images/how-to-set-a-stop-loss.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://forexgoldea.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://forexgoldea.com/blog.html"}, {"@type": "ListItem", "position": 3, "name": "How to set a stop loss", "item": "https://forexgoldea.com/how-to-set-a-stop-loss.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Where should I place my stop loss?", "acceptedAnswer": {"@type": "Answer", "text": "Just beyond the price level that would prove your reason for the trade wrong — below the support you are buying from, below the range a breakout came out of, or below the most recent higher low in a trend. Place it beyond the level rather than at it, then choose a position size so that distance costs an acceptable amount."}}, {"@type": "Question", "name": "How far should a stop loss be on gold?", "acceptedAnswer": {"@type": "Answer", "text": "Far enough that ordinary movement does not reach it, which on gold is further than most beginners expect. A common approach is 1.5 to 2 times the Average True Range of the timeframe you are trading, so the distance adapts as volatility changes. Fixed dollar stops become unreliable as conditions shift."}}, {"@type": "Question", "name": "Why does my stop loss keep getting hit before price reverses?", "acceptedAnswer": {"@type": "Answer", "text": "Most often because the stop sits at an obvious level — a round number or the exact swing high or low — where large numbers of other stops also sit. Those clusters are liquidity, and price reaching into them before reversing is a mechanical consequence rather than anything aimed at you. Placing stops a few dollars beyond the obvious level usually resolves it."}}, {"@type": "Question", "name": "Should I use a trailing stop?", "acceptedAnswer": {"@type": "Answer", "text": "A trailing stop is useful once a position has moved meaningfully in your favour, but it must trail behind structure rather than behind price. Gold's pullbacks within a trend are large, so a tight trail removes you during normal retracements and converts winning positions into small ones."}}, {"@type": "Question", "name": "Is it ever right to move a stop loss further away?", "acceptedAnswer": {"@type": "Answer", "text": "No. Widening a stop as price approaches it is a decision to accept a bigger loss than the one you already judged acceptable, taken at the worst possible moment. It is the mechanism behind most account-ending single losses. A stop may move toward profit and never away from it."}}, {"@type": "Question", "name": "Can I trade without a stop loss?", "acceptedAnswer": {"@type": "Answer", "text": "You can place the order, but you are then relying on judgement during a losing position, which is when judgement is least reliable. Systems that operate without stops do not remove risk — they defer it into an open position that keeps growing until something forces it closed, usually the margin level."}}]}</script>
+</head>
+<body>
+
+<header style="border-bottom: 1px solid #E9E5DC; background: rgba(251,250,247,0.92);">
+  <div class="wrap" style="max-width: 1120px; height: 64px; display: flex; align-items: center; gap: 10px;">
+    <a href="index.html" style="display:flex; align-items:center; gap:10px; color:#1C2226;">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-label="ForexGoldEA"><defs><radialGradient id="fg" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#EFD48F"/><stop offset="100%" stop-color="#A37E2C"/></radialGradient></defs><circle cx="20" cy="20" r="18" fill="url(#fg)" stroke="#8A6A1F" stroke-width="2"/><text x="20" y="25.5" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="14.5" fill="#FBFAF7">FGE</text></svg>
+      <span style="font-weight:700;">ForexGoldEA</span>
+    </a>
+    <nav style="margin-left:auto; font-size:14.5px; font-weight:500;"><a href="blog.html" style="color:#4A5258;">← All posts</a><a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener" style="margin-left:16px; background:#A37E2C; color:#fff; padding:8px 15px; border-radius:8px; font-weight:600;">Ask the desk</a></nav>
+  </div>
+</header>
+
+<article class="wrap" style="padding: 48px 24px 40px;">
+<nav aria-label="Breadcrumb" style="font-size:13px;margin:0 0 18px;opacity:.8;"><a href="index.html">Home</a> &rsaquo; <a href="blog.html">Blog</a></nav>
+  <div style="font-size: 13px; color: #A37E2C; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;">Risk basics · August 18, 2026</div>
+  <h1 style="font-family: 'Newsreader', serif; font-size: 40px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.12; margin: 12px 0 20px;">Where to put a stop loss, and why most sit in the wrong place</h1>
+<img class="article-hero" src="images/how-to-set-a-stop-loss.jpg" alt="How to set a stop loss on a gold chart — structure and volatility based placement" width="1200" height="630" style="width:100%;height:auto;border-radius:14px;margin:6px 0 26px;" />
+  <p style="font-size: 18px; color: #4A5258;">Most stop losses are placed at the point where the trader would like to stop losing money. That sounds reasonable and is exactly backwards. The market has no interest in your comfort level, and a stop set by feeling is a stop set at random — which is why so many traders watch price touch their level and then continue in the direction they originally chose.</p>
+
+<div class="answer"><p style="margin:0"><strong>In short</strong> a stop loss marks the price at which your reason for the trade is no longer true &mdash; not the amount you are willing to lose. Place it where the idea is invalidated (below the structure the trade relies on, or a volatility multiple away using ATR), then size the position so that distance costs an acceptable amount. Doing it in that order is the whole discipline. Avoid exact round numbers and the obvious swing high or low by a few dollars on gold, and move a stop only toward profit, never further away.</p></div>
+
+
+  <h2>The stop is not a loss limit. It is an invalidation point.</h2>
+  <p>Two traders take the same long. The first decides she is comfortable risking $50 and places her stop $50 below entry. The second identifies the level that, if broken, means the setup has failed &mdash; and places his stop just beyond it, then chooses a position size so that distance costs him a comfortable amount.</p>
+  <p>The first has told the market how much she feels like losing. The market does not receive that message. Her stop sits at an arbitrary price with no structural meaning, and it will be reached routinely by ordinary movement that has nothing to do with whether she was right.</p>
+  <p>The second has asked a question with an answer: at what price is this idea wrong? Everything else &mdash; size, risk, whether to take the trade at all &mdash; follows from that. If the invalidation point is too far away to size sensibly, the correct response is to skip the trade, not to move the stop closer.</p>
+  <div class="note"><strong>The order matters more than the method.</strong> Find the invalidation level first. Calculate position size second. Reversing those two steps is the single most common cause of stops that get hit for no informative reason.</div>
+
+  <h2>Placement by structure</h2>
+  <p>The most defensible stops sit just beyond a level that the trade's logic depends on.</p>
+  <ul>
+    <li><strong>Long from support:</strong> below the low of the zone, not at it. If the level breaks, the reason for the trade has gone.</li>
+    <li><strong>Long on a breakout:</strong> below the consolidation the price broke out of. Back inside the range means the breakout failed.</li>
+    <li><strong>Long on a pullback in a trend:</strong> below the most recent higher low. A lower low means the trend structure has changed.</li>
+  </ul>
+  <p>In each case the stop is answering the same question, and in each case it sits <em>beyond</em> the level rather than on it. Placing a stop exactly at the level you are relying on guarantees that a normal test of that level removes you.</p>
+
+  <h2>Placement by volatility, which suits gold</h2>
+  <p>Structure is not always obvious, and gold moves enough that a technically correct level can still be reached by ordinary noise. The Average True Range measures how far the instrument typically travels in a period, and placing a stop at a multiple of it &mdash; commonly 1.5 to 2 times the ATR &mdash; adapts the distance to current conditions automatically.</p>
+  <p>The practical effect is that stops widen when gold is volatile and tighten when it is calm, which is the correct direction of travel. A fixed $10 stop that was sensible in a quiet week is a guaranteed exit in an active one.</p>
+  <p>Because the resulting distance changes, position size has to change with it. If you widen the stop and keep the lot size, you have quietly doubled your risk &mdash; the arithmetic is in <a href="how-to-calculate-lot-size-xauusd.html">calculating lot size for XAU/USD</a>.</p>
+
+  <h2>Why round numbers are the worst place</h2>
+  <p>Gold has a strong pull toward round levels &mdash; the hundreds and the fifties. Those are exactly the prices at which large numbers of stops accumulate, because they are the obvious places to put one.</p>
+  <p>Clusters of stops are liquidity. Price reaching into them, triggering exits and then reversing is not a conspiracy against you; it is the mechanical consequence of many orders sitting at the same visible price. The wick that removes you and reverses is a description of that structure, not of the market noticing your account.</p>
+  <p>The fix costs nothing: place stops a few dollars beyond the obvious level rather than at it. Slightly wider, slightly smaller position, materially fewer exits on moves that immediately reverse.</p>
+
+  <h2>Percentage stops are backwards</h2>
+  <p>&ldquo;Risk 1% per trade&rdquo; is sound advice about <em>size</em> that is frequently misapplied as advice about <em>placement</em>. The 1% belongs to the position calculation, not to the chart. Converting 1% of your balance into a price distance and putting the stop there produces a level with no relationship to the market at all.</p>
+  <p>The correct sequence is always: chart gives the distance, account gives the size. Keeping <a href="how-to-set-risk-per-trade-gold-ea.html">risk per trade</a> constant is what makes a run of losses survivable; it is not what decides where the line goes.</p>
+
+  <h2>Moving a stop: management or fear</h2>
+  <p>There is one rule that resolves nearly every case. <strong>A stop may move toward profit. It may never move further away.</strong></p>
+  <p>Moving a stop to break-even after price has travelled meaningfully, or trailing it below successive higher lows, is management: the invalidation point genuinely has moved, because the structure has. Widening a stop because price is approaching it is not management. It is the decision to take a larger loss than the one you already judged acceptable, made at the worst possible moment &mdash; and it is the mechanism behind most catastrophic single losses, which is a theme running through <a href="trading-psychology.html">the psychology of losing money</a>.</p>
+  <p>One caution on trailing too tightly: gold's pullbacks inside a trend are large. A trail that would be comfortable on a currency pair will remove you from a good gold position during a routine retracement. Trail behind structure, not behind price.</p>
+
+
+  <h2 id="faq">Reader questions</h2>
+  <h3>Where should I place my stop loss?</h3>
+  <p>Just beyond the level that would invalidate your reason for the trade — then size the position so that distance is affordable.</p>
+  <h3>How far should a stop loss be on gold?</h3>
+  <p>Usually 1.5 to 2 times ATR, so the distance adapts to volatility. Gold needs more room than most beginners expect.</p>
+  <h3>Why does my stop loss keep getting hit before price reverses?</h3>
+  <p>Because it sits at an obvious level where many stops cluster. Place it a few dollars beyond the round number or swing point.</p>
+  <h3>Should I use a trailing stop?</h3>
+  <p>Yes, once a trade has moved in your favour — but trail behind structure. Tight trails get removed by gold's normal pullbacks.</p>
+  <h3>Is it ever right to move a stop loss further away?</h3>
+  <p>No. Widening a stop under pressure is how small losses become account-ending ones. Stops move toward profit only.</p>
+  <h3>Can I trade without a stop loss?</h3>
+  <p>Technically yes, but it defers risk rather than removing it — the loss simply keeps growing until margin forces it closed.</p>
+
+  <h2>Where this leaves you</h2>
+  <p>A stop loss is a statement about the market, not about your feelings toward money. Find the price that proves the idea wrong, place the order a little beyond it, and let the account decide the position size rather than the level. Do it in that order and the stops that do get hit will at least be telling you something true — which is the most a stop was ever supposed to do.</p>
+
+  <div class="note" style="margin: 22px 0;">Trading gold and forex on margin carries a high level of risk and may not be suitable for everyone; a large majority of retail CFD accounts lose money. This article is educational and not financial advice.</div>
+
+  <div style="margin: 36px 0 8px;">
+    <a class="cta" href="https://affs.click/JVeDD" target="_blank" rel="nofollow noopener">Get ForexGoldEA free →</a>
+    <a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener" style="display:inline-block; margin-left:12px; margin-top:12px; background:#1C2226; color:#fff; padding:13px 26px; border-radius:10px; font-weight:600;">Ask the desk on Telegram →</a>
+  </div>
+  <p style="font-size: 13px; color: #9AA0A5;">Affiliate disclosure: we earn a commission when you open and fund an account through our partner links, at no extra cost to you.</p>
+
+<div class="related-guides" style="margin:36px 0 8px;">
+<h2>Continue reading</h2>
+<ul>
+<li><a href="how-to-set-risk-per-trade-gold-ea.html">How to set risk per trade</a></li>
+<li><a href="how-to-calculate-lot-size-xauusd.html">How to calculate lot size for XAU/USD</a></li>
+<li><a href="trading-psychology.html">Trading psychology: why your brain loses money</a></li>
+<li><a href="moving-averages-gold.html">Moving averages, and the one job they're good at</a></li>
+<li><a href="blog.html">All gold EA &amp; XAUUSD guides &rarr;</a></li>
+</ul>
+</div>
+</article>
+
+<footer style="background: #1C2226; color: #AEB6BB;">
+  <div class="wrap" style="max-width: 1120px; padding: 32px 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13.5px;">
+    <span>© 2026 ForexGoldEA — BBFxAi LLC</span>
+    <a href="blog.html" style="color: #AEB6BB;">← More guides</a>
+  </div>
+</footer>
+
+</body>
+</html>

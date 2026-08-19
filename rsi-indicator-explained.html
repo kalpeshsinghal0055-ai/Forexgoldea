@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X82W5RGRLF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X82W5RGRLF');
+</script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<title>RSI Indicator Explained: How to Read It on Gold</title>
+<meta name="description" content="What the RSI really measures, why the 70/30 overbought rule fails on gold, how divergence behaves in practice, and the settings that suit a metal that trends hard." />
+<meta name="keywords" content="RSI indicator, RSI explained, relative strength index, RSI gold trading, RSI settings, overbought oversold, RSI divergence" />
+<meta name="author" content="ForexGoldEA" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://forexgoldea.com/rsi-indicator-explained.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="The RSI, and what it actually tells you about gold" />
+<meta property="og:description" content="Why the 70/30 rule fails on gold, and what the RSI is actually useful for." />
+<meta property="og:url" content="https://forexgoldea.com/rsi-indicator-explained.html" />
+<meta property="og:image" content="https://forexgoldea.com/images/rsi-indicator-explained.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="RSI Explained, for Gold Traders" />
+<meta name="twitter:description" content="Why the 70/30 rule fails on gold, and what the RSI is actually useful for." />
+<meta name="twitter:image" content="https://forexgoldea.com/images/rsi-indicator-explained.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: #FBFAF7; }
+  body { font-family: 'Public Sans', sans-serif; color: #1C2226; -webkit-font-smoothing: antialiased; line-height: 1.7; }
+  a { color: #8A6A1F; text-decoration: none; } a:hover { color: #6E5316; }
+  * { box-sizing: border-box; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  article h2 { font-family: 'Newsreader', serif; font-size: 27px; font-weight: 500; letter-spacing: -0.01em; margin: 40px 0 12px; line-height: 1.2; }
+  article h3 { font-size: 18.5px; font-weight: 700; margin: 24px 0 6px; }
+  article p, article li { font-size: 16.5px; color: #2E3840; }
+  article ol, article ul { padding-left: 22px; } article li { margin-bottom: 8px; }
+  .cta { display: inline-block; background: #A37E2C; color: #fff; padding: 13px 26px; border-radius: 10px; font-weight: 600; } .cta:hover { background: #8A6A1F; color:#fff; }
+  .note { background: #F3EEE2; border: 1px solid #E2D9C2; border-radius: 12px; padding: 16px 18px; font-size: 15px; color: #4A5258; }
+  .answer { background: transparent; border: 0; border-left: 2px solid #A37E2C; border-radius: 0; padding: 4px 0 4px 24px; margin: 30px 0; font-family: 'Newsreader', serif; font-size: 19.5px; font-style: italic; line-height: 1.55; color: #2E3840; }
+  .answer > strong:first-child, .answer > p > strong:first-child { font-style: normal; font-family: 'Public Sans', sans-serif; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6A1F; display: block; margin-bottom: 8px; }
+  article > p:first-of-type::first-letter { float: left; font-family: 'Newsreader', serif; font-size: 62px; line-height: 0.84; padding: 7px 11px 0 0; color: #A37E2C; font-weight: 500; }
+  article h2 { border-bottom: 1px solid #E9E5DC; padding-bottom: 8px; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0 4px; font-size: 15px; }
+  th, td { border: 1px solid #E9E5DC; padding: 10px 12px; text-align: left; vertical-align: top; }
+  th { background: #F3EEE2; font-weight: 600; }
+  @media (max-width: 640px) { table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; } }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The RSI, and what it actually tells you about gold", "description": "A plain-English explanation of the RSI indicator for gold traders: what the calculation measures, why overbought and oversold readings mislead during strong XAU/USD trends, how divergence performs in practice, and which settings and timeframes suit gold.", "datePublished": "2026-08-01", "dateModified": "2026-08-01", "author": {"@type": "Organization", "name": "ForexGoldEA"}, "publisher": {"@type": "Organization", "name": "ForexGoldEA", "logo": {"@type": "ImageObject", "url": "https://forexgoldea.com/images/rsi-indicator-explained.jpg"}}, "mainEntityOfPage": "https://forexgoldea.com/rsi-indicator-explained.html", "image": "https://forexgoldea.com/images/rsi-indicator-explained.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://forexgoldea.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://forexgoldea.com/blog.html"}, {"@type": "ListItem", "position": 3, "name": "RSI indicator explained", "item": "https://forexgoldea.com/rsi-indicator-explained.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does the RSI indicator measure?", "acceptedAnswer": {"@type": "Answer", "text": "It measures the speed and size of recent price changes by comparing average gains to average losses over a lookback period, usually 14 candles, and plots the result between 0 and 100. It describes momentum — how one-sided recent trading has been — and says nothing about whether an instrument is cheap or expensive."}}, {"@type": "Question", "name": "Is RSI above 70 a sell signal on gold?", "acceptedAnswer": {"@type": "Answer", "text": "Not on its own, and on gold it is often the opposite. XAU/USD makes extended directional runs when the dollar or rate expectations move, and the RSI can hold above 70 for weeks during them. In a strong trend a high reading confirms strength rather than warning of a reversal."}}, {"@type": "Question", "name": "What is the best RSI setting for gold?", "acceptedAnswer": {"@type": "Answer", "text": "The standard 14-period setting on the 4-hour chart is the most workable starting point. Shorter settings produce constant extremes that mostly reflect noise, and hunting for an unusual period value is a common route to fitting a parameter to past data that will not repeat."}}, {"@type": "Question", "name": "How reliable is RSI divergence?", "acceptedAnswer": {"@type": "Answer", "text": "It identifies genuine loss of momentum, but it is early far more often than it is timely. In strong gold trends divergence can appear several times while price continues in the same direction. It works better as a reason to tighten a stop or take partial profit than as a standalone reversal entry."}}, {"@type": "Question", "name": "Should I use RSI on its own?", "acceptedAnswer": {"@type": "Answer", "text": "No indicator should carry a decision alone, and the RSI is a poor candidate because it describes what has already happened. Establish direction from price structure and the wider trend, then use the RSI to judge whether the move is fresh or already stretched."}}, {"@type": "Question", "name": "What is the difference between RSI and stochastic?", "acceptedAnswer": {"@type": "Answer", "text": "Both are momentum oscillators on a 0-100 scale, but they measure different things. The RSI compares average gains to average losses, while the stochastic compares the closing price to the recent high-low range. The stochastic is more reactive and reaches extremes more often, which makes it noisier on an instrument as volatile as gold."}}]}</script>
+</head>
+<body>
+
+<header style="border-bottom: 1px solid #E9E5DC; background: rgba(251,250,247,0.92);">
+  <div class="wrap" style="max-width: 1120px; height: 64px; display: flex; align-items: center; gap: 10px;">
+    <a href="index.html" style="display:flex; align-items:center; gap:10px; color:#1C2226;">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-label="ForexGoldEA"><defs><radialGradient id="fg" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#EFD48F"/><stop offset="100%" stop-color="#A37E2C"/></radialGradient></defs><circle cx="20" cy="20" r="18" fill="url(#fg)" stroke="#8A6A1F" stroke-width="2"/><text x="20" y="25.5" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="14.5" fill="#FBFAF7">FGE</text></svg>
+      <span style="font-weight:700;">ForexGoldEA</span>
+    </a>
+    <nav style="margin-left:auto; font-size:14.5px; font-weight:500;"><a href="blog.html" style="color:#4A5258;">← All posts</a><a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener" style="margin-left:16px; background:#A37E2C; color:#fff; padding:8px 15px; border-radius:8px; font-weight:600;">Ask the desk</a></nav>
+  </div>
+</header>
+
+<article class="wrap" style="padding: 48px 24px 40px;">
+<nav aria-label="Breadcrumb" style="font-size:13px;margin:0 0 18px;opacity:.8;"><a href="index.html">Home</a> &rsaquo; <a href="blog.html">Blog</a></nav>
+  <div style="font-size: 13px; color: #A37E2C; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;">Chart reading · August 18, 2026</div>
+  <h1 style="font-family: 'Newsreader', serif; font-size: 40px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.12; margin: 12px 0 20px;">The RSI, and what it actually tells you about gold</h1>
+<img class="article-hero" src="images/rsi-indicator-explained.jpg" alt="RSI indicator explained for gold trading — reading momentum on XAU/USD" width="1200" height="630" style="width:100%;height:auto;border-radius:14px;margin:6px 0 26px;" />
+  <p style="font-size: 18px; color: #4A5258;">The RSI is the first indicator almost everyone adds to a chart, and the first one almost everyone misreads. The problem is not the tool. It is that the rule people are taught — buy below 30, sell above 70 — describes behaviour gold displays less often than any other instrument on the platform.</p>
+
+<div class="answer"><p style="margin:0"><strong>In short</strong> the RSI measures the <em>speed</em> of recent price change, not value. A reading of 75 does not mean gold is expensive; it means buying has been persistent. That distinction is the whole thing. On XAU/USD, which trends hard when the dollar or rates move, the RSI can sit above 70 for weeks while price keeps rising &mdash; so treating 70 as a sell signal means selling into strength repeatedly. Use it for context and divergence, on the 4H or daily, with the standard 14-period setting. Never as a standalone entry.</p></div>
+
+
+  <h2>What the number is actually measuring</h2>
+  <p>The Relative Strength Index compares the size of recent gains to the size of recent losses over a lookback window, conventionally 14 periods, and expresses the result on a scale of 0 to 100. That is all it does.</p>
+  <p>Read that definition again, because it contains the misunderstanding. The RSI knows nothing about value, fair price, or whether gold is expensive. It knows how one-sided the last fourteen candles have been. A reading of 78 is a statement about <em>momentum</em>, and momentum is a description of what has just happened, not a prediction of what happens next.</p>
+  <p>The name is unhelpful here. &ldquo;Relative strength&rdquo; sounds like a comparison against other assets. It is not; it is a comparison of the instrument against its own recent behaviour.</p>
+
+  <h2>The 70/30 rule, and why gold ignores it</h2>
+  <p>The textbook says above 70 is overbought and below 30 is oversold, with the implication that price should turn. On a range-bound instrument, that works often enough to feel true.</p>
+  <p>Gold is not reliably range-bound. When the dollar weakens or rate expectations shift, XAU/USD makes extended directional runs, and during those runs the RSI reaches 70 early and simply stays there. Nothing is wrong with the indicator; it is faithfully reporting that buying has been persistent. What is wrong is the interpretation that persistence must end soon.</p>
+  <div class="note"><strong>The rule worth remembering:</strong> in a strong trend, overbought is not a warning. It is confirmation. The RSI reaching an extreme and remaining there is what a healthy trend looks like from the momentum indicator's point of view.</div>
+  <p>Traders who sell every reading above 70 during a gold rally do not lose because they are unlucky. They lose because they are using a range tool to fight a trend, and the drivers behind that trend &mdash; covered in <a href="what-moves-xauusd-gold-price-drivers.html">what moves the gold price</a> &mdash; do not resolve in fourteen candles.</p>
+
+  <h2>Divergence, and its honest hit rate</h2>
+  <p>The more interesting use is divergence: price makes a higher high while the RSI makes a lower high, suggesting the move is being driven by less force than the one before it.</p>
+  <p>This is a real observation and worth watching. It is also worth being honest about what it delivers. Divergence signals frequently appear well before any turn, and in strong gold trends they can appear three or four times while price continues in the original direction. A trader entering on the first divergence in a powerful move usually enters early enough to be stopped out before being right.</p>
+  <p>Used as a <em>reason to tighten a stop or take partial profit</em>, divergence earns its place. Used as a reversal entry on its own, it is one of the most expensive habits available on a gold chart.</p>
+
+  <h2>Settings, and why the default is usually correct</h2>
+  <p>The standard is 14 periods. Shortening it to 7 or 9 makes the line more reactive and produces far more extreme readings, most of which mean nothing. Lengthening it to 21 smooths the line and delays every signal further.</p>
+  <p>There is no hidden setting that unlocks the indicator, and searching for one is a well-trodden route to <a href="how-to-backtest-gold-ea.html">curve-fitting</a> &mdash; tuning a parameter until it would have worked beautifully on the last six months and has no reason to work on the next six.</p>
+  <table>
+    <tr><th>Timeframe</th><th>How the RSI behaves on gold</th></tr>
+    <tr><td>M1&ndash;M15</td><td>Reaches extremes constantly. Mostly reflects spread and noise rather than momentum.</td></tr>
+    <tr><td>H1</td><td>Usable for context within a session, still frequently at extremes during active hours.</td></tr>
+    <tr><td>H4</td><td>The most workable timeframe. Extremes are less frequent and mean more.</td></tr>
+    <tr><td>D1</td><td>Slow, and best for judging whether the larger move is stretched. Signals are rare.</td></tr>
+  </table>
+  <p>One adjustment does help in practice: in an established uptrend, treat 40&ndash;50 as the zone where pullbacks tend to end rather than waiting for 30, which may never arrive. In a downtrend, mirror it at 50&ndash;60. This keeps the tool aligned with the trend instead of arguing with it.</p>
+
+  <h2>Using it as context, not as a signal</h2>
+  <p>The honest role of the RSI on a gold chart is as a second opinion. Decide direction from structure and the larger trend; use the RSI to judge whether the move you are looking at is fresh or already extended.</p>
+  <ul>
+    <li><strong>Trend intact, RSI pulling back toward 50:</strong> the kind of pause that continuation setups form in.</li>
+    <li><strong>Trend intact, RSI pinned above 70 for days:</strong> strength, not a sell signal. A poor place to <em>start</em> a position, a fine place to hold one.</li>
+    <li><strong>No clear trend, RSI at 75:</strong> the only situation where the textbook reading carries real weight.</li>
+    <li><strong>Divergence forming:</strong> a reason to protect profit, not to reverse direction.</li>
+  </ul>
+  <p>Combined with <a href="how-to-read-candlestick-charts.html">what the candles themselves are showing</a> and a sensible <a href="how-to-set-a-stop-loss.html">stop placement</a>, that is a genuinely useful tool. Used alone, on a fast timeframe, as a reason to fade a trending metal, it is an efficient way to donate money.</p>
+
+
+  <h2 id="faq">Reader questions</h2>
+  <h3>What does the RSI indicator measure?</h3>
+  <p>It measures momentum: how one-sided recent price changes have been over the last 14 candles. It says nothing about value.</p>
+  <h3>Is RSI above 70 a sell signal on gold?</h3>
+  <p>No. On gold the RSI can stay above 70 for weeks in a trend — a high reading usually confirms strength, not a reversal.</p>
+  <h3>What is the best RSI setting for gold?</h3>
+  <p>The default 14 period on the 4-hour chart. Shorter settings mostly produce noise, and unusual values tend to be curve-fitted.</p>
+  <h3>How reliable is RSI divergence?</h3>
+  <p>It spots real momentum loss but fires early, often several times in a trend. Better for tightening stops than for reversal entries.</p>
+  <h3>Should I use RSI on its own?</h3>
+  <p>No. Establish direction from structure first, then use the RSI to judge whether the move is fresh or stretched.</p>
+  <h3>What is the difference between RSI and stochastic?</h3>
+  <p>Both are momentum oscillators, but RSI compares gains to losses while stochastic compares close to recent range. Stochastic is noisier.</p>
+
+  <h2>Where this leaves you</h2>
+  <p>The RSI is a momentum description dressed up, by decades of repetition, as a valuation signal. Once you stop asking it whether gold is expensive and start asking it whether the current move is fresh or tired, it becomes a genuinely useful second opinion — particularly on the 4-hour chart, particularly alongside structure, and particularly when you accept that a reading of 75 in a strong gold trend is information about strength rather than an invitation to fight it.</p>
+
+  <div class="note" style="margin: 22px 0;">Trading gold and forex on margin carries a high level of risk and may not be suitable for everyone; a large majority of retail CFD accounts lose money. This article is educational and not financial advice.</div>
+
+  <div style="margin: 36px 0 8px;">
+    <a class="cta" href="https://affs.click/JVeDD" target="_blank" rel="nofollow noopener">Get ForexGoldEA free →</a>
+    <a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener" style="display:inline-block; margin-left:12px; margin-top:12px; background:#1C2226; color:#fff; padding:13px 26px; border-radius:10px; font-weight:600;">Ask the desk on Telegram →</a>
+  </div>
+  <p style="font-size: 13px; color: #9AA0A5;">Affiliate disclosure: we earn a commission when you open and fund an account through our partner links, at no extra cost to you.</p>
+
+<div class="related-guides" style="margin:36px 0 8px;">
+<h2>Continue reading</h2>
+<ul>
+<li><a href="moving-averages-gold.html">Moving averages, and the one job they're good at</a></li>
+<li><a href="how-to-read-candlestick-charts.html">How to read candlestick charts</a></li>
+<li><a href="gold-trading-strategies.html">Gold trading strategies that actually work</a></li>
+<li><a href="what-moves-xauusd-gold-price-drivers.html">What moves XAU/USD: the real drivers</a></li>
+<li><a href="blog.html">All gold EA &amp; XAUUSD guides &rarr;</a></li>
+</ul>
+</div>
+</article>
+
+<footer style="background: #1C2226; color: #AEB6BB;">
+  <div class="wrap" style="max-width: 1120px; padding: 32px 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13.5px;">
+    <span>© 2026 ForexGoldEA — BBFxAi LLC</span>
+    <a href="blog.html" style="color: #AEB6BB;">← More guides</a>
+  </div>
+</footer>
+
+</body>
+</html>
