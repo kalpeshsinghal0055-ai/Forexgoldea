@@ -1,5 +1,19 @@
 [
   {
+    "title": "The risk-reward ratio, and what it actually buys",
+    "url": "risk-reward-ratio.html",
+    "date": "2026-08-21",
+    "tag": "Method",
+    "excerpt": "Not a verdict on a trade — a statement about how often you can afford to be wrong, and what it costs to arrange the number rather than observe it."
+  },
+  {
+    "title": "Margin on gold: what a position actually ties up",
+    "url": "xauusd-margin-requirements.html",
+    "date": "2026-08-21",
+    "tag": "The mechanics",
+    "excerpt": "A deposit rather than a cost, the arithmetic on 0.01 lots, and why free margin closes accounts out of trades that were right."
+  },
+  {
     "title": "Gold or silver: the same story, told at different volumes",
     "url": "gold-vs-silver-trading.html",
     "date": "2026-08-18",

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X82W5RGRLF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X82W5RGRLF');
+</script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<title>XAUUSD Margin: How Much Does 0.01 Lots Tie Up?</title>
+<meta name="description" content="What margin on XAU/USD really is, the arithmetic for 0.01 lots at 1:100 and 1:500, why free margin decides your stop-out, and how to size so margin never becomes the constraint." />
+<meta name="keywords" content="XAUUSD margin, gold margin requirement, margin for 0.01 lots gold, free margin, margin level, stop out level, XAUUSD leverage margin" />
+<meta name="author" content="ForexGoldEA" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://forexgoldea.com/xauusd-margin-requirements.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Margin on gold: what a position actually ties up" />
+<meta property="og:description" content="A deposit, not a cost — and why small accounts hit stop-out on correct trades." />
+<meta property="og:url" content="https://forexgoldea.com/xauusd-margin-requirements.html" />
+<meta property="og:image" content="https://forexgoldea.com/images/xauusd-margin-requirements.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="XAUUSD Margin Explained" />
+<meta name="twitter:description" content="A deposit, not a cost — and why small accounts hit stop-out on correct trades." />
+<meta name="twitter:image" content="https://forexgoldea.com/images/xauusd-margin-requirements.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: #FBFAF7; }
+  body { font-family: 'Public Sans', sans-serif; color: #1C2226; -webkit-font-smoothing: antialiased; line-height: 1.7; }
+  a { color: #8A6A1F; text-decoration: none; } a:hover { color: #6E5316; }
+  * { box-sizing: border-box; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  article h2 { font-family: 'Newsreader', serif; font-size: 27px; font-weight: 500; letter-spacing: -0.01em; margin: 40px 0 12px; line-height: 1.2; }
+  article h3 { font-size: 18.5px; font-weight: 700; margin: 24px 0 6px; }
+  article p, article li { font-size: 16.5px; color: #2E3840; }
+  article ol, article ul { padding-left: 22px; } article li { margin-bottom: 8px; }
+  .cta { display: inline-block; background: #A37E2C; color: #fff; padding: 13px 26px; border-radius: 10px; font-weight: 600; } .cta:hover { background: #8A6A1F; color:#fff; }
+  .note { background: #F3EEE2; border: 1px solid #E2D9C2; border-radius: 12px; padding: 16px 18px; font-size: 15px; color: #4A5258; }
+  .answer { background: transparent; border: 0; border-left: 2px solid #A37E2C; border-radius: 0; padding: 4px 0 4px 24px; margin: 30px 0; font-family: 'Newsreader', serif; font-size: 19.5px; font-style: italic; line-height: 1.55; color: #2E3840; }
+  .answer > strong:first-child, .answer > p > strong:first-child { font-style: normal; font-family: 'Public Sans', sans-serif; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6A1F; display: block; margin-bottom: 8px; }
+  article > p:first-of-type::first-letter { float: left; font-family: 'Newsreader', serif; font-size: 62px; line-height: 0.84; padding: 7px 11px 0 0; color: #A37E2C; font-weight: 500; }
+  article h2 { border-bottom: 1px solid #E9E5DC; padding-bottom: 8px; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0 4px; font-size: 15px; }
+  th, td { border: 1px solid #E9E5DC; padding: 10px 12px; text-align: left; vertical-align: top; }
+  th { background: #F3EEE2; font-weight: 600; }
+  @media (max-width: 640px) { table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; } }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Margin on gold: what a position actually ties up", "description": "A plain-English explanation of margin on XAU/USD gold: what margin is and is not, the calculation for a 0.01 lot position at common leverage levels, how free margin and the stop-out level interact, and why undersized accounts get closed out of positions that were right.", "datePublished": "2026-08-01", "dateModified": "2026-08-01", "author": {"@type": "Organization", "name": "ForexGoldEA"}, "publisher": {"@type": "Organization", "name": "ForexGoldEA", "logo": {"@type": "ImageObject", "url": "https://forexgoldea.com/images/xauusd-margin-requirements.jpg"}}, "mainEntityOfPage": "https://forexgoldea.com/xauusd-margin-requirements.html", "image": "https://forexgoldea.com/images/xauusd-margin-requirements.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://forexgoldea.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://forexgoldea.com/blog.html"}, {"@type": "ListItem", "position": 3, "name": "XAUUSD margin requirements", "item": "https://forexgoldea.com/xauusd-margin-requirements.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much margin do I need for 0.01 lots of gold?", "acceptedAnswer": {"@type": "Answer", "text": "One standard lot of XAU/USD is 100 ounces, so 0.01 lots is one ounce. With gold around $2,400 that position controls roughly $24 of metal — about $24 of margin at 1:100 leverage, or about $4.80 at 1:500. Figures move with the gold price, and some brokers apply a fixed metals margin rate instead of your account leverage."}}, {"@type": "Question", "name": "Is margin a fee I pay to the broker?", "acceptedAnswer": {"@type": "Answer", "text": "No. Margin is a portion of your balance held as security while a position is open and released in full when it closes. It is not deducted or charged. The actual costs of the trade are the spread, any commission, and overnight swap."}}, {"@type": "Question", "name": "Does higher leverage mean more risk on gold?", "acceptedAnswer": {"@type": "Answer", "text": "Not directly. Leverage changes how much margin is set aside, not how much you lose if the stop is hit — a one-ounce position with a $6 stop loses $6 at any leverage. What high leverage does is remove the natural limit that would have stopped a small account opening an oversized position."}}, {"@type": "Question", "name": "What is the margin level and when does the broker close my trade?", "acceptedAnswer": {"@type": "Answer", "text": "Margin level is equity divided by used margin, shown as a percentage. Below the margin call threshold, often around 100%, you cannot open new positions. At the stop-out level, commonly 50%, the broker starts closing positions itself, usually the largest loser first."}}, {"@type": "Question", "name": "Why was my gold position closed even though I was right?", "acceptedAnswer": {"@type": "Answer", "text": "Because free margin ran out before the move resolved. Gold can retrace $20 to $40 against a position and still finish in your favour, but if the account cannot hold the floating loss through that retracement the broker closes it at the worst point. That is a position-size problem rather than an analysis one."}}, {"@type": "Question", "name": "How much of my account should be used as margin?", "acceptedAnswer": {"@type": "Answer", "text": "As a working guide, keep used margin under roughly 10 to 15% of equity. Above that, an ordinary move against you can push the margin level toward the broker's thresholds. If margin is what limits your position size rather than your stop distance, the position is already too large."}}]}</script>
+</head>
+<body>
+
+<header style="border-bottom: 1px solid #E9E5DC; background: rgba(251,250,247,0.92);">
+  <div class="wrap" style="max-width: 1120px; height: 64px; display: flex; align-items: center; gap: 10px;">
+    <a href="index.html" style="display:flex; align-items:center; gap:10px; color:#1C2226;">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-label="ForexGoldEA"><defs><radialGradient id="fg" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#EFD48F"/><stop offset="100%" stop-color="#A37E2C"/></radialGradient></defs><circle cx="20" cy="20" r="18" fill="url(#fg)" stroke="#8A6A1F" stroke-width="2"/><text x="20" y="25.5" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="14.5" fill="#FBFAF7">FGE</text></svg>
+      <span style="font-weight:700;">ForexGoldEA</span>
+    </a>
+    <nav style="margin-left:auto; font-size:14.5px; font-weight:500;"><a href="blog.html" style="color:#4A5258;">← All posts</a><a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener" style="margin-left:16px; background:#A37E2C; color:#fff; padding:8px 15px; border-radius:8px; font-weight:600;">Ask the desk</a></nav>
+  </div>
+</header>
+
+<article class="wrap" style="padding: 48px 24px 40px;">
+<nav aria-label="Breadcrumb" style="font-size:13px;margin:0 0 18px;opacity:.8;"><a href="index.html">Home</a> &rsaquo; <a href="blog.html">Blog</a></nav>
+  <div style="font-size: 13px; color: #A37E2C; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;">The mechanics · August 21, 2026</div>
+  <h1 style="font-family: 'Newsreader', serif; font-size: 40px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.12; margin: 12px 0 20px;">Margin on gold: what a position actually ties up</h1>
+<img class="article-hero" src="images/xauusd-margin-requirements.jpg" alt="XAUUSD margin requirements explained for gold trading positions" width="1200" height="630" style="width:100%;height:auto;border-radius:14px;margin:6px 0 26px;" />
+  <p style="font-size: 18px; color: #4A5258;">Margin is the most misunderstood number on a trading platform, mostly because it looks like a cost and behaves like a deposit. Get it wrong on gold — where one minimum-size position already controls an ounce of metal — and the account can be closed out of a trade that was perfectly correct, simply because there was nothing left to hold it with.</p>
+
+<div class="answer"><p style="margin:0"><strong>In short</strong> margin is not a fee. It is a portion of your balance the broker <em>ring-fences</em> while a position is open, and returns in full when you close it. On XAU/USD one standard lot is 100 ounces, so 0.01 lots is one ounce. With gold near $2,400, that position controls roughly $24 of metal &mdash; at 1:100 leverage the margin is about <strong>$24</strong>, at 1:500 about <strong>$4.80</strong>. Margin is rarely what limits a small account. <strong>Free margin</strong> is: as a losing position grows, free margin falls, and when the margin level drops far enough the broker closes the trade for you regardless of whether you were right.</p></div>
+
+
+  <h2>What margin is, and what it is not</h2>
+  <p>When you open a position, the broker sets aside part of your balance as security. That amount is the margin. It is not deducted, not spent, and not a charge &mdash; it is unavailable while the trade is open and released the moment it closes.</p>
+  <p>The confusion comes from where it appears. The platform shows <em>Balance</em>, <em>Equity</em>, <em>Margin</em> and <em>Free Margin</em> in one row, so margin sits alongside numbers that genuinely move up and down with profit and loss. It does not behave like them. Think of it as a deposit held against a rental rather than the rent itself.</p>
+  <p>What it does do is reduce the room you have left. That is the part worth understanding, and it is where accounts actually get into trouble.</p>
+
+  <h2>The arithmetic on a 0.01 lot</h2>
+  <p>Gold's contract size is the number to start from. One standard lot of XAU/USD is <strong>100 ounces</strong>. The minimum size most brokers allow, 0.01 lots, is therefore one ounce.</p>
+  <p>The formula is unglamorous:</p>
+  <div class="note"><strong>Margin = (contract size &times; lots &times; price) &divide; leverage</strong></div>
+  <p>With gold at roughly $2,400, a 0.01-lot position controls about $24 of metal. What the broker sets aside depends entirely on your account leverage:</p>
+  <table>
+    <tr><th>Leverage</th><th>Margin for 0.01 lots</th><th>Margin for 0.10 lots</th><th>Margin for 1.00 lot</th></tr>
+    <tr><td>1:50</td><td>~$48</td><td>~$480</td><td>~$4,800</td></tr>
+    <tr><td>1:100</td><td>~$24</td><td>~$240</td><td>~$2,400</td></tr>
+    <tr><td>1:200</td><td>~$12</td><td>~$120</td><td>~$1,200</td></tr>
+    <tr><td>1:500</td><td>~$4.80</td><td>~$48</td><td>~$480</td></tr>
+  </table>
+  <p>Figures move with the gold price &mdash; they are illustrative at $2,400, not fixed. Some brokers also apply a separate, fixed margin rate to metals rather than your account leverage, so the specification for the symbol is the authority, not the account setting. Check it in Market Watch before assuming.</p>
+  <p>The immediate observation: at 1:500, margin on a minimum position is under five dollars. On almost any funded account, margin is not the thing stopping you from opening the trade. The <a href="how-to-calculate-lot-size-xauusd.html">position size calculation</a> and the <a href="how-much-is-a-pip-in-gold-xauusd.html">value of each dollar of movement</a> matter far more.</p>
+
+  <h2>Leverage changes the deposit, not the danger</h2>
+  <p>Here is where the industry's marketing has done real damage. Higher leverage is sold as though it increases what you can make. What it actually changes is how much of your balance is ring-fenced.</p>
+  <p>Compare the same trade at two leverage settings. One ounce of gold, a $6 stop. At 1:100 the margin is $24; at 1:500 it is $4.80. In both cases, if the stop is hit, <strong>the loss is $6</strong>. Identical. Leverage moved the deposit, not the outcome.</p>
+  <p>What high leverage does is remove a natural brake. At 1:50, a small account simply cannot open a reckless position &mdash; there is not enough margin. At 1:500 the same account can open something ten times larger, and nothing on the screen objects. The risk was always in the position size; leverage just stopped preventing it. We took this apart in more detail in <a href="leverage-gold-ea.html">the guide to leverage on gold</a>.</p>
+
+  <h2>Free margin, and the number that closes your trade</h2>
+  <p>This is the mechanism that actually removes people from correct trades.</p>
+  <ul>
+    <li><strong>Equity</strong> = balance plus or minus the floating profit and loss on open positions.</li>
+    <li><strong>Free margin</strong> = equity minus the margin currently held.</li>
+    <li><strong>Margin level</strong> = (equity &divide; used margin) &times; 100, shown as a percentage.</li>
+  </ul>
+  <p>As a position moves against you, equity falls while used margin stays where it is. The margin level therefore drops. Cross the broker's <strong>margin call</strong> threshold &mdash; often around 100% &mdash; and you can no longer open anything new. Keep falling to the <strong>stop-out</strong> level, commonly 50%, and the broker begins closing positions itself, largest loss first.</p>
+  <div class="note"><strong>The uncomfortable part:</strong> a stop-out is not a judgement about your analysis. Gold can retrace $40 against a position and still resolve in your favour a day later. If the account ran out of free margin during that retracement, the position was closed at the worst point and the recovery happened without you.</div>
+
+  <h2>Why small accounts get stopped out on correct trades</h2>
+  <p>Put the pieces together and the failure is predictable rather than unlucky.</p>
+  <p>A $200 account at 1:500 can open 0.10 lots &mdash; margin about $48, comfortably affordable. But at 0.10 lots, every $1 of gold movement is $10 of profit or loss. Gold routinely travels $20&ndash;$30 in a day. A perfectly ordinary retracement of $15 is $150 against a $200 balance, equity drops to $50, the margin level collapses and the broker closes the position.</p>
+  <p>Nothing was wrong with the direction. The position was simply too large for the account to sit through normal movement. This is the same conclusion the <a href="how-much-money-to-run-gold-ea.html">deposit guide</a> reaches from the other direction: a balance buys the room to be wrong for a while, and margin is the mechanism that takes that room away.</p>
+
+  <h2>Sizing so margin never becomes the constraint</h2>
+  <ol>
+    <li><strong>Size from the stop, not from available margin.</strong> Decide where the idea is invalidated, then choose a lot size where that distance costs an acceptable amount. Margin should be an afterthought &mdash; if it is not, the position is too big.</li>
+    <li><strong>Keep used margin small relative to equity.</strong> As a working guide, if open positions are using more than about 10&ndash;15% of equity as margin, a normal move can put the account under pressure.</li>
+    <li><strong>Watch margin level, not free margin.</strong> The percentage is what triggers the broker's action, and it is the number to glance at before adding a second position.</li>
+    <li><strong>Remember gold's range.</strong> A stop distance that feels generous on a currency pair is often tight on XAU/USD. <a href="how-to-set-a-stop-loss.html">Where the stop belongs</a> is decided by the chart; the account then decides the size.</li>
+  </ol>
+  <p>Done in that order, margin becomes what it should be: a number you check occasionally and never think about again.</p>
+
+
+  <h2 id="faq">Reader questions</h2>
+  <h3>How much margin do I need for 0.01 lots of gold?</h3>
+  <p>About $24 at 1:100 or $4.80 at 1:500, with gold near $2,400. Check the symbol specification, as metals often have their own rate.</p>
+  <h3>Is margin a fee I pay to the broker?</h3>
+  <p>No — it is held as security and returned when the trade closes. Your real costs are spread, commission and swap.</p>
+  <h3>Does higher leverage mean more risk on gold?</h3>
+  <p>Not by itself. It changes the margin held, not the loss per trade — but it removes the brake on oversized positions.</p>
+  <h3>What is the margin level and when does the broker close my trade?</h3>
+  <p>Equity ÷ used margin, as a percentage. Margin call near 100%, and the broker force-closes at stop-out, often 50%.</p>
+  <h3>Why was my gold position closed even though I was right?</h3>
+  <p>Free margin ran out during a normal retracement. The direction was fine; the position was too large to sit through it.</p>
+  <h3>How much of my account should be used as margin?</h3>
+  <p>Under roughly 10-15% of equity. If margin limits your size instead of your stop distance, the position is too big.</p>
+
+  <h2>Where this leaves you</h2>
+  <p>Margin is a deposit, not a cost, and on gold it is almost never the thing preventing a trade. Free margin is — because a position sized without regard for gold's ordinary range will exhaust it during a retracement that means nothing. Decide the stop first, size so that distance is affordable, and margin quietly stops being a number you have to think about.</p>
+
+  <div class="note" style="margin: 22px 0;">Trading gold and forex on margin carries a high level of risk and may not be suitable for everyone; a large majority of retail CFD accounts lose money. This article is educational and not financial advice.</div>
+
+  <div style="margin: 36px 0 8px;">
+    <a class="cta" href="https://affs.click/JVeDD" target="_blank" rel="nofollow noopener">Get ForexGoldEA free &rarr;</a>
+    <a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener" style="display:inline-block; margin-left:12px; margin-top:12px; background:#1C2226; color:#fff; padding:13px 26px; border-radius:10px; font-weight:600;">Ask the desk on Telegram →</a>
+  </div>
+  <p style="font-size: 13px; color: #9AA0A5;">Affiliate disclosure: we earn a commission when you open and fund an account through our partner links, at no extra cost to you.</p>
+
+<div class="related-guides" style="margin:36px 0 8px;">
+<h2>Continue reading</h2>
+<ul>
+<li><a href="how-to-calculate-lot-size-xauusd.html">How to calculate lot size for XAU/USD</a></li>
+<li><a href="how-much-is-a-pip-in-gold-xauusd.html">How much is a pip in gold?</a></li>
+<li><a href="leverage-gold-ea.html">Leverage on gold: 1:100 or 1:500?</a></li>
+<li><a href="how-to-set-a-stop-loss.html">Where to put a stop loss</a></li>
+<li><a href="blog.html">All gold EA &amp; XAUUSD guides &rarr;</a></li>
+</ul>
+</div>
+</article>
+
+<footer style="background: #1C2226; color: #AEB6BB;">
+  <div class="wrap" style="max-width: 1120px; padding: 32px 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13.5px;">
+    <span>© 2026 ForexGoldEA — BBFxAi LLC</span>
+    <a href="blog.html" style="color: #AEB6BB;">← More guides</a>
+  </div>
+</footer>
+
+</body>
+</html>
