@@ -234,8 +234,7 @@
             <a href="https://www.tradingview.com/symbols/XAUUSD/?exchange=OANDA" rel="noopener nofollow" target="_blank" style="color:#2962FF;">XAUUSD quote</a>
             <span style="color:#9AA0A5;"> by TradingView</span>
           </div>
-          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
-          {
+          <div id="tvHost" data-tv-config='{
           "lineWidth": 2,
           "lineType": 0,
           "chartType": "area",
@@ -267,8 +266,7 @@
           "autosize": true,
           "width": "100%",
           "height": "100%"
-          }
-          </script>
+          }' style="height:100%;width:100%;"><div style="height:100%;display:flex;align-items:center;justify-content:center;color:#9AA0A5;font-size:14px;">Live XAU/USD chart loads as you scroll</div></div>
         </div>
       </div>
     </div>
@@ -499,6 +497,32 @@
     }
     wrap.innerHTML = inner;
     host.appendChild(wrap);
+  }
+})();
+
+/* ---------- TradingView: load only when it scrolls into view ---------- */
+(function () {
+  var host = document.getElementById('tvHost');
+  if (!host) return;
+  var done = false;
+  function load() {
+    if (done) return;
+    done = true;
+    host.innerHTML = '<div class="tradingview-widget-container__widget" style="height:100%;width:100%;"></div>';
+    var sc = document.createElement('script');
+    sc.type = 'text/javascript';
+    sc.async = true;
+    sc.src = 'https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js';
+    sc.text = host.getAttribute('data-tv-config');
+    host.appendChild(sc);
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { load(); io.disconnect(); } });
+    }, { rootMargin: '400px' });
+    io.observe(host);
+  } else {
+    load();
   }
 })();
 </script>
