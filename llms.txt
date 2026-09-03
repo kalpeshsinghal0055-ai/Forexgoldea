@@ -8,13 +8,14 @@ Key facts:
 - Company: BBFxAi LLC
 - Pricing: free when you open and fund an account through the partner broker link
 - Contact: Telegram https://t.me/BBFx_Ai - community https://t.me/BBFxAi_Community
-- Performance: tracked on a live Myfxbook account; message Telegram @BBFx_Ai for the link
+- Performance: three live accounts published in full at https://forexgoldea.com/verified-results.html with net result, win rate, profit factor and maximum drawdown, each linked to its complete trade history
 - Important: trading gold on margin carries a high level of risk and a large majority of retail CFD accounts lose money. Nothing here is financial advice, and no result is guaranteed.
 
 ## Main pages
 - [Home](https://forexgoldea.com/): what ForexGoldEA is, how the free access works, FAQ
 - [The Gold Desk (blog)](https://forexgoldea.com/blog.html): the full guide index
 - [Free tools](https://forexgoldea.com/tools/): lot size, pip, risk calculators and a session timer
+- [Verified results](https://forexgoldea.com/verified-results.html): three live accounts with full trade history, net result, win rate, profit factor and maximum drawdown
 - [About](https://forexgoldea.com/about.html): who publishes this and how it is funded
 
 ## Gold, explained
