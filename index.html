@@ -243,39 +243,7 @@
             <a href="https://www.tradingview.com/symbols/XAUUSD/?exchange=OANDA" rel="noopener nofollow" target="_blank" style="color:#2962FF;">XAUUSD quote</a>
             <span style="color:#9AA0A5;"> by TradingView</span>
           </div>
-          <div id="tvHost" data-tv-config='{
-          "lineWidth": 2,
-          "lineType": 0,
-          "chartType": "area",
-          "fontColor": "rgb(106, 109, 120)",
-          "gridLineColor": "rgba(46, 46, 46, 0.06)",
-          "volumeUpColor": "rgba(34, 171, 148, 0.5)",
-          "volumeDownColor": "rgba(247, 82, 95, 0.5)",
-          "backgroundColor": "#ffffff",
-          "widgetFontColor": "#0F0F0F",
-          "upColor": "#22ab94",
-          "downColor": "#f7525f",
-          "borderUpColor": "#22ab94",
-          "borderDownColor": "#f7525f",
-          "wickUpColor": "#22ab94",
-          "wickDownColor": "#f7525f",
-          "colorTheme": "light",
-          "isTransparent": false,
-          "locale": "en",
-          "chartOnly": false,
-          "scalePosition": "right",
-          "scaleMode": "Normal",
-          "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
-          "valuesTracking": "1",
-          "changeMode": "price-and-percent",
-          "symbols": [["OANDA:XAUUSD|ALL"]],
-          "dateRanges": ["1d|1","1m|30","3m|60","12m|1D","60m|1W","all|1M"],
-          "fontSize": "10",
-          "headerFontSize": "medium",
-          "autosize": true,
-          "width": "100%",
-          "height": "100%"
-          }' style="height:100%;width:100%;"><div style="height:100%;display:flex;align-items:center;justify-content:center;color:#9AA0A5;font-size:14px;">Live XAU/USD chart loads as you scroll</div></div>
+          <div id="tvHost" style="height:100%;width:100%;"><div style="height:100%;display:flex;align-items:center;justify-content:center;color:#9AA0A5;font-size:14px;">Live XAU/USD chart loads as you scroll</div></div></div>
         </div>
       </div>
     </div>
@@ -510,7 +478,7 @@
   }
 })();
 
-/* ---------- TradingView: load only when it scrolls into view ---------- */
+/* ---------- TradingView mini chart: load only when it scrolls into view ---------- */
 (function () {
   var host = document.getElementById('tvHost');
   if (!host) return;
@@ -518,13 +486,11 @@
   function load() {
     if (done) return;
     done = true;
-    host.innerHTML = '<div class="tradingview-widget-container__widget" style="height:100%;width:100%;"></div>';
     var sc = document.createElement('script');
-    sc.type = 'text/javascript';
-    sc.async = true;
-    sc.src = 'https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js';
-    sc.text = host.getAttribute('data-tv-config');
-    host.appendChild(sc);
+    sc.type = 'module';
+    sc.src = 'https://widgets.tradingview-widget.com/w/en/tv-mini-chart.js';
+    document.head.appendChild(sc);
+    host.innerHTML = '<tv-mini-chart symbol="OANDA:XAUUSD" transparent style="display:block;width:100%;height:100%;"></tv-mini-chart>';
   }
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (es) {
