@@ -1,0 +1,5 @@
+(()=>{'use strict';
+const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('.mobile-navigation');
+if(toggle&&nav){const close=()=>{nav.hidden=true;toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation');toggle.textContent='Menu';};toggle.addEventListener('click',()=>{const open=nav.hidden;nav.hidden=!open;toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close navigation':'Open navigation');toggle.textContent=open?'Close':'Menu';});nav.addEventListener('click',e=>{if(e.target.closest('a'))close();});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!nav.hidden){close();toggle.focus();}});window.matchMedia('(min-width:1051px)').addEventListener('change',e=>{if(e.matches)close();});}
+document.querySelectorAll('.faq-q').forEach((q,i)=>{const answer=q.parentElement.querySelector('.faq-a');if(answer){answer.id='faq-answer-'+i;q.setAttribute('aria-controls',answer.id);}});
+})();
