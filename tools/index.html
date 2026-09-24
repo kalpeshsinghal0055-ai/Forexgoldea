@@ -32,17 +32,16 @@
 <meta content="https://forexgoldea.com/og-image.jpg" name="twitter:image"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"CollectionPage","name":"Free Gold Trading Tools","url":"https://forexgoldea.com/tools/","description":"Free XAUUSD trading calculators and tools by ForexGoldEA.","publisher":{"@type":"Organization","name":"ForexGoldEA","url":"https://forexgoldea.com/"}}
-</script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&amp;display=swap" rel="stylesheet"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Free Gold Trading Tools", "url": "https://forexgoldea.com/tools/", "description": "Free XAU/USD calculators for position sizing, risk, pip value and market sessions.", "publisher": {"@id": "https://forexgoldea.com/#organization"}, "mainEntity": {"@type": "ItemList", "name": "Free gold trading calculators", "numberOfItems": 4, "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "WebApplication", "name": "Gold Lot Size Calculator", "url": "https://forexgoldea.com/tools/gold-lot-size-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "description": "Work out the correct XAUUSD lot size from account balance, risk percentage and stop-loss distance.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}}, {"@type": "ListItem", "position": 2, "item": {"@type": "WebApplication", "name": "Risk Calculator", "url": "https://forexgoldea.com/tools/risk-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "description": "See what a trade risks in dollars and as a share of the account, plus the effect of a losing streak.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}}, {"@type": "ListItem", "position": 3, "item": {"@type": "WebApplication", "name": "Gold Pip Calculator", "url": "https://forexgoldea.com/tools/pip-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "description": "Convert pips, points and dollar moves on XAUUSD into money for any lot size.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}}, {"@type": "ListItem", "position": 4, "item": {"@type": "WebApplication", "name": "Trading Session Timer", "url": "https://forexgoldea.com/tools/trading-session-timer.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "description": "Live forex sessions in your local time, including the London-New York overlap.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}}]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which calculator should I use first?", "acceptedAnswer": {"@type": "Answer", "text": "The lot size calculator. Position size is the one decision that determines what a losing trade costs you, and every other number on this page follows from it. Work out the lot size first, then use the risk calculator to see what a run of losses at that size would do to the balance."}}, {"@type": "Question", "name": "Do these calculators work for pairs other than gold?", "acceptedAnswer": {"@type": "Answer", "text": "The risk calculator and the session timer are instrument-agnostic. The lot size and pip calculators are built around the XAU/USD contract, where one standard lot is 100 ounces and a $1 move is $100 per lot, so their numbers apply to gold rather than to currency pairs."}}, {"@type": "Question", "name": "Are the results exact?", "acceptedAnswer": {"@type": "Answer", "text": "They are estimates. None of them includes spread, commission, swap or slippage, and contract specifications differ between brokers - check yours before trading. Treat the output as the size of the decision, not as a guaranteed cost."}}]}</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://forexgoldea.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://forexgoldea.com/tools/"}]}
 </script>
 <style>
 :root{--paper:#FBFAF7;--card:#FFFFFF;--ink:#1C2226;--soft:#4A5258;--line:#E9E5DC;--gold:#A37E2C;--gold-l:#EFD48F;--gold-soft:#F4EACF;}
 *{box-sizing:border-box;margin:0;}
-body{background:var(--paper);color:var(--ink);font-family:'Public Sans',system-ui,sans-serif;font-size:16.5px;line-height:1.65;}
+body{background:var(--paper);color:var(--ink);font-family: 'DM Sans', sans-serif;font-size:16.5px;line-height:1.65;}
 a{text-decoration:none;}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
 header{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
@@ -54,13 +53,13 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.92);backdro
 .nav-cta{background:var(--ink);color:#f4f1e9 !important;padding:10px 20px;border-radius:8px;font-weight:600;}
 .hero{padding:72px 0 40px;}
 .eyebrow{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin-bottom:12px;}
-h1{font-family:'Newsreader',serif;font-size:46px;font-weight:500;letter-spacing:-.02em;line-height:1.1;margin-bottom:14px;}
+h1{font-family: 'DM Sans', sans-serif;font-size:46px;font-weight:500;letter-spacing:-.02em;line-height:1.1;margin-bottom:14px;}
 .lead{font-size:17px;color:var(--soft);max-width:62ch;}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;padding:24px 0 72px;}
 .tool{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:10px;transition:border-color .15s,box-shadow .15s;}
 .tool:hover{border-color:var(--gold);box-shadow:0 6px 24px rgba(28,34,38,.07);}
 .tool .ico{width:52px;height:52px;border-radius:12px;background:var(--gold-soft);display:flex;align-items:center;justify-content:center;margin-bottom:6px;}
-.tool h2{font-family:'Newsreader',serif;font-size:23px;font-weight:500;color:var(--ink);line-height:1.2;}
+.tool h2{font-family: 'DM Sans', sans-serif;font-size:23px;font-weight:500;color:var(--ink);line-height:1.2;}
 .tool p{font-size:14.5px;color:var(--soft);flex:1;}
 .tool .go{font-size:14px;color:var(--gold);font-weight:600;}
 .note{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 28px;margin-bottom:72px;font-size:14px;color:var(--soft);}
@@ -113,6 +112,26 @@ footer{background:#1b1e19;color:#b5b9ad;font-size:13.5px;}
 <p>Live forex market sessions in your local time — see when London and New York overlap for peak gold volatility.</p>
 <span class="go">Open timer →</span>
 </a>
+</section>
+<section class="wrap" style="max-width: 860px; margin: 0 auto; padding: 48px 24px 0;">
+<h2 style="font-family: 'DM Sans', sans-serif; font-size: 30px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.2; margin: 0 0 20px; color: #f4f1e9;">Which one do I need?</h2>
+<p style="margin: 0 0 16px; font-size: 15.5px; line-height: 1.75; color: #b5b9ad; max-width: 68ch;">Most people arrive here with one of four questions. <a href="gold-lot-size-calculator.html">How many lots</a> answers "my stop is X dollars away and I will risk 1% - what size do I trade?". <a href="risk-calculator.html">Risk calculator</a> answers "what does this actually cost me in dollars, and what does a six-loss streak do to my balance?". <a href="pip-calculator.html">Pip calculator</a> converts the pips, points and dollar moves gold quotes in into money at your lot size. <a href="trading-session-timer.html">Session timer</a> answers "is the market busy right now?" - it shows the London and New York sessions in your own timezone.</p>
+<p style="margin: 0 0 16px; font-size: 15.5px; line-height: 1.75; color: #b5b9ad; max-width: 68ch;">They work the same way whether you trade by hand or run an expert advisor. An EA needs the same numbers you do: a risk percentage it can size from, a stop distance, and an honest view of what a losing streak costs. If you want the reasoning behind them rather than the arithmetic, the guides on <a href="../how-to-calculate-lot-size-xauusd.html">lot size</a>, <a href="../how-to-set-risk-per-trade-gold-ea.html">risk per trade</a> and <a href="../how-much-is-a-pip-in-gold-xauusd.html">pip value</a> walk through each one.</p>
+</section>
+<section aria-labelledby="faq-heading" class="wrap" id="faq" style="max-width: 860px; margin: 0 auto; padding: 36px 24px 0;">
+<h2 id="faq-heading" style="font-family: 'DM Sans', sans-serif; font-size: 30px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.2; margin: 0 0 20px; color: #f4f1e9;">Common questions</h2>
+<div style="padding: 22px 0; border-top: 1px solid #34382f;">
+<h3 style="font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 600; color: #f4f1e9; margin: 0 0 8px; line-height: 1.4;">Which calculator should I use first?</h3>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.75; color: #b5b9ad; max-width: 68ch;">The lot size calculator. Position size is the one decision that determines what a losing trade costs you, and every other number on this page follows from it. Work out the lot size first, then use the risk calculator to see what a run of losses at that size would do to the balance.</p>
+</div>
+<div style="padding: 22px 0; border-top: 1px solid #34382f;">
+<h3 style="font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 600; color: #f4f1e9; margin: 0 0 8px; line-height: 1.4;">Do these calculators work for pairs other than gold?</h3>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.75; color: #b5b9ad; max-width: 68ch;">The risk calculator and the session timer are instrument-agnostic. The lot size and pip calculators are built around the XAU/USD contract, where one standard lot is 100 ounces and a $1 move is $100 per lot, so their numbers apply to gold rather than to currency pairs.</p>
+</div>
+<div style="padding: 22px 0; border-top: 1px solid #34382f;">
+<h3 style="font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 600; color: #f4f1e9; margin: 0 0 8px; line-height: 1.4;">Are the results exact?</h3>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.75; color: #b5b9ad; max-width: 68ch;">They are estimates. None of them includes spread, commission, swap or slippage, and contract specifications differ between brokers - check yours before trading. Treat the output as the size of the decision, not as a guaranteed cost.</p>
+</div>
 </section>
 <section class="wrap"><div class="note"><strong>Note:</strong> These tools are free educational calculators. They do not constitute financial advice, and results are estimates — always confirm contract specifications (lot size, tick value) with your broker. Trading gold and CFDs on margin carries a high risk of loss.</div></section>
 <footer>

@@ -3,7 +3,7 @@
 > ForexGoldEA publishes plain-English education about trading gold (XAU/USD): what moves the metal, how the arithmetic of pips, lots, spread and leverage actually works, the psychology that decides most outcomes, and what changes when an Expert Advisor trades it for you. The site also offers ForexGoldEA, a rules-based XAU/USD expert advisor for MetaTrader 4 and 5, free to traders who open an account through the partner broker link. Editorial focus is the gold market and the trader; deep MT4/MT5 engineering topics are not this site's focus.
 
 Key facts:
-- Last updated: 2026-09-18
+- Last updated: 2026-09-24
 - Editorial scope: gold market education - drivers, sessions, position-size arithmetic, trading psychology, and an honest account of what automation does and does not solve
 - Product: ForexGoldEA, a rules-based XAU/USD expert advisor for MT4 and MT5, with a fixed stop-loss on every trade and user-set risk limits (no martingale, no grid without stops)
 - Company: BBFxAi LLC
@@ -12,10 +12,21 @@ Key facts:
 - Performance: three live accounts published in full at https://forexgoldea.com/verified-results.html with net result, win rate, profit factor and maximum drawdown, each linked to its complete trade history
 - Important: trading gold on margin carries a high level of risk and a large majority of retail CFD accounts lose money. Nothing here is financial advice, and no result is guaranteed.
 
+## How to get the EA
+Free, but not anonymous: the EA is funded by broker commission, so access is tied to a partner account.
+1. Open a live account with a partner broker through the link on the request page.
+2. Submit the request form at https://get.forexgoldea.com/get/forexgoldea with your email, Telegram and account number.
+3. The account number is checked by hand against the partner report, usually within hours, and the EA file is sent by email.
+There is no subscription, no card and no payment at any step. Deposits stay in the trader's own broker account.
+
 ## Main pages
 - [Home](https://forexgoldea.com/): what ForexGoldEA is, how the free access works, FAQ
 - [The Gold Desk (blog)](https://forexgoldea.com/blog.html): the full guide index
 - [Free tools](https://forexgoldea.com/tools/): lot size, pip, risk calculators and a session timer
+  - [Gold lot size calculator](https://forexgoldea.com/tools/gold-lot-size-calculator.html): XAUUSD position size from balance, risk % and stop distance
+  - [Risk calculator](https://forexgoldea.com/tools/risk-calculator.html): dollar risk, reward, break-even win rate and the effect of a losing streak
+  - [Gold pip calculator](https://forexgoldea.com/tools/pip-calculator.html): pip, point and dollar values on XAU/USD for any lot size
+  - [Trading session timer](https://forexgoldea.com/tools/trading-session-timer.html): live London/New York sessions in the reader's own timezone
 - [Verified results](https://forexgoldea.com/verified-results.html): three live accounts with full trade history, net result, win rate, profit factor and maximum drawdown
 - [About](https://forexgoldea.com/about.html): who publishes this and how it is funded
 

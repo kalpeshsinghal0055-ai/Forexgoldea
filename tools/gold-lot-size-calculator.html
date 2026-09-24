@@ -32,20 +32,15 @@
 <meta content="https://forexgoldea.com/og-image.jpg" name="twitter:image"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&amp;display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://forexgoldea.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://forexgoldea.com/tools/"},{"@type":"ListItem","position":3,"name":"Gold Lot Size Calculator","item":"https://forexgoldea.com/tools/gold-lot-size-calculator.html"}]}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"How do you calculate lot size for gold (XAUUSD)?","acceptedAnswer":{"@type":"Answer","text":"Multiply your account balance by your risk percentage to get the dollars you can lose. One standard lot of XAUUSD is 100 ounces, so each $1 of stop-loss distance costs $100 per lot (or $1 per 0.01 lot). Divide your risk dollars by (stop-loss distance in dollars x 100) to get the lot size, then round down."}},
-{"@type":"Question","name":"What is the value of 0.01 lot in gold?","acceptedAnswer":{"@type":"Answer","text":"0.01 lots of XAUUSD equals 1 ounce of gold, so a $1 move in the gold price changes your profit or loss by about $1. A $6 stop-loss distance at 0.01 lots risks roughly $6 plus spread."}},
-{"@type":"Question","name":"What lot size is safe for a small gold account?","acceptedAnswer":{"@type":"Answer","text":"Keep risk to 1-2% of the balance per trade. On most accounts under $1,000 that means the minimum 0.01-0.03 lots. The calculator sizes this for you automatically."}}]}
-</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do you calculate lot size for gold (XAUUSD)?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply your account balance by your risk percentage to get the dollars you can lose. One standard lot of XAUUSD is 100 ounces, so each $1 of stop-loss distance costs $100 per lot (or $1 per 0.01 lot). Divide your risk dollars by (stop-loss distance in dollars x 100) to get the lot size, then round down."}}, {"@type": "Question", "name": "What is the value of 0.01 lot in gold?", "acceptedAnswer": {"@type": "Answer", "text": "0.01 lots of XAUUSD equals 1 ounce of gold, so a $1 move in the gold price changes your profit or loss by about $1. A $6 stop-loss distance at 0.01 lots risks roughly $6 plus spread."}}, {"@type": "Question", "name": "What lot size is safe for a small gold account?", "acceptedAnswer": {"@type": "Answer", "text": "Keep risk to 1-2% of the balance per trade. On most accounts under $1,000 that means the minimum 0.01-0.03 lots. The calculator sizes this for you automatically."}}]}</script>
 <style>
 :root{--paper:#FBFAF7;--card:#FFFFFF;--ink:#1C2226;--soft:#4A5258;--line:#E9E5DC;--gold:#A37E2C;--gold-l:#EFD48F;--gold-soft:#F4EACF;--good:#1f7a4d;--warn:#b4472b;}
 *{box-sizing:border-box;margin:0;}
-body{background:var(--paper);color:var(--ink);font-family:'Public Sans',system-ui,sans-serif;font-size:16.5px;line-height:1.65;}
+body{background:var(--paper);color:var(--ink);font-family: 'DM Sans', sans-serif;font-size:16.5px;line-height:1.65;}
 a{text-decoration:none;color:var(--gold);}
 .wrap{max-width:820px;margin:0 auto;padding:0 24px;}
 .wrap-wide{max-width:1120px;margin:0 auto;padding:0 24px;}
@@ -60,7 +55,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.92);backdro
 .crumb a{color:var(--soft);}
 .head{padding:14px 0 6px;}
 .eyebrow{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin-bottom:10px;}
-h1{font-family:'Newsreader',serif;font-size:40px;font-weight:500;letter-spacing:-.02em;line-height:1.12;margin-bottom:12px;}
+h1{font-family: 'DM Sans', sans-serif;font-size:40px;font-weight:500;letter-spacing:-.02em;line-height:1.12;margin-bottom:12px;}
 .lead{font-size:17px;color:var(--soft);margin-bottom:6px;}
 .calc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;margin:26px 0;box-shadow:0 6px 24px rgba(28,34,38,.05);}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
@@ -74,7 +69,7 @@ input,select{border:0;outline:0;padding:12px 12px;font-size:16px;font-family:inh
 select{cursor:pointer;padding:12px;}
 .out{background:linear-gradient(180deg,#FffdF6,#F7F0DE);border:1px solid var(--gold-l);border-radius:14px;padding:24px;margin-top:8px;}
 .out-main{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;}
-.out-lots{font-size:44px;font-weight:700;color:var(--ink);font-family:'Newsreader',serif;line-height:1;}
+.out-lots{font-size:44px;font-weight:700;color:var(--ink);font-family: 'DM Sans', sans-serif;line-height:1;}
 .out-lbl{font-size:14px;color:var(--soft);}
 .out-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px;}
 .stat{background:#171916;border:1px solid var(--line);border-radius:10px;padding:14px;}
@@ -87,7 +82,7 @@ select{cursor:pointer;padding:12px;}
 .cta{background:var(--ink);color:#f4f1e9;border-radius:16px;padding:26px 28px;margin:30px 0;text-align:center;}
 .cta p{margin-bottom:14px;color:#D8DCDE;}
 .cta a{display:inline-block;background:var(--gold);color:#f4f1e9;padding:12px 26px;border-radius:10px;font-weight:600;}
-.body h2{font-family:'Newsreader',serif;font-size:27px;font-weight:500;margin:34px 0 10px;}
+.body h2{font-family: 'DM Sans', sans-serif;font-size:27px;font-weight:500;margin:34px 0 10px;}
 .body p{margin-bottom:16px;}
 .body h3{font-size:17px;margin:20px 0 6px;}
 .disc{font-size:13px;color:var(--soft);border-top:1px solid var(--line);padding-top:18px;margin:28px 0;}
@@ -172,10 +167,25 @@ footer{background:#1b1e19;color:#b5b9ad;font-size:13.5px;margin-top:20px;}
 <p>On a $500 account risking 1% ($5), with a $6 stop-loss: $5 ÷ ($6 × 100) = 0.0083 lots → round down to <strong>0.01 lots</strong>. That single trade then risks about $6 if the stop is hit — right around your 1% target.</p>
 <h3>Why round down, never up</h3>
 <p>Rounding up pushes your risk above the limit you set. Always round <em>down</em> to the nearest step your broker allows (usually 0.01). It's the difference between a disciplined system and one that quietly over-leverages.</p>
+<section aria-labelledby="faq-heading" id="faq" style="margin: 48px 0 8px; padding: 0;">
+<h2 id="faq-heading" style="font-family: 'DM Sans', sans-serif; font-size: 30px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.2; margin: 0 0 28px; color: #f4f1e9;">Common questions</h2>
+<div style="padding: 22px 0; border-top: 1px solid #34382f;">
+<h3 style="font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 600; color: #f4f1e9; margin: 0 0 8px; line-height: 1.4;">How do you calculate lot size for gold (XAUUSD)?</h3>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.75; color: #b5b9ad; max-width: 68ch;">Multiply your account balance by your risk percentage to get the dollars you can lose. One standard lot of XAUUSD is 100 ounces, so each $1 of stop-loss distance costs $100 per lot (or $1 per 0.01 lot). Divide your risk dollars by (stop-loss distance in dollars x 100) to get the lot size, then round down.</p>
+</div>
+<div style="padding: 22px 0; border-top: 1px solid #34382f;">
+<h3 style="font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 600; color: #f4f1e9; margin: 0 0 8px; line-height: 1.4;">What is the value of 0.01 lot in gold?</h3>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.75; color: #b5b9ad; max-width: 68ch;">0.01 lots of XAUUSD equals 1 ounce of gold, so a $1 move in the gold price changes your profit or loss by about $1. A $6 stop-loss distance at 0.01 lots risks roughly $6 plus spread.</p>
+</div>
+<div style="padding: 22px 0; border-top: 1px solid #34382f;">
+<h3 style="font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 600; color: #f4f1e9; margin: 0 0 8px; line-height: 1.4;">What lot size is safe for a small gold account?</h3>
+<p style="margin: 0; font-size: 15.5px; line-height: 1.75; color: #b5b9ad; max-width: 68ch;">Keep risk to 1-2% of the balance per trade. On most accounts under $1,000 that means the minimum 0.01-0.03 lots. The calculator sizes this for you automatically.</p>
+</div>
+</section>
 <div class="disc">Estimates only. Contract sizes and tick values vary between brokers and account types — always confirm your symbol's specification in MetaTrader. This tool is educational and not financial advice. Trading gold on margin carries a high risk of loss.</div>
 </div>
 <div class="related">
-<h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:24px;margin-bottom:8px;">Keep going</h2>
+<h2 style="font-family: 'DM Sans', sans-serif;font-weight:500;font-size:24px;margin-bottom:8px;">Keep going</h2>
 <a href="risk-calculator.html">→ Risk Calculator — see the dollar risk and losing-streak impact</a>
 <a href="pip-calculator.html">→ Gold Pip Calculator — convert pips and points to money</a>
 <a href="../how-much-money-to-run-gold-ea.html">→ How much money do you need to run a gold EA?</a>
