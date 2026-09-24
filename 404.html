@@ -27,11 +27,14 @@
   a { color:#ddba76; text-decoration:none; }
   * { box-sizing:border-box; }
   .wrap { max-width:720px; margin:0 auto; padding:0 24px; }
-  .eyebrow { font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.14em; color:#ddba76; margin:0 0 14px; }
+  /* redesign.css sets every .content-page paragraph to 16px, which flattens the
+     eyebrow, lede and list into one size - restate the steps here. */
+  .eyebrow { font-size:12px !important; font-weight:600; text-transform:uppercase; letter-spacing:.14em; color:#ddba76; margin:0 0 14px; }
+  .lede { font-size:20px !important; color:#b5b9ad; max-width:56ch; }
   .actions { display:flex; flex-wrap:wrap; gap:12px; margin:30px 0 0; }
   .go-list { list-style:none; margin:34px 0 0; padding:26px 0 0; border-top:1px solid #34382f; display:grid; gap:10px; }
   .go-list a { text-decoration:underline; text-underline-offset:4px; }
-  .go-list span { color:#b5b9ad; font-size:14.5px; }
+  .go-list span { color:#b5b9ad; font-size:12.5px !important; }
 </style>
 <link href="https://forexgoldea.com/feed.xml" rel="alternate" title="ForexGoldEA — The Gold Desk" type="application/rss+xml"/>
 <link href="/assets/redesign.css" rel="stylesheet"/><script defer="True" src="/assets/redesign.js"></script><meta content="#10120f" name="theme-color"/></head>
@@ -48,7 +51,7 @@
 <main class="wrap" id="main-content" style="padding:44px 24px 30px;">
 <p class="eyebrow">404 — page not found</p>
 <h1 style="margin:0 0 14px;">This page has drifted off the chart.</h1>
-<p style="font-size:18px; color:#b5b9ad; max-width:56ch;">The page you were after does not exist, or it has moved since you last saw it. Everything below is still where it should be.</p>
+<p class="lede">The page you were after does not exist, or it has moved since you last saw it. Everything below is still where it should be.</p>
 <div class="actions">
 <a class="btn-gold" href="/" style="padding:14px 28px;">Go to the homepage</a>
 <a class="btn-outline" href="/blog.html" style="padding:13px 26px;">Browse the guides</a>
