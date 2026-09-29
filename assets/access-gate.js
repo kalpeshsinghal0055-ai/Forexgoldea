@@ -35,7 +35,7 @@
       'The EA is paid for by partner commission rather than by you, so access is tied to an account ' +
       'opened through our link. Your deposit stays in your own account.</p>' +
       '<div style="display:flex;flex-direction:column;gap:11px">' +
-      '<a class="ag-yes" href="' + FORM + '" target="_blank" rel="noopener" ' +
+      '<a class="ag-yes" data-no-gate href="' + FORM + '" target="_blank" rel="noopener" ' +
       'style="display:block;text-align:center;padding:14px 20px;border-radius:10px;font-weight:600;font-size:15px;' +
       'text-decoration:none;background:#ddba76;color:#161910">Yes &mdash; open the request form</a>' +
       '<a class="ag-no" href="' + XS + '" target="_blank" rel="sponsored nofollow noopener" ' +
@@ -77,6 +77,7 @@
     if (!a) return;
     if (a.href.indexOf('get.forexgoldea.com') === -1) return;
     if (a.hasAttribute('data-no-gate')) return;
+    if (box && box.contains(a)) return;          // the dialog's own buttons must pass through
     e.preventDefault();
     open();
   }, true);
