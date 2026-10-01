@@ -3,7 +3,7 @@
 > ForexGoldEA publishes plain-English education about trading gold (XAU/USD): what moves the metal, how the arithmetic of pips, lots, spread and leverage actually works, the psychology that decides most outcomes, and what changes when an Expert Advisor trades it for you. The site also offers ForexGoldEA, a rules-based XAU/USD expert advisor for MetaTrader 4 and 5, free to traders who open an account through the partner broker link. Editorial focus is the gold market and the trader; deep MT4/MT5 engineering topics are not this site's focus.
 
 Key facts:
-- Last updated: 2026-09-24
+- Last updated: 2026-10-01
 - Editorial scope: gold market education - drivers, sessions, position-size arithmetic, trading psychology, and an honest account of what automation does and does not solve
 - Product: ForexGoldEA, a rules-based XAU/USD expert advisor for MT4 and MT5, with a fixed stop-loss on every trade and user-set risk limits (no martingale, no grid without stops)
 - Company: BBFxAi LLC
@@ -38,6 +38,13 @@ There is no subscription, no card and no payment at any step. Deposits stay in t
 - [Gold vs Bitcoin: which should you actually trade?](https://forexgoldea.com/gold-vs-bitcoin.html): Volatility, hours, costs and character compared honestly — and which instrument fits which trader.
 - [What time does the gold market open and close?](https://forexgoldea.com/gold-market-hours.html): Open Sunday ~22:00 GMT, close Friday ~21:00 GMT — the full timezone table (GMT/IST/EST), sessions, the daily break and the trap windows.
 - [Best time to trade XAUUSD: gold trading sessions explained](https://forexgoldea.com/best-time-to-trade-xauusd-gold-sessions.html): Gold doesn't move the same way all day. Here's when XAU/USD is most active — the London–New York overlap, news times, and what it means for an EA.
+
+## Doing the numbers
+- [XAUUSD Stop Loss Calculator: Turn Risk Into Lots](https://forexgoldea.com/xauusd-stop-loss-calculator.html): Work out a gold stop loss in dollars, then the lot size that fits it. The formula, worked examples at $500 and $2,000, and the broker specs that change the answer.
+- [XAUUSD Pip Value: 0.01, 0.1 and 1 Lot in Dollars](https://forexgoldea.com/xauusd-pip-value-per-lot.html): What one pip of gold is worth at every common lot size, the arithmetic behind the table, and why the same move can read as 10 pips or 100 points.
+- [Gold Swap and Rollover: The Overnight Cost](https://forexgoldea.com/gold-swap-rollover-cost.html): What swap charges on XAUUSD, why holding gold overnight has a price, how triple swap Wednesday works and when the cost is large enough to change a trade.
+- [Break-Even Win Rate: The Number Behind Your R:R](https://forexgoldea.com/break-even-win-rate-gold.html): The win rate a risk-reward ratio needs just to break even, the table for 1:1 through 1:5, and why costs move the line further than most traders expect.
+- [Margin vs Risk: How Many Gold Lots Can You Trade?](https://forexgoldea.com/margin-vs-risk-lot-size.html): Margin decides the biggest gold position your account can open. Risk decides the biggest one it should. The two answers differ by a lot, with worked numbers.
 
 ## The mechanics
 - [The RSI, and what it actually tells you about gold](https://forexgoldea.com/rsi-indicator-explained.html): Why the 70/30 overbought rule fails on a metal that trends hard, what divergence really delivers, and the settings worth using.
