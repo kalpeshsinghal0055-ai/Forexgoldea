@@ -34,4 +34,14 @@ body.content-page .wrap,body.tools-page .wrap{max-width:1100px}.content-page mai
 
 /* WCAG 2.2 target size (2.5.8): the footer link column rendered 22px tall with a 6px
    gap between links. The anchors are flex items, so padding grows the hit area cleanly. */
-footer nav a{padding-block:5px}
+
+/* the tools pages put their footer links in a <span>, not a <nav>, so they need
+   inline-block before the padding can grow the hit area. */
+
+/* WCAG 2.2 target size (2.5.8). Footer links appear in three different wrappers
+   across these pages - a <nav> column, a <span> row and a bare flex row - and ran
+   17-22px tall in all of them. One rule covers the lot; inline-block is what lets
+   the padding grow the hit area. The related-guides list is navigation, not prose,
+   so it does not get the in-sentence exemption either. */
+footer a{display:inline-block;padding-block:5px}
+.related-guides li a{display:inline-block;padding-block:4px}

@@ -26,4 +26,5 @@
 /* WCAG 2.2 target size (2.5.8): these links rendered 13-16px tall, small enough that a
    mistap on a phone lands on the neighbour. Each one is a flex item, so vertical padding
    grows the hit area and the row's own gap absorbs it without the layout moving. */
-.footer-top>div a,.footer-bottom>div a,.hero-bottom a{padding-block:5px}
+.footer-top>div a,.footer-bottom>div a{padding-block:5px}
+.hero-bottom a,.hero-bottom button{padding-block:7px}
