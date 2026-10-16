@@ -22,3 +22,8 @@
 .vps-banner{flex:0 1 560px;max-width:100%;display:block}
 .vps-banner img{width:100%;height:auto;display:block;border-radius:6px}
 @media(max-width:680px){.vps{gap:24px;margin-top:38px;padding-top:30px}}
+
+/* WCAG 2.2 target size (2.5.8): these links rendered 13-16px tall, small enough that a
+   mistap on a phone lands on the neighbour. Each one is a flex item, so vertical padding
+   grows the hit area and the row's own gap absorbs it without the layout moving. */
+.footer-top>div a,.footer-bottom>div a,.hero-bottom a{padding-block:5px}

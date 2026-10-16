@@ -31,3 +31,7 @@ body.content-page .wrap,body.tools-page .wrap{max-width:1100px}.content-page mai
 @media(max-width:1050px) and (min-width:761px){.gold-scene{width:49%;right:-3%}}
 @media(max-width:760px){.gold-scene{width:100%;height:43%;top:auto;bottom:0;right:0}.hero-section.has-3d:after{background:linear-gradient(180deg,#10120f 0%,#10120f 51%,rgba(16,18,15,.3) 69%,transparent 88%)}.motion-control{bottom:12px;right:12px;font-size:10px;padding:7px 11px}.has-3d .hero-art{opacity:.08}.depth-card,.depth-card:hover{transform:none!important}}
 @media(prefers-reduced-motion:reduce){.depth-card,.depth-card:hover{transform:none!important}.mobile-navigation:not([hidden]){animation:none}.gold-scene,.hero-art{transition:none!important}}
+
+/* WCAG 2.2 target size (2.5.8): the footer link column rendered 22px tall with a 6px
+   gap between links. The anchors are flex items, so padding grows the hit area cleanly. */
+footer nav a{padding-block:5px}
