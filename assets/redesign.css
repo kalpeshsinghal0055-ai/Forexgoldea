@@ -45,3 +45,5 @@ body.content-page .wrap,body.tools-page .wrap{max-width:1100px}.content-page mai
    so it does not get the in-sentence exemption either. */
 footer a{display:inline-block;padding-block:5px}
 .related-guides li a{display:inline-block;padding-block:4px}
+/* the breadcrumb sits inside the article, not the header */
+article nav a{display:inline-block;padding-block:4px}
